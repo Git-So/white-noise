@@ -26,6 +26,17 @@ ApplicationWindow {
         SHome {
             stackObj: stack
             aboutID: aboutView
+            customizeID: customizeView
+        }
+    }
+
+    // 自定义配置
+    Component {
+        id: customizeView
+
+        SCustomize {
+            stackObj: stack
+            aboutID: aboutView
         }
     }
 

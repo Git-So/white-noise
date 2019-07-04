@@ -13,6 +13,9 @@ Item {
     // 关于界面ID
     property var aboutID: false
 
+    // 自定义界面ID
+    property var customizeID: false
+
 
     Row {
         height: 60
@@ -37,13 +40,32 @@ Item {
 
                     anchors.verticalCenter: parent.verticalCenter
 
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            if (stackObj && activeID != 0 ) {
+                                stackObj.pop()
+                            }
+                        }
+                    }
                 }
 
                 Text {
+                    z: 100
                     text: qsTr("自选")
                     color: activeID != 1 ? "#ddd" : "#fff"
 
                     anchors.verticalCenter: parent.verticalCenter
+
+                    MouseArea {
+                        anchors.fill: parent
+
+                        onClicked: {
+                            if (stackObj && customizeID && activeID != 1 ) {
+                                stackObj.push(customizeID)
+                            }
+                        }
+                    }
                 }
             }
         }

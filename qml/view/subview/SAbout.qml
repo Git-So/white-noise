@@ -6,10 +6,10 @@ Rectangle {
     // width: parent.width
     // height: parent.height
 
-    property int block: 45
+    // property int block: 45
 
-    width: 9 * block
-    height: 16 * block
+    // width: 9 * block
+    // height: 16 * block
 
     color: "#212121"
 
