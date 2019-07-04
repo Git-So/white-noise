@@ -19,9 +19,22 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
+    // 主页
     Component {
         id: homeView
 
-        SHome {}
+        SHome {
+            stackObj: stack
+            aboutID: aboutView
+        }
+    }
+
+    // 关于
+    Component {
+        id: aboutView
+
+        SAbout {
+            stackObj: stack
+        }
     }
 }

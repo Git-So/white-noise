@@ -7,6 +7,12 @@ Item {
     // 选中ID
     property int activeID: 0
 
+    // 栈对象
+    property var stackObj: false
+
+    // 关于界面ID
+    property var aboutID: false
+
 
     Row {
         height: 60
@@ -26,7 +32,7 @@ Item {
                 spacing: 20
 
                 Text {
-                    text: "推荐"
+                    text: qsTr("推荐")
                     color: activeID != 0 ? "#ddd" : "#fff"
 
                     anchors.verticalCenter: parent.verticalCenter
@@ -34,7 +40,7 @@ Item {
                 }
 
                 Text {
-                    text: "自选"
+                    text: qsTr("自选")
                     color: activeID != 1 ? "#ddd" : "#fff"
 
                     anchors.verticalCenter: parent.verticalCenter
@@ -56,6 +62,15 @@ Item {
                 anchors.top: parent.top
                 anchors.right: parent.right
 
+                MouseArea {
+                    anchors.fill: parent
+
+                    onClicked: {
+                        if (stackObj && aboutID) {
+                            stackObj.push(aboutID)
+                        }
+                    }
+                }
             }
         }
 
