@@ -1,0 +1,171 @@
+[
+  {
+    "title": "夏雨",
+    "engTitle": "Shower",
+    "colorParam": "#FF8FC86F;#FF46A773",
+    "icon": "夏雨.png",
+    "volume": "1.4",
+    "audioUrls": [
+      {
+        "url": "夏雨",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "雨打树叶",
+    "engTitle": "Rainforest",
+    "colorParam": "#FFFF8DA5;#FF9B85EC",
+    "icon": "雨打树叶.png",
+    "volume": "1.5",
+    "audioUrls": [
+      {
+        "url": "雨打树叶",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "河流",
+    "engTitle": "River",
+    "colorParam": "#FF84C1F3;#FF79A7EF",
+    "icon": "河流.png",
+    "volume": "1.35",
+    "audioUrls": [
+      {
+        "url": "河流",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "溪流",
+    "engTitle": "Stream",
+    "colorParam": "#FFFFB586;#FFFE9090",
+    "icon": "溪流.png",
+    "volume": "1.65",
+    "audioUrls": [
+      {
+        "url": "溪流",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "近海",
+    "engTitle": "Beach",
+    "colorParam": "#FF40A9B7;#FF74D8BD",
+    "icon": "近海.png",
+    "volume": "1.0",
+    "audioUrls": [
+      {
+        "url": "近海",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "远海",
+    "engTitle": "Sea",
+    "colorParam": "#FFF89BAE;#FFF7A78B",
+    "icon": "远海.png",
+    "volume": "1.0",
+    "audioUrls": [
+      {
+        "url": "远海",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "炉火",
+    "engTitle": "Fireplace",
+    "colorParam": "#FF7B86FF;#FFFF93E8",
+    "icon": "炉火.png",
+    "volume": "1.8",
+    "audioUrls": [
+      {
+        "url": "炉火",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "森林",
+    "engTitle": "Grove",
+    "colorParam": "#FFFFC685;#FFFF8282",
+    "icon": "森林.png",
+    "volume": "1.8",
+    "audioUrls": [
+      {
+        "url": "森林",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "鸟鸣",
+    "engTitle": "Birds A",
+    "colorParam": "#FFB77FD4;#FFFD96AD",
+    "icon": "鸟鸣.png",
+    "volume": "1.6",
+    "audioUrls": [
+      {
+        "url": "鸟鸣",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "海风",
+    "engTitle": "Monsoon",
+    "colorParam": "#FF91DB9D;#FF3AB2A3",
+    "icon": "海风.png",
+    "volume": "2.0",
+    "audioUrls": [
+      {
+        "url": "空气",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "钢琴声",
+    "engTitle": "Piano A",
+    "colorParam": "#FF6A79D2;#FFE790B0",
+    "icon": "钢琴声.png",
+    "volume": "1.4",
+    "audioUrls": [
+      {
+        "url": "钢琴",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "窗外的风",
+    "engTitle": "Wind B",
+    "colorParam": "#FFAE6DE7;#FF6CB6E7",
+    "icon": "窗外的风.png",
+    "volume": "2.0",
+    "audioUrls": [
+      {
+        "url": "窗外的风",
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "title": "时钟",
+    "engTitle": "Clock",
+    "colorParam": "#FF8FC86F;#FF46A773",
+    "icon": "时钟.png",
+    "volume": "1.6",
+    "audioUrls": [
+      {
+        "url": "时钟",
+        "duration": 0
+      }
+    ]
+  }
+]

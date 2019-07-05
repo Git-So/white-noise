@@ -1,0 +1,212 @@
+[
+  {
+    "title": "庄稼地",
+    "engTitle": "CropLand",
+    "colorParam": "#ff6794DB;#ff90FFFB",
+    "icon": "河流.png",
+    "frequency":17,
+    "volume": 1.0,
+    "type":2,
+    "audioUrls": [
+      {
+        "url": "庄稼地1",
+        "duration": 4049
+      },
+      {
+        "url": "庄稼地2",
+        "duration": 3448
+      },
+      {
+        "url": "庄稼地3",
+        "duration": 3527
+      },
+      {
+        "url": "庄稼地4",
+        "duration": 3448
+      },
+      {
+        "url": "庄稼地5",
+        "duration": 3448
+      }
+    ]
+  },
+  {
+    "title": "雨滴",
+    "engTitle": "RainDrop",
+    "colorParam": "#ff9BFEAA;#ff34A1B6",
+    "icon": "夏雨.png",
+    "frequency":44,
+    "volume": 1.0,
+    "type":2,
+    "audioUrls": [
+      {
+        "url": "雨滴1",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴2",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴3",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴4",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴5",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴6",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴7",
+        "duration": 2064
+      },
+      {
+        "url": "雨滴8",
+        "duration": 2064
+      }
+    ]
+  },
+  {
+    "title": "雷",
+    "engTitle": "Thunder",
+    "colorParam": "#ff46A773;#ffD9E391",
+    "icon": "森林.png",
+    "frequency":5,
+    "volume": 1.0,
+    "type":2,
+    "audioUrls": [
+      {
+        "url": "雷1",
+        "duration": 5042
+      },
+      {
+        "url": "雷2",
+        "duration": 5042
+      },
+      {
+        "url": "雷3",
+        "duration": 8046
+      }
+    ]
+  },
+  {
+    "title": "青蛙",
+    "engTitle": "Frog",
+    "colorParam": "#ffFF7A93;#ffFCD57E",
+    "icon": "鸟鸣.png",
+    "frequency": 15,
+    "volume": 1.0,
+    "type":2,
+    "audioUrls": [
+      {
+        "url": "青蛙1",
+        "duration": 3056
+      },
+      {
+        "url": "青蛙2",
+        "duration": 3056
+      },
+      {
+        "url": "青蛙3",
+        "duration": 3056
+      },
+      {
+        "url": "青蛙4",
+        "duration": 3056
+      },
+      {
+        "url": "青蛙5",
+        "duration": 3082
+      }
+    ]
+  },
+  {
+    "title": "风吹树叶",
+    "engTitle": "Wind leaves",
+    "colorParam": "#fffc67f9;#ff7b86ff",
+    "icon": "溪流.png",
+    "frequency": 4,
+    "volume": 1.0,
+    "type":2,
+    "audioUrls": [
+      {
+        "url": "风吹树叶1",
+        "duration": 9404
+      },
+      {
+        "url": "风吹树叶2",
+        "duration": 8568
+      },
+      {
+        "url": "风吹树叶3",
+        "duration": 13897
+      },
+      {
+        "url": "风吹树叶4",
+        "duration": 6975
+      },
+      {
+        "url": "风吹树叶5",
+        "duration": 7784
+      }
+    ]
+  },
+  {
+    "title": "鸟",
+    "engTitle": "Birds",
+    "colorParam": "#ffE27DBF;#ffFCF075",
+    "icon": "雨打树叶.png",
+    "frequency": 25,
+    "volume": 1.0,
+    "type":2,
+    "audioUrls": [
+      {
+        "url": "鸟1",
+        "duration": 3448
+      },
+      {
+        "url": "鸟2",
+        "duration": 2456
+      },
+      {
+        "url": "鸟3",
+        "duration": 2482
+      },
+      {
+        "url": "鸟4",
+        "duration": 3448
+      },
+      {
+        "url": "鸟5",
+        "duration": 3056
+      },
+      {
+        "url": "鸟6",
+        "duration": 2456
+      },
+      {
+        "url": "鸟7",
+        "duration": 3448
+      },
+      {
+        "url": "鸟8",
+        "duration": 2664
+      },
+      {
+        "url": "鸟9",
+        "duration": 3056
+      },
+      {
+        "url": "鸟10",
+        "duration": 2664
+      }
+    ]
+  }
+]

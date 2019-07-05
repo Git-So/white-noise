@@ -32,7 +32,7 @@ Item {
                 height: 60
 
                 anchors.horizontalCenter: parent.horizontalCenter
-                spacing: 20
+                spacing: 40
 
                 Text {
                     text: qsTr("推荐")
