@@ -7,17 +7,17 @@
     "imagePath": "夏雨.jpg",
     "cropPicSmall": {
       "centerLine": 0.7345,
-      "top":131,
-      "bottom":131,
-      "left":225,
-      "right":225
+      "top": 131,
+      "bottom": 131,
+      "left": 225,
+      "right": 225
     },
     "cropPicLarge": {
       "centerLine": 0.7345,
-      "top":316,
-      "bottom":316,
-      "left":540,
-      "right":540
+      "top": 316,
+      "bottom": 316,
+      "left": 540,
+      "right": 540
     }
   },
   {
@@ -28,17 +28,17 @@
     "imagePath": "森林.jpg",
     "cropPicSmall": {
       "centerLine": 0.2995,
-      "top":131,
-      "bottom":131,
-      "left":225,
-      "right":225
+      "top": 131,
+      "bottom": 131,
+      "left": 225,
+      "right": 225
     },
     "cropPicLarge": {
       "centerLine": 0.2995,
-      "top":316,
-      "bottom":316,
-      "left":540,
-      "right":540
+      "top": 316,
+      "bottom": 316,
+      "left": 540,
+      "right": 540
     }
   },
   {
@@ -49,17 +49,17 @@
     "imagePath": "炉火.jpg",
     "cropPicSmall": {
       "centerLine": 0.5405,
-      "top":131,
-      "bottom":131,
-      "left":225,
-      "right":225
+      "top": 131,
+      "bottom": 131,
+      "left": 225,
+      "right": 225
     },
     "cropPicLarge": {
       "centerLine": 0.5405,
-      "top":316,
-      "bottom":316,
-      "left":540,
-      "right":540
+      "top": 316,
+      "bottom": 316,
+      "left": 540,
+      "right": 540
     }
   },
   {
@@ -70,17 +70,17 @@
     "imagePath": "海洋.jpg",
     "cropPicSmall": {
       "centerLine": 0.2345,
-      "top":131,
-      "bottom":131,
-      "left":225,
-      "right":225
+      "top": 131,
+      "bottom": 131,
+      "left": 225,
+      "right": 225
     },
     "cropPicLarge": {
       "centerLine": 0.2345,
-      "top":316,
-      "bottom":316,
-      "left":540,
-      "right":540
+      "top": 316,
+      "bottom": 316,
+      "left": 540,
+      "right": 540
     }
   }
 ]

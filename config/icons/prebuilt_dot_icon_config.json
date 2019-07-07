@@ -4,9 +4,9 @@
     "engTitle": "CropLand",
     "colorParam": "#ff6794DB;#ff90FFFB",
     "icon": "河流.png",
-    "frequency":17,
+    "frequency": 17,
     "volume": 1.0,
-    "type":2,
+    "type": 2,
     "audioUrls": [
       {
         "url": "庄稼地1",
@@ -35,9 +35,9 @@
     "engTitle": "RainDrop",
     "colorParam": "#ff9BFEAA;#ff34A1B6",
     "icon": "夏雨.png",
-    "frequency":44,
+    "frequency": 44,
     "volume": 1.0,
-    "type":2,
+    "type": 2,
     "audioUrls": [
       {
         "url": "雨滴1",
@@ -78,9 +78,9 @@
     "engTitle": "Thunder",
     "colorParam": "#ff46A773;#ffD9E391",
     "icon": "森林.png",
-    "frequency":5,
+    "frequency": 5,
     "volume": 1.0,
-    "type":2,
+    "type": 2,
     "audioUrls": [
       {
         "url": "雷1",
@@ -103,7 +103,7 @@
     "icon": "鸟鸣.png",
     "frequency": 15,
     "volume": 1.0,
-    "type":2,
+    "type": 2,
     "audioUrls": [
       {
         "url": "青蛙1",
@@ -134,7 +134,7 @@
     "icon": "溪流.png",
     "frequency": 4,
     "volume": 1.0,
-    "type":2,
+    "type": 2,
     "audioUrls": [
       {
         "url": "风吹树叶1",
@@ -165,7 +165,7 @@
     "icon": "雨打树叶.png",
     "frequency": 25,
     "volume": 1.0,
-    "type":2,
+    "type": 2,
     "audioUrls": [
       {
         "url": "鸟1",
