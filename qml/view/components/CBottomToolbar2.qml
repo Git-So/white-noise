@@ -2,11 +2,15 @@ import QtQuick 2.7
 import QtGraphicalEffects 1.13
 
 Rectangle {
+    id: bottomToolbar2Root
     color: "transparent"
-
 
     property bool iconMusicPlay: false
     property string activeMusic: "鸟鸣"
+
+    // 栈对象
+    property var stackObj: false
+    property var muiscInfoID: false
 
     Rectangle {
         width: parent.width * 0.88
@@ -24,32 +28,45 @@ Rectangle {
                 width: parent.width / 10 * 7.5
                 height: parent.height
                 color: "#282c34"
-                radius: 25
+                radius: 20
                 clip: true
+                smooth: true
 
                 Rectangle {
-                    radius: 25
+                    id: musicInfoBg
+                    radius: 20
                     clip: true
+                    smooth: true
 
                     anchors.fill: parent
+                }
 
-                    RadialGradient {
-                        anchors.fill: parent
-                        horizontalOffset: parent.width / 2
-                        verticalOffset: parent.height / 2
-                        verticalRadius: parent.height * 2
+                RadialGradient {
+                    id: musicInfoBgColor
+                    visible: false
 
-                        gradient: Gradient {
-                            GradientStop {
-                                position: 0.0
-                                color: "#ffE27DBF"
-                            }
-                            GradientStop {
-                                position: 1
-                                color: "#ffFCF075"
-                            }
+                    horizontalOffset: parent.width / 2
+                    verticalOffset: parent.height / 2
+                    verticalRadius: parent.height * 2
+
+                    gradient: Gradient {
+                        GradientStop {
+                            position: 0.0
+                            color: "#ffE27DBF"
+                        }
+                        GradientStop {
+                            position: 1
+                            color: "#ffFCF075"
                         }
                     }
+
+                    anchors.fill: parent
+                }
+
+                OpacityMask {
+                    anchors.fill: parent
+                    source: musicInfoBgColor
+                    maskSource: musicInfoBg
                 }
 
                 Row {
@@ -93,6 +110,19 @@ Rectangle {
                     anchors.rightMargin: 22
 
                 }
+
+                MouseArea {
+                    anchors.fill: parent
+
+                    onClicked: {
+
+                        console.log("muiscInfo",stackObj,muiscInfoID)
+
+                        if (stackObj && muiscInfoID) {
+                            stackObj.push(muiscInfoID)
+                        }
+                    }
+                }
             }
 
             // 播放控制
@@ -105,37 +135,49 @@ Rectangle {
 
                 anchors.right: parent.right
 
-                property int iconSize: 25
+                property int iconSize: 20
 
                 Rectangle {
-                    width: parent.width
-                    height: width
-                    radius: 25
+                    id: musicPlayBg
+                    radius: 20
+                    clip: true
+                    smooth: true
 
-                    RadialGradient {
-                        anchors.fill: parent
-                        horizontalOffset: parent.width / 2
-                        verticalOffset: parent.height / 2
-                        verticalRadius: parent.height * 2
+                    anchors.fill: parent
+                }
 
-                        gradient: Gradient {
-                            GradientStop {
-                                position: 0.0
-                                color: "#ffE27DBF"
-                            }
-                            GradientStop {
-                                position: 1
-                                color: "#ffFCF075"
-                            }
+                RadialGradient {
+                    id: musicPlayBgColor
+                    visible: false
+                    horizontalOffset: parent.width / 2
+                    verticalOffset: parent.height / 2
+                    verticalRadius: parent.height * 2
+
+                    gradient: Gradient {
+                        GradientStop {
+                            position: 0.0
+                            color: "#ffE27DBF"
+                        }
+                        GradientStop {
+                            position: 1
+                            color: "#ffFCF075"
                         }
                     }
+
+                    anchors.fill: parent
+                }
+
+                OpacityMask {
+                    anchors.fill: parent
+                    source: musicPlayBgColor
+                    maskSource: musicPlayBg
                 }
 
                 //  图标
                 Image {
                     width: parent.iconSize
                     height: parent.iconSize
-                    visible: iconMusicPlay
+                    visible: bottomToolbar2Root.iconMusicPlay
 
                     // source: "qrc:/qml/drawable/icon_music_play.png"
                     source: "../../drawable/icon_music_play.png"
@@ -147,12 +189,21 @@ Rectangle {
                 Image {
                     width: parent.iconSize
                     height: parent.iconSize
-                    visible: !iconMusicPlay
+                    visible: !bottomToolbar2Root.iconMusicPlay
 
                     // source: "qrc:/qml/drawable/icon_music_pause.png"
                     source: "../../drawable/icon_music_pause.png"
 
                     anchors.centerIn: parent
+                }
+
+                // 切换播放状态
+                MouseArea {
+                    anchors.fill: parent
+
+                    onClicked: {
+                        bottomToolbar2Root.iconMusicPlay = !bottomToolbar2Root.iconMusicPlay
+                    }
                 }
             }
         }

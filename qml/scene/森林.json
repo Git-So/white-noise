@@ -1,0 +1,83 @@
+[
+  {
+    "audioName": "鸟鸣",
+    "duration": 0,
+    "isLineAudio": true,
+    "isPointAudio": false,
+    "isRawRes": true,
+    "startPlayTime": 0,
+    "totalEndTime": 0,
+    "frequency": 0,
+    "names":[],
+    "volume": 1.0,
+    "pitch": 0.0,
+    "speed": 0.0
+  },
+  {
+    "audioName": "森林",
+    "duration": 0,
+    "isLineAudio": true,
+    "isPointAudio": false,
+    "isRawRes": true,
+    "startPlayTime": 0,
+    "totalEndTime": 0,
+    "frequency": 0,
+    "names":[],
+    "volume": 1.0,
+    "pitch": 0.0,
+    "speed": 0.0
+  },
+  {
+    "audioName": "溪流",
+    "duration": 0,
+    "isLineAudio": true,
+    "isPointAudio": false,
+    "isRawRes": true,
+    "startPlayTime": 0,
+    "totalEndTime": 0,
+    "frequency": 0,
+    "names":[],
+    "volume": 1.0,
+    "pitch": 0.0,
+    "speed": 0.0
+  },
+  {
+    "duration": 4049,
+    "frequency": 17,
+    "isLineAudio": false,
+    "isPointAudio": true,
+    "isRawRes": true,
+    "names": ["庄稼地1", "庄稼地2", "庄稼地3", "庄稼地4", "庄稼地5"],
+    "startPlayTime": 0,
+    "totalEndTime": 120059,
+    "pitch": 0.0,
+    "speed": 0.0,
+    "volume": 1.0
+  },
+  {
+    "duration": 3448,
+    "frequency": 25,
+    "isLineAudio": false,
+    "isPointAudio": true,
+    "isRawRes": true,
+    "names": ["鸟1", "鸟2", "鸟3", "鸟4", "鸟5","鸟6", "鸟7", "鸟8", "鸟9", "鸟10"],
+    "startPlayTime": 0,
+    "totalEndTime": 120059,
+    "pitch": 0.0,
+    "speed": 0.0,
+    "volume": 1.0
+  },
+  {
+    "duration": 13897,
+    "frequency": 4,
+    "isLineAudio": false,
+    "isPointAudio": true,
+    "isRawRes": true,
+    "names": ["风吹树叶1", "风吹树叶2", "风吹树叶3", "风吹树叶4", "风吹树叶5"],
+    "startPlayTime": 0,
+    "totalEndTime": 120059,
+    "pitch": 0.0,
+    "speed": 0.0,
+    "volume": 1.0
+  }
+]

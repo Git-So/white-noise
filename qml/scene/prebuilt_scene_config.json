@@ -1,0 +1,86 @@
+[
+  {
+    "title": "夏雨",
+    "desp": "六月与夏雨的邂逅",
+    "engTitle": "Rain",
+    "engDesp": "A sunshiny shower",
+    "imagePath": "夏雨.jpg",
+    "cropPicSmall": {
+      "centerLine": 0.7345,
+      "top":131,
+      "bottom":131,
+      "left":225,
+      "right":225
+    },
+    "cropPicLarge": {
+      "centerLine": 0.7345,
+      "top":316,
+      "bottom":316,
+      "left":540,
+      "right":540
+    }
+  },
+  {
+    "title": "森林",
+    "desp": "把你的秘密藏进森林",
+    "engTitle": "Forest",
+    "engDesp": "Find peace among the trees",
+    "imagePath": "森林.jpg",
+    "cropPicSmall": {
+      "centerLine": 0.2995,
+      "top":131,
+      "bottom":131,
+      "left":225,
+      "right":225
+    },
+    "cropPicLarge": {
+      "centerLine": 0.2995,
+      "top":316,
+      "bottom":316,
+      "left":540,
+      "right":540
+    }
+  },
+  {
+    "title": "炉火",
+    "desp": "温暖冬日的闲暇时光",
+    "engTitle": "Fireplace",
+    "engDesp": "Sit by the fireplace with a cup of tea",
+    "imagePath": "炉火.jpg",
+    "cropPicSmall": {
+      "centerLine": 0.5405,
+      "top":131,
+      "bottom":131,
+      "left":225,
+      "right":225
+    },
+    "cropPicLarge": {
+      "centerLine": 0.5405,
+      "top":316,
+      "bottom":316,
+      "left":540,
+      "right":540
+    }
+  },
+  {
+    "title": "海洋",
+    "desp": "海边漫步的气息",
+    "engTitle": "Ocean",
+    "engDesp": "Have a walk on the beach",
+    "imagePath": "海洋.jpg",
+    "cropPicSmall": {
+      "centerLine": 0.2345,
+      "top":131,
+      "bottom":131,
+      "left":225,
+      "right":225
+    },
+    "cropPicLarge": {
+      "centerLine": 0.2345,
+      "top":316,
+      "bottom":316,
+      "left":540,
+      "right":540
+    }
+  }
+]

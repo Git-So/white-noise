@@ -1,8 +1,10 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.5
+import QtGraphicalEffects 1.13
 import "../components"
 
 Rectangle {
+    id: customizeRoot
     property int block: 45
 
     width: 9 * block
@@ -11,6 +13,7 @@ Rectangle {
 
     // 栈对象
     property var aboutID: false
+    property var muiscInfoID: false
     property var stackObj: false
 
     // 是否选中选项
@@ -21,7 +24,7 @@ Rectangle {
         height: parent.height
         spacing:5
 
-        property var toolbarHeight: 80
+        property var toolbarHeight: 100
         property var bottomToolbarHeight: 100
         property var gridHeight: parent.height - toolbarHeight - bottomToolbarHeight
 
@@ -32,12 +35,11 @@ Rectangle {
             color: "transparent"
 
             CToolbar {
-                width: parent.width
-                height: parent.height
-
-                aboutID: parent.aboutID
-                stackObj: parent.stackObj
+                aboutID: customizeRoot.aboutID
+                stackObj: customizeRoot.stackObj
                 activeID: 1
+
+                anchors.fill: parent
             }
         }
 
@@ -65,79 +67,23 @@ Rectangle {
                     // anchors.centerIn: parent
 
                     Repeater {
-                        model: 16
+                        model: [
+                            {
+                                name: "自定义",
+                                icon: "../../icons/庭院鸟鸣.png",
+                                startColor: "#ffE27DBF",
+                                endColor: "#ffFCF075"
+                            }
+                        ]
 
-                        property variant colorArray: ["#00bde3", "#67c111", "#ea7025"]
-                        property var rectangleWidth: 50
-
-                        Rectangle {
+                        CIconItem {
                             width: 120
                             height: width + 30
-                            color: "transparent"
-                            // color: "red"
 
-                            Column {
-                                width: parent.width
-                                height: parent.height
-                                // color: "transparent"
-                                // spacing: 5
-
-                                Rectangle {
-                                    width: parent.width * 0.8
-                                    height: width
-
-                                    property int colorIndex: Math.floor(Math.random()*3)
-                                    color: "#282c34"
-                                    radius: 100
-
-                                    Rectangle {
-                                        visible: Math.random() > 0.5 ? true : false
-                                        radius: 100
-                                        rotation: 135
-                                        gradient: Gradient{
-                                                    GradientStop{
-                                                        position: 0.0;
-                                                        color: "#ffE27DBF";
-
-                                                    }
-                                                    GradientStop{
-                                                        position: 1.0;
-                                                        color: "#ffFCF075";
-                                                    }
-                                                }
-
-                                        anchors.fill: parent
-                                    }
-
-
-
-                                    anchors.horizontalCenter: parent.horizontalCenter
-
-                                    //  图标
-                                    Image {
-                                        width: parent.width * 0.45
-                                        height: width
-
-                                        // source: "qrc:/qml/icons/庭院鸟鸣.png"
-                                        source: "../../icons/庭院鸟鸣.png"
-
-                                        anchors.centerIn: parent
-                                    }
-                                }
-
-                                Rectangle {
-                                    width: parent.width
-                                    height: width - parent.width * 0.8 + 15
-                                    color: "transparent"
-
-                                    Text {
-                                        text: "自定义"
-                                        color: "#fff"
-
-                                        anchors.centerIn: parent
-                                    }
-                                }
-                            }
+                            name: modelData.name
+                            icon: modelData.icon
+                            startColor: modelData.startColor
+                            endColor: modelData.endColor
                         }
                     }
                 }
@@ -162,6 +108,9 @@ Rectangle {
                 visible: isActiveMusic
 
                 anchors.fill: parent
+
+                stackObj: customizeRoot.stackObj
+                muiscInfoID: customizeRoot.muiscInfoID
             }
         }
     }

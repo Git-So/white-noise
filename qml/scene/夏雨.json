@@ -1,0 +1,83 @@
+[
+  {
+    "audioName": "河流",
+    "duration": 0,
+    "isLineAudio": true,
+    "isPointAudio": false,
+    "isRawRes": true,
+    "startPlayTime": 0,
+    "totalEndTime": 0,
+    "frequency": 0,
+    "names":[],
+    "volume": 1.0,
+    "pitch": 0.0,
+    "speed": 0.0
+  },
+  {
+    "audioName": "夏雨",
+    "duration": 0,
+    "isLineAudio": true,
+    "isPointAudio": false,
+    "isRawRes": true,
+    "startPlayTime": 0,
+    "totalEndTime": 0,
+    "frequency": 0,
+    "names":[],
+    "volume": 1.0,
+    "pitch": 0.0,
+    "speed": 0.0
+  },
+  {
+    "audioName": "雨打树叶",
+    "duration": 0,
+    "isLineAudio": true,
+    "isPointAudio": false,
+    "isRawRes": true,
+    "startPlayTime": 0,
+    "totalEndTime": 0,
+    "frequency": 0,
+    "names":[],
+    "volume": 1.0,
+    "pitch": 0.0,
+    "speed": 0.0
+  },
+  {
+    "duration": 3082,
+    "frequency": 15,
+    "isLineAudio": false,
+    "isPointAudio": true,
+    "isRawRes": true,
+    "names": ["青蛙1", "青蛙2", "青蛙3", "青蛙4", "青蛙5"],
+    "startPlayTime": 0,
+    "totalEndTime": 120059,
+    "pitch": 0.0,
+    "speed": 0.0,
+    "volume": 1.0
+  },
+  {
+    "duration": 2064,
+    "frequency": 44,
+    "isLineAudio": false,
+    "isPointAudio": true,
+    "isRawRes": true,
+    "names": ["雨滴1", "雨滴2", "雨滴3", "雨滴4", "雨滴5","雨滴6", "雨滴7", "雨滴8"],
+    "startPlayTime": 0,
+    "totalEndTime": 120059,
+    "pitch": 0.0,
+    "speed": 0.0,
+    "volume": 1.0
+  },
+  {
+    "duration": 8046,
+    "frequency": 5,
+    "isLineAudio": false,
+    "isPointAudio": true,
+    "isRawRes": true,
+    "names": ["雷1", "雷2", "雷3"],
+    "startPlayTime": 0,
+    "totalEndTime": 120059,
+    "pitch": 0.0,
+    "speed": 0.0,
+    "volume": 1.0
+  }
+]

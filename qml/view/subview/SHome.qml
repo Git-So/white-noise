@@ -2,6 +2,7 @@ import QtQuick 2.7
 import "../components"
 
 Rectangle {
+    id: homeRoot
 
     // property string imgUrl: "qrc:/qml/scene/森林.jpg"
     property string imgUrl: "../../scene/森林.jpg"
@@ -14,7 +15,7 @@ Rectangle {
 
     // 背景
     Image {
-        source: imgUrl
+        source: homeRoot.imgUrl
 
         asynchronous: true
         cache: false
@@ -24,37 +25,24 @@ Rectangle {
     }
 
     // 禁音
-    Rectangle {
-        width: parent.width
-        height: parent.height / 1.2
-        color: "transparent"
-        visible: quite
-
-        // anchors.fill: parent
-
-        Image {
-            width: 80
-            height: 80
-
-            // source: "qrc:/qml/drawable/ic_play.png"
-            source: "../../drawable/ic_play.png"
-
-            anchors.centerIn: parent
-        }
+    CQuite {
+        quite: homeRoot.quite
     }
 
     // 声音详情
     Rectangle {
         width: parent.width
-        height: 160
+        height: 180
         color: "transparent"
         // color: "#f00"
 
         anchors.bottom: parent.bottom
 
         Row {
-            width: parent.width
+            width: parent.width - 40
             height: parent.height
+
+            anchors.horizontalCenter: parent.horizontalCenter
 
             Rectangle {
                 width: parent.width / 7 * 5
@@ -104,7 +92,7 @@ Rectangle {
 
                 Rectangle {
                     width: parent.width / 10 * 8
-                    height: parent.height / 4
+                    height: parent.height / 4.2
                     radius: 20
                     color: "transparent"
                     border {
@@ -130,9 +118,9 @@ Rectangle {
         width: parent.width
         height: 100
 
-        customizeID: parent.customizeID
-        aboutID: parent.aboutID
-        stackObj: parent.stackObj
+        customizeID: homeRoot.customizeID
+        aboutID: homeRoot.aboutID
+        stackObj: homeRoot.stackObj
         activeID: 0
     }
 }

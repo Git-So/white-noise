@@ -37,6 +37,16 @@ ApplicationWindow {
         SCustomize {
             stackObj: stack
             aboutID: aboutView
+            muiscInfoID: muiscInfoView
+        }
+    }
+
+    // 播放详情
+    Component {
+        id: muiscInfoView
+
+        SMuiscInfo {
+            stackObj: stack
         }
     }
 

@@ -7,7 +7,7 @@ Rectangle {
         width: parent.width * 0.88
         height: parent.height * 0.68
         color: "#282c34"
-        radius: 25
+        radius: 20
 
         anchors.horizontalCenter: parent.horizontalCenter
 

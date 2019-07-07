@@ -1,7 +1,8 @@
 import QtQuick 2.7
 
 Item {
-    visible: true
+    id: toolbarRoot
+
     anchors.fill: parent
 
     // 选中ID
@@ -36,14 +37,14 @@ Item {
 
                 Text {
                     text: qsTr("推荐")
-                    color: activeID != 0 ? "#ddd" : "#fff"
+                    color: toolbarRoot.activeID != 0 ? "#ddd" : "#fff"
 
                     anchors.verticalCenter: parent.verticalCenter
 
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            if (stackObj && activeID != 0 ) {
+                            if (toolbarRoot.stackObj && toolbarRoot.activeID != 0 ) {
                                 stackObj.pop()
                             }
                         }
@@ -61,8 +62,9 @@ Item {
                         anchors.fill: parent
 
                         onClicked: {
-                            if (stackObj && customizeID && activeID != 1 ) {
-                                stackObj.push(customizeID)
+
+                            if (toolbarRoot.stackObj && toolbarRoot.customizeID && toolbarRoot.activeID != 1 ) {
+                                toolbarRoot.stackObj.push(customizeID)
                             }
                         }
                     }
@@ -88,8 +90,8 @@ Item {
                     anchors.fill: parent
 
                     onClicked: {
-                        if (stackObj && aboutID) {
-                            stackObj.push(aboutID)
+                        if (toolbarRoot.stackObj && toolbarRoot.aboutID) {
+                            toolbarRoot.stackObj.push(aboutID)
                         }
                     }
                 }
