@@ -2,7 +2,7 @@ package scene
 
 // Info 场景信息
 type Info struct {
-	Titile       string   `json:"title"`
+	Title        string   `json:"title"`
 	Desp         string   `json:"desp"`
 	EngTitle     string   `json:"engTitle"`
 	EngDesp      string   `json:"engDesp"`

@@ -6,7 +6,7 @@ Rectangle {
     // color: "red"
 
     property var name: "自定义"
-    property var icon: "../../icons/庭院鸟鸣.png"
+    property var icon: "庭院鸟鸣.png"
     property var startColor: "#ffE27DBF"
     property var endColor: "#ffFCF075"
 
@@ -53,7 +53,7 @@ Rectangle {
                 height: width
 
                 // source: "qrc:/qml/icons/庭院鸟鸣.png"
-                source: iconItemRoot.icon
+                source: "qrc:/qml/icons/" + iconItemRoot.icon
 
                 anchors.centerIn: parent
             }

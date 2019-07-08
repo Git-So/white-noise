@@ -7,6 +7,8 @@ Rectangle {
 
     property bool iconMusicPlay: false
     property string activeMusic: "鸟鸣"
+    property string startColor: "#ffE27DBF"
+    property string endColor: "#ffFCF075"
 
     // 栈对象
     property var stackObj: false

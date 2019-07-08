@@ -1,6 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.5
 import QtGraphicalEffects 1.13
+import CustomQmlTypes 1.0
 import "../components"
 
 Rectangle {
@@ -67,23 +68,26 @@ Rectangle {
                     // anchors.centerIn: parent
 
                     Repeater {
-                        model: [
-                            {
-                                name: "自定义",
-                                icon: "../../icons/庭院鸟鸣.png",
-                                startColor: "#ffE27DBF",
-                                endColor: "#ffFCF075"
-                            }
-                        ]
+                        model: IconListModel{}
 
                         CIconItem {
                             width: 120
                             height: width + 30
 
-                            name: modelData.name
-                            icon: modelData.icon
-                            startColor: modelData.startColor
-                            endColor: modelData.endColor
+                            name: display.title
+                            icon: display.icon
+                            startColor: display.colorParam.split(";")[0]
+                            endColor: display.colorParam.split(";")[1]
+
+                            // 切换选中状态
+                            MouseArea {
+                                anchors.fill: parent
+
+                                onClicked: {
+                                    display.change()
+                                    iconColorStack.update()
+                                }
+                            }
                         }
                     }
                 }
@@ -99,18 +103,20 @@ Rectangle {
             // color: "red"
 
             CBottomToolbar1 {
-                visible: !isActiveMusic
+                visible: !iconColorStack.isActive
 
                 anchors.fill: parent
             }
 
             CBottomToolbar2 {
-                visible: isActiveMusic
+                visible: iconColorStack.isActive
 
                 anchors.fill: parent
 
                 stackObj: customizeRoot.stackObj
                 muiscInfoID: customizeRoot.muiscInfoID
+                startColor: iconColorStack.colorParam.split(";")[0]
+                endColor: iconColorStack.colorParam.split(";")[1]
             }
         }
     }

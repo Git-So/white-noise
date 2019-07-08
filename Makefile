@@ -8,23 +8,37 @@ init:
 
 rebuild:
 	qtdeploy build desktop
+	-rm -rf rcc*
+	-rm -rf ./scene/moc*
+	-rm -rf ./icon/moc*
 
 build:
 	make clear
 	make rebuild
 
 clear:
-	-rm -rf vendor rcc* deploy linux
+	-rm -rf vendor deploy linux
 	go mod vendor
 	go mod download
 	cp -r cache/env_linux_amd64_512 vendor/github.com/therecipe/
 
 run:
-	make build
+	make rebuild
 	make rerun
 
 rerun:
 	./deploy/linux/${AppName}
 
 test:
-	echo "🤪还没有写,正在学习QT"
+ifeq ($(findstring _test.go,$(testFile)),_test.go)
+# go test
+# 预测试环境
+	-@ln -s $(rootPath)/config $(filePath)/config
+#开始测试
+	-go test -timeout 30s -v $(testFile)
+# 清理测试环境
+	-@rm -rf $(filePath)/config
+else
+# app test
+	@echo "🤪待写吧..."
+endif

@@ -3,5 +3,7 @@ cache
 vendor
 deploy
 *.qrc
+*.h
 *.cpp
 rcc_*
+moc_*

@@ -15,7 +15,7 @@ Rectangle {
 
     // 背景
     Image {
-        source: homeRoot.imgUrl
+        source: "qrc:/qml/scene/" + sceneObj.imagePath
 
         asynchronous: true
         cache: false
@@ -63,7 +63,7 @@ Rectangle {
                     Column {
                         // 标题
                         Text {
-                            text: "森林"
+                            text: sceneObj.title
                             color: "#fff"
                             font {
                                 pixelSize: 35
@@ -73,7 +73,7 @@ Rectangle {
 
                         // 介绍
                         Text {
-                            text: "把你的秘密藏进森林里"
+                            text: sceneObj.desp
                             color: "#eee"
                             font.pixelSize: 17
                         }
@@ -107,6 +107,12 @@ Rectangle {
                         color: "#fff"
 
                         anchors.centerIn: parent
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+
+                        onClicked: sceneObj.next()
                     }
                 }
             }

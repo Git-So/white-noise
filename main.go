@@ -7,6 +7,9 @@ import (
 	"github.com/therecipe/qt/gui"
 	"github.com/therecipe/qt/qml"
 	"github.com/therecipe/qt/quickcontrols2"
+
+	"github.com/Git-So/white-noise/icon"
+	"github.com/Git-So/white-noise/scene"
 )
 
 func main() {
@@ -20,6 +23,8 @@ func main() {
 	quickcontrols2.QQuickStyle_SetStyle("Material")
 
 	engine := qml.NewQQmlApplicationEngine(nil)
+	engine.RootContext().SetContextProperty("sceneObj", scene.NewObj(nil))
+	engine.RootContext().SetContextProperty("iconColorStack", icon.NewIconColorStack(nil))
 	engine.Load(core.NewQUrl3("qrc:/qml/view/App.qml", 0))
 
 	gui.QGuiApplication_Exec()
