@@ -24,7 +24,7 @@ func main() {
 
 	engine := qml.NewQQmlApplicationEngine(nil)
 	engine.RootContext().SetContextProperty("sceneObj", scene.NewObj(nil))
-	engine.RootContext().SetContextProperty("iconColorStack", icon.NewIconColorStack(nil))
+	engine.RootContext().SetContextProperty("iconStack", icon.NewIconStack(nil))
 	engine.Load(core.NewQUrl3("qrc:/qml/view/App.qml", 0))
 
 	gui.QGuiApplication_Exec()

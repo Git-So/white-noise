@@ -9,6 +9,7 @@ Rectangle {
     property var icon: "庭院鸟鸣.png"
     property var startColor: "#ffE27DBF"
     property var endColor: "#ffFCF075"
+    property bool isActive: false
 
     Column {
         width: parent.width
@@ -25,11 +26,11 @@ Rectangle {
 
             anchors.horizontalCenter: parent.horizontalCenter
 
-            property bool isActive: false
+
 
             // 渐变背景
             Rectangle {
-                visible: parent.isActive
+                visible: iconItemRoot.isActive
                 radius: 100
                 rotation: 135
                 gradient: Gradient{
@@ -59,13 +60,13 @@ Rectangle {
             }
 
             // 切换选中状态
-            MouseArea {
-                anchors.fill: parent
+            // MouseArea {
+            //     anchors.fill: parent
 
-                onClicked: {
-                    parent.isActive = !parent.isActive
-                }
-            }
+            //     onClicked: {
+            //         parent.isActive = !parent.isActive
+            //     }
+            // }
         }
 
         Rectangle {

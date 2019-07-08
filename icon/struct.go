@@ -10,6 +10,7 @@ type Info struct {
 	Volume     float32 `json:"volume"`
 	Type       int     `json:"type"`
 	AudioUrls  []Audio `json:"audioUrls"`
+	IsActive   bool    `json:"isActive"`
 }
 
 // Audio 音频信息

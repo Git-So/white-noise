@@ -2,36 +2,40 @@ package icon
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/therecipe/qt/core"
 )
 
 var (
-	iconList   []Info
-	colorstack []string
-	viewColor  string
+	// 图标数据
+	iconList []Info
+	// 选中栈
+	selectedStack []map[string]*core.QVariant
 )
 
 // IconListModel 场景对象
 type IconListModel struct {
 	core.QAbstractListModel
 
-	_ func()        `constructor:"init"`
-	_ func(idx int) `signal:"change,auto"`
+	_ func()                   `constructor:"init"`
+	_ func(idx *core.QVariant) `signal:"change,auto"`
 
 	modelData []Info
 }
 
-// IconColorStack 选中场景栈
-type IconColorStack struct {
+// IconStack 选中场景栈
+type IconStack struct {
 	core.QObject
 
 	_ string `property:"colorParam"`
 	_ bool   `property:"isActive"`
+	_ string `property:"title"`
 
 	_ func() `constructor:"init"`
 
-	_ func() `signal:"update,auto"`
+	_ func(index *core.QVariant)           `signal:"pop,auto"`
+	_ func(data map[string]*core.QVariant) `signal:"push,auto"`
 }
 
 // init IconListModel
@@ -54,38 +58,78 @@ func (o *IconListModel) data(index *core.QModelIndex, role int) *core.QVariant {
 	item := o.modelData[index.Row()]
 	// return core.NewQVariant()
 	return core.NewQVariant23(map[string]*core.QVariant{
-		"title":      core.NewQVariant12(item.Title),
+		"index":      core.NewQVariant5(index.Row()),
+		"name":       core.NewQVariant12(item.Title),
 		"colorParam": core.NewQVariant12(item.ColorParam),
 		"icon":       core.NewQVariant12(item.Icon),
+		"isActive":   core.NewQVariant9(item.IsActive),
 	})
 }
 
 // change
-func (o *IconListModel) change(idx int) {
-	color := iconList[idx].ColorParam
-	var isExist bool
-	var index int
-	for key, val := range colorstack {
-		if val == color {
-			isExist = true
-			index = key
-		}
-	}
-	if isExist {
-		colorstack = append(colorstack[:index], colorstack[index+1:]...)
+func (o *IconListModel) change(idx *core.QVariant) {
+	stat := true
+	index := idx.ToInt(&stat)
+	if o.modelData[index].IsActive {
+		o.modelData[index].IsActive = false
 	} else {
-		colorstack = append(colorstack, color)
+		o.modelData[index].IsActive = true
 	}
-
-	viewColor = colorstack[len(colorstack)-1]
+	// o.ConnectRowCount(o.rowCount)
+	// o.ConnectData(o.data)
+	o.DataChanged(o.Index(index, 0, core.NewQModelIndex()), o.Index(index, 0, core.NewQModelIndex()), []int{int(core.Qt__DisplayRole)})
 }
 
-// init IconColorStack
-func (cs *IconColorStack) init() {
+// init IconStack
+func (cs *IconStack) init() {
 	cs.SetColorParam("")
 	cs.SetIsActive(false)
 }
 
-func (cs *IconColorStack) update() {
+func (cs *IconStack) pop(index *core.QVariant) {
+	if len(selectedStack) == 0 {
+		return
+	}
+
+	fmt.Println("pop")
+	stat := true
+	for idx, val := range selectedStack {
+		fmt.Println("idx", val["index"].ToInt(&stat))
+		fmt.Println("index", index.ToInt(&stat))
+		if val["index"].ToInt(&stat) == index.ToInt(&stat) {
+			selectedStack = append(selectedStack[:idx], selectedStack[idx+1:]...)
+			break
+		}
+	}
+
+	cs.update()
+}
+
+func (cs *IconStack) push(data map[string]*core.QVariant) {
+	fmt.Println("push")
+	selectedStack = append(selectedStack, data)
+	cs.update()
+}
+
+// update 栈数据更新后同步更新相关数据
+func (cs *IconStack) update() {
 	fmt.Println("update")
+	stackLen := len(selectedStack)
+	if stackLen == 0 {
+		cs.SetIsActive(false)
+	} else {
+		// 标题
+		var names []string
+		for _, val := range selectedStack {
+			names = append(names, val["name"].ToString())
+		}
+		title := strings.Join(names, "/")
+		cs.SetTitle(title)
+
+		// 其他信息
+		selectedInfo := selectedStack[stackLen-1]
+		cs.SetColorParam(selectedInfo["colorParam"].ToString())
+		cs.SetIsActive(true)
+	}
+
 }

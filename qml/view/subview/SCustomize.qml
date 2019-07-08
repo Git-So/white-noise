@@ -68,24 +68,30 @@ Rectangle {
                     // anchors.centerIn: parent
 
                     Repeater {
+                        id: iconListView
                         model: IconListModel{}
 
                         CIconItem {
                             width: 120
                             height: width + 30
 
-                            name: display.title
+                            name: display.name
                             icon: display.icon
                             startColor: display.colorParam.split(";")[0]
                             endColor: display.colorParam.split(";")[1]
+                            isActive: display.isActive
 
                             // 切换选中状态
                             MouseArea {
                                 anchors.fill: parent
 
                                 onClicked: {
-                                    display.change()
-                                    iconColorStack.update()
+                                    iconListView.model.change(display.index)
+                                    if (display.isActive) {
+                                        iconStack.push(display)
+                                    } else {
+                                        iconStack.pop(display.index)
+                                    }
                                 }
                             }
                         }
@@ -103,20 +109,20 @@ Rectangle {
             // color: "red"
 
             CBottomToolbar1 {
-                visible: !iconColorStack.isActive
+                visible: !iconStack.isActive
 
                 anchors.fill: parent
             }
 
             CBottomToolbar2 {
-                visible: iconColorStack.isActive
+                visible: iconStack.isActive
 
                 anchors.fill: parent
 
                 stackObj: customizeRoot.stackObj
-                muiscInfoID: customizeRoot.muiscInfoID
-                startColor: iconColorStack.colorParam.split(";")[0]
-                endColor: iconColorStack.colorParam.split(";")[1]
+                startColor: iconStack.colorParam.split(";")[0]
+                endColor: iconStack.colorParam.split(";")[1]
+                title: iconStack.title
             }
         }
     }

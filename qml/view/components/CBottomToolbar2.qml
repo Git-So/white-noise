@@ -5,10 +5,10 @@ Rectangle {
     id: bottomToolbar2Root
     color: "transparent"
 
-    property bool iconMusicPlay: false
-    property string activeMusic: "鸟鸣"
-    property string startColor: "#ffE27DBF"
-    property string endColor: "#ffFCF075"
+    property bool   iconMusicPlay:  false
+    property string title:          "鸟鸣"
+    property string startColor:     "#ffE27DBF"
+    property string endColor:       "#ffFCF075"
 
     // 栈对象
     property var stackObj: false
@@ -54,11 +54,11 @@ Rectangle {
                     gradient: Gradient {
                         GradientStop {
                             position: 0.0
-                            color: "#ffE27DBF"
+                            color: bottomToolbar2Root.startColor
                         }
                         GradientStop {
                             position: 1
-                            color: "#ffFCF075"
+                            color: bottomToolbar2Root.endColor
                         }
                     }
 
@@ -91,7 +91,7 @@ Rectangle {
 
                     // 提示
                     Text {
-                        text: activeMusic
+                        text: bottomToolbar2Root.title
                         color: "#fff"
 
                         anchors.leftMargin: 20
@@ -158,11 +158,11 @@ Rectangle {
                     gradient: Gradient {
                         GradientStop {
                             position: 0.0
-                            color: "#ffE27DBF"
+                            color: bottomToolbar2Root.startColor
                         }
                         GradientStop {
                             position: 1
-                            color: "#ffFCF075"
+                            color: bottomToolbar2Root.endColor
                         }
                     }
 
