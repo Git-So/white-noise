@@ -19,6 +19,22 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
+
+    Rectangle {
+        color: "transparent"
+
+        anchors.centerIn: parent
+
+        ToolTip {
+            id: toast
+            delay: 0
+            timeout: 1200
+            visible: toastObj.visible
+            text: qsTr(toastObj.msg)
+        }
+    }
+
+
     // 主页
     Component {
         id: homeView

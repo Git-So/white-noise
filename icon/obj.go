@@ -1,9 +1,10 @@
 package icon
 
 import (
-	"fmt"
 	"strings"
 
+	"github.com/Git-So/white-noise/logger"
+	"github.com/Git-So/white-noise/toast"
 	"github.com/therecipe/qt/core"
 )
 
@@ -73,6 +74,11 @@ func (o *IconListModel) change(idx *core.QVariant) {
 	if o.modelData[index].IsActive {
 		o.modelData[index].IsActive = false
 	} else {
+		// 最多同时播放三个音频
+		if len(selectedStack) >= 3 {
+			toast.Msg("最多可以选三个")
+			return
+		}
 		o.modelData[index].IsActive = true
 	}
 	// o.ConnectRowCount(o.rowCount)
@@ -91,11 +97,11 @@ func (cs *IconStack) pop(index *core.QVariant) {
 		return
 	}
 
-	fmt.Println("pop")
+	logger.Debug("pop")
 	stat := true
 	for idx, val := range selectedStack {
-		fmt.Println("idx", val["index"].ToInt(&stat))
-		fmt.Println("index", index.ToInt(&stat))
+		logger.Debug("idx", val["index"].ToInt(&stat))
+		logger.Debug("index", index.ToInt(&stat))
 		if val["index"].ToInt(&stat) == index.ToInt(&stat) {
 			selectedStack = append(selectedStack[:idx], selectedStack[idx+1:]...)
 			break
@@ -106,14 +112,20 @@ func (cs *IconStack) pop(index *core.QVariant) {
 }
 
 func (cs *IconStack) push(data map[string]*core.QVariant) {
-	fmt.Println("push")
+	// 最多同时播放三个音频
+	if len(selectedStack) >= 3 {
+		toast.Msg("最多可以选三个")
+		return
+	}
+
+	logger.Debug("push")
 	selectedStack = append(selectedStack, data)
 	cs.update()
 }
 
 // update 栈数据更新后同步更新相关数据
 func (cs *IconStack) update() {
-	fmt.Println("update")
+	logger.Debug("update")
 	stackLen := len(selectedStack)
 	if stackLen == 0 {
 		cs.SetIsActive(false)

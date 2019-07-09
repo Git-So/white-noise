@@ -11,6 +11,7 @@ rebuild:
 	-rm -rf rcc*
 	-rm -rf ./scene/moc*
 	-rm -rf ./icon/moc*
+	-rm -rf ./toast/moc*
 
 build:
 	make clear

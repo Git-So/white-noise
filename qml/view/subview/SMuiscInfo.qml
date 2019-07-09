@@ -16,11 +16,11 @@ Rectangle {
     gradient: Gradient {
         GradientStop {
             position: 1
-            color: "#ffE27DBF"
+            color: iconStack.colorParam.split(";")[0]
         }
         GradientStop {
             position: 0.0
-            color: "#ffFCF075"
+            color: iconStack.colorParam.split(";")[1]
         }
     }
 
@@ -125,7 +125,7 @@ Rectangle {
 
                                 // 介绍
                                 Text {
-                                    text: "夏雨/雨打树叶"
+                                    text: iconStack.title
                                     color: "#eee"
                                     font.pixelSize: 17
                                 }
@@ -170,11 +170,11 @@ Rectangle {
             gradient: Gradient {
                 GradientStop {
                     position: 1
-                    color: "#ffE27DBF"
+                    color: iconStack.colorParam.split(";")[0]
                 }
                 GradientStop {
                     position: 0.0
-                    color: "#ffFCF075"
+                    color: iconStack.colorParam.split(";")[1]
                 }
             }
 

@@ -17,9 +17,6 @@ Rectangle {
     property var muiscInfoID: false
     property var stackObj: false
 
-    // 是否选中选项
-    property bool isActiveMusic: true
-
     Column {
         width: parent.width
         height: parent.height
@@ -61,11 +58,7 @@ Rectangle {
                 Flow {
                     width: parent.width
                     height: parent.height
-                    // anchors.margins: 20
                     spacing: 5
-                    // flow: Grid.TopToBottom
-
-                    // anchors.centerIn: parent
 
                     Repeater {
                         id: iconListView
@@ -120,6 +113,7 @@ Rectangle {
                 anchors.fill: parent
 
                 stackObj: customizeRoot.stackObj
+                muiscInfoID: customizeRoot.muiscInfoID
                 startColor: iconStack.colorParam.split(";")[0]
                 endColor: iconStack.colorParam.split(";")[1]
                 title: iconStack.title

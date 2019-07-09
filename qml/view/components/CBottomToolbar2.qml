@@ -118,10 +118,10 @@ Rectangle {
 
                     onClicked: {
 
-                        console.log("muiscInfo",stackObj,muiscInfoID)
+                        console.log("muiscInfo",bottomToolbar2Root.stackObj,bottomToolbar2Root.muiscInfoID)
 
-                        if (stackObj && muiscInfoID) {
-                            stackObj.push(muiscInfoID)
+                        if (bottomToolbar2Root.stackObj && bottomToolbar2Root.muiscInfoID) {
+                            bottomToolbar2Root.stackObj.push(bottomToolbar2Root.muiscInfoID)
                         }
                     }
                 }

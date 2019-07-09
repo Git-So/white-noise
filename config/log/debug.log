@@ -1,0 +1,738 @@
+[Debug][obj.go:29]2019/07/09 14:37:32 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:32 pop
+[Debug][obj.go:103]2019/07/09 14:37:32 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:32 index 5
+[Debug][obj.go:103]2019/07/09 14:37:32 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:32 index 5
+[Debug][obj.go:103]2019/07/09 14:37:32 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:32 index 5
+[Debug][obj.go:128]2019/07/09 14:37:32 update
+[Debug][obj.go:29]2019/07/09 14:37:35 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:35 pop
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:128]2019/07/09 14:37:35 update
+[Debug][obj.go:29]2019/07/09 14:37:35 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:35 pop
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:128]2019/07/09 14:37:35 update
+[Debug][obj.go:29]2019/07/09 14:37:35 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:35 pop
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:128]2019/07/09 14:37:35 update
+[Debug][obj.go:29]2019/07/09 14:37:35 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:35 pop
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:103]2019/07/09 14:37:35 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:35 index 5
+[Debug][obj.go:128]2019/07/09 14:37:35 update
+[Debug][obj.go:29]2019/07/09 14:37:36 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:36 pop
+[Debug][obj.go:103]2019/07/09 14:37:36 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:36 index 8
+[Debug][obj.go:103]2019/07/09 14:37:36 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:36 index 8
+[Debug][obj.go:103]2019/07/09 14:37:36 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:36 index 8
+[Debug][obj.go:128]2019/07/09 14:37:36 update
+[Debug][obj.go:29]2019/07/09 14:37:36 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:36 pop
+[Debug][obj.go:103]2019/07/09 14:37:36 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:36 index 8
+[Debug][obj.go:103]2019/07/09 14:37:36 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:36 index 8
+[Debug][obj.go:103]2019/07/09 14:37:36 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:36 index 8
+[Debug][obj.go:128]2019/07/09 14:37:36 update
+[Debug][obj.go:29]2019/07/09 14:37:39 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:37:39 pop
+[Debug][obj.go:103]2019/07/09 14:37:39 idx 1
+[Debug][obj.go:104]2019/07/09 14:37:39 index 3
+[Debug][obj.go:103]2019/07/09 14:37:39 idx 2
+[Debug][obj.go:104]2019/07/09 14:37:39 index 3
+[Debug][obj.go:103]2019/07/09 14:37:39 idx 4
+[Debug][obj.go:104]2019/07/09 14:37:39 index 3
+[Debug][obj.go:128]2019/07/09 14:37:39 update
+[Debug][obj.go:121]2019/07/09 14:47:18 push
+[Debug][obj.go:128]2019/07/09 14:47:18 update
+[Debug][obj.go:121]2019/07/09 14:47:19 push
+[Debug][obj.go:128]2019/07/09 14:47:19 update
+[Debug][obj.go:121]2019/07/09 14:47:19 push
+[Debug][obj.go:128]2019/07/09 14:47:19 update
+[Debug][obj.go:29]2019/07/09 14:47:20 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:47:20 pop
+[Debug][obj.go:103]2019/07/09 14:47:20 idx 5
+[Debug][obj.go:104]2019/07/09 14:47:20 index 2
+[Debug][obj.go:103]2019/07/09 14:47:20 idx 4
+[Debug][obj.go:104]2019/07/09 14:47:20 index 2
+[Debug][obj.go:103]2019/07/09 14:47:20 idx 1
+[Debug][obj.go:104]2019/07/09 14:47:20 index 2
+[Debug][obj.go:128]2019/07/09 14:47:20 update
+[Debug][obj.go:29]2019/07/09 14:47:23 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:47:23 pop
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 5
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 4
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 1
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:128]2019/07/09 14:47:23 update
+[Debug][obj.go:29]2019/07/09 14:47:23 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:47:23 pop
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 5
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 4
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 1
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:128]2019/07/09 14:47:23 update
+[Debug][obj.go:29]2019/07/09 14:47:23 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:47:23 pop
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 5
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 4
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 1
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:128]2019/07/09 14:47:23 update
+[Debug][obj.go:29]2019/07/09 14:47:23 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:47:23 pop
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 5
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 4
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:103]2019/07/09 14:47:23 idx 1
+[Debug][obj.go:104]2019/07/09 14:47:23 index 3
+[Debug][obj.go:128]2019/07/09 14:47:23 update
+[Debug][obj.go:29]2019/07/09 14:47:26 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 14:47:26 pop
+[Debug][obj.go:103]2019/07/09 14:47:26 idx 5
+[Debug][obj.go:104]2019/07/09 14:47:26 index 7
+[Debug][obj.go:103]2019/07/09 14:47:26 idx 4
+[Debug][obj.go:104]2019/07/09 14:47:26 index 7
+[Debug][obj.go:103]2019/07/09 14:47:26 idx 1
+[Debug][obj.go:104]2019/07/09 14:47:26 index 7
+[Debug][obj.go:128]2019/07/09 14:47:26 update
+[Debug][obj.go:121]2019/07/09 15:08:57 push
+[Debug][obj.go:128]2019/07/09 15:08:57 update
+[Debug][obj.go:121]2019/07/09 15:08:57 push
+[Debug][obj.go:128]2019/07/09 15:08:57 update
+[Debug][obj.go:121]2019/07/09 15:08:58 push
+[Debug][obj.go:128]2019/07/09 15:08:58 update
+[Debug][obj.go:29]2019/07/09 15:08:58 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:08:58 pop
+[Debug][obj.go:103]2019/07/09 15:08:58 idx 4
+[Debug][obj.go:104]2019/07/09 15:08:58 index 5
+[Debug][obj.go:103]2019/07/09 15:08:58 idx 1
+[Debug][obj.go:104]2019/07/09 15:08:58 index 5
+[Debug][obj.go:103]2019/07/09 15:08:58 idx 2
+[Debug][obj.go:104]2019/07/09 15:08:58 index 5
+[Debug][obj.go:128]2019/07/09 15:08:58 update
+[Debug][obj.go:29]2019/07/09 15:08:59 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:08:59 pop
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 4
+[Debug][obj.go:104]2019/07/09 15:08:59 index 5
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 1
+[Debug][obj.go:104]2019/07/09 15:08:59 index 5
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 2
+[Debug][obj.go:104]2019/07/09 15:08:59 index 5
+[Debug][obj.go:128]2019/07/09 15:08:59 update
+[Debug][obj.go:29]2019/07/09 15:08:59 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:08:59 pop
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 4
+[Debug][obj.go:104]2019/07/09 15:08:59 index 5
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 1
+[Debug][obj.go:104]2019/07/09 15:08:59 index 5
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 2
+[Debug][obj.go:104]2019/07/09 15:08:59 index 5
+[Debug][obj.go:128]2019/07/09 15:08:59 update
+[Debug][obj.go:29]2019/07/09 15:08:59 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:08:59 pop
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 4
+[Debug][obj.go:104]2019/07/09 15:08:59 index 7
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 1
+[Debug][obj.go:104]2019/07/09 15:08:59 index 7
+[Debug][obj.go:103]2019/07/09 15:08:59 idx 2
+[Debug][obj.go:104]2019/07/09 15:08:59 index 7
+[Debug][obj.go:128]2019/07/09 15:08:59 update
+[Debug][obj.go:29]2019/07/09 15:09:00 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:09:00 pop
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 4
+[Debug][obj.go:104]2019/07/09 15:09:00 index 7
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 1
+[Debug][obj.go:104]2019/07/09 15:09:00 index 7
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 2
+[Debug][obj.go:104]2019/07/09 15:09:00 index 7
+[Debug][obj.go:128]2019/07/09 15:09:00 update
+[Debug][obj.go:29]2019/07/09 15:09:00 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:09:00 pop
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 4
+[Debug][obj.go:104]2019/07/09 15:09:00 index 6
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 1
+[Debug][obj.go:104]2019/07/09 15:09:00 index 6
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 2
+[Debug][obj.go:104]2019/07/09 15:09:00 index 6
+[Debug][obj.go:128]2019/07/09 15:09:00 update
+[Debug][obj.go:29]2019/07/09 15:09:00 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:09:00 pop
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 4
+[Debug][obj.go:104]2019/07/09 15:09:00 index 3
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 1
+[Debug][obj.go:104]2019/07/09 15:09:00 index 3
+[Debug][obj.go:103]2019/07/09 15:09:00 idx 2
+[Debug][obj.go:104]2019/07/09 15:09:00 index 3
+[Debug][obj.go:128]2019/07/09 15:09:00 update
+[Debug][obj.go:29]2019/07/09 15:09:01 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:09:01 pop
+[Debug][obj.go:103]2019/07/09 15:09:01 idx 4
+[Debug][obj.go:104]2019/07/09 15:09:01 index 0
+[Debug][obj.go:103]2019/07/09 15:09:01 idx 1
+[Debug][obj.go:104]2019/07/09 15:09:01 index 0
+[Debug][obj.go:103]2019/07/09 15:09:01 idx 2
+[Debug][obj.go:104]2019/07/09 15:09:01 index 0
+[Debug][obj.go:128]2019/07/09 15:09:01 update
+[Debug][obj.go:121]2019/07/09 15:19:34 push
+[Debug][obj.go:128]2019/07/09 15:19:34 update
+[Debug][obj.go:100]2019/07/09 15:19:35 pop
+[Debug][obj.go:103]2019/07/09 15:19:35 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:35 index 5
+[Debug][obj.go:128]2019/07/09 15:19:35 update
+[Debug][obj.go:121]2019/07/09 15:19:35 push
+[Debug][obj.go:128]2019/07/09 15:19:35 update
+[Debug][obj.go:121]2019/07/09 15:19:36 push
+[Debug][obj.go:128]2019/07/09 15:19:36 update
+[Debug][obj.go:121]2019/07/09 15:19:36 push
+[Debug][obj.go:128]2019/07/09 15:19:36 update
+[Debug][obj.go:29]2019/07/09 15:19:37 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:19:37 pop
+[Debug][obj.go:103]2019/07/09 15:19:37 idx 8
+[Debug][obj.go:104]2019/07/09 15:19:37 index 7
+[Debug][obj.go:103]2019/07/09 15:19:37 idx 4
+[Debug][obj.go:104]2019/07/09 15:19:37 index 7
+[Debug][obj.go:103]2019/07/09 15:19:37 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:37 index 7
+[Debug][obj.go:128]2019/07/09 15:19:37 update
+[Debug][obj.go:29]2019/07/09 15:19:38 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:19:38 pop
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 8
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 4
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:128]2019/07/09 15:19:38 update
+[Debug][obj.go:29]2019/07/09 15:19:38 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:19:38 pop
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 8
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 4
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:128]2019/07/09 15:19:38 update
+[Debug][obj.go:29]2019/07/09 15:19:38 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:19:38 pop
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 8
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 4
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:128]2019/07/09 15:19:38 update
+[Debug][obj.go:29]2019/07/09 15:19:38 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:19:38 pop
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 8
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 4
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:103]2019/07/09 15:19:38 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:38 index 7
+[Debug][obj.go:128]2019/07/09 15:19:38 update
+[Debug][obj.go:29]2019/07/09 15:19:59 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:19:59 pop
+[Debug][obj.go:103]2019/07/09 15:19:59 idx 8
+[Debug][obj.go:104]2019/07/09 15:19:59 index 1
+[Debug][obj.go:103]2019/07/09 15:19:59 idx 4
+[Debug][obj.go:104]2019/07/09 15:19:59 index 1
+[Debug][obj.go:103]2019/07/09 15:19:59 idx 5
+[Debug][obj.go:104]2019/07/09 15:19:59 index 1
+[Debug][obj.go:128]2019/07/09 15:19:59 update
+[Debug][obj.go:29]2019/07/09 15:20:00 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:20:00 pop
+[Debug][obj.go:103]2019/07/09 15:20:00 idx 8
+[Debug][obj.go:104]2019/07/09 15:20:00 index 2
+[Debug][obj.go:103]2019/07/09 15:20:00 idx 4
+[Debug][obj.go:104]2019/07/09 15:20:00 index 2
+[Debug][obj.go:103]2019/07/09 15:20:00 idx 5
+[Debug][obj.go:104]2019/07/09 15:20:00 index 2
+[Debug][obj.go:128]2019/07/09 15:20:00 update
+[Debug][obj.go:29]2019/07/09 15:20:01 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:20:01 pop
+[Debug][obj.go:103]2019/07/09 15:20:01 idx 8
+[Debug][obj.go:104]2019/07/09 15:20:01 index 7
+[Debug][obj.go:103]2019/07/09 15:20:01 idx 4
+[Debug][obj.go:104]2019/07/09 15:20:01 index 7
+[Debug][obj.go:103]2019/07/09 15:20:01 idx 5
+[Debug][obj.go:104]2019/07/09 15:20:01 index 7
+[Debug][obj.go:128]2019/07/09 15:20:01 update
+[Debug][obj.go:29]2019/07/09 15:20:06 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:20:06 pop
+[Debug][obj.go:103]2019/07/09 15:20:06 idx 8
+[Debug][obj.go:104]2019/07/09 15:20:06 index 10
+[Debug][obj.go:103]2019/07/09 15:20:06 idx 4
+[Debug][obj.go:104]2019/07/09 15:20:06 index 10
+[Debug][obj.go:103]2019/07/09 15:20:06 idx 5
+[Debug][obj.go:104]2019/07/09 15:20:06 index 10
+[Debug][obj.go:128]2019/07/09 15:20:06 update
+[Debug][obj.go:121]2019/07/09 15:27:16 push
+[Debug][obj.go:128]2019/07/09 15:27:16 update
+[Debug][obj.go:121]2019/07/09 15:27:16 push
+[Debug][obj.go:128]2019/07/09 15:27:16 update
+[Debug][obj.go:121]2019/07/09 15:27:17 push
+[Debug][obj.go:128]2019/07/09 15:27:17 update
+[Debug][obj.go:29]2019/07/09 15:27:17 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:27:17 pop
+[Debug][obj.go:103]2019/07/09 15:27:17 idx 1
+[Debug][obj.go:104]2019/07/09 15:27:17 index 8
+[Debug][obj.go:103]2019/07/09 15:27:17 idx 4
+[Debug][obj.go:104]2019/07/09 15:27:17 index 8
+[Debug][obj.go:103]2019/07/09 15:27:17 idx 5
+[Debug][obj.go:104]2019/07/09 15:27:17 index 8
+[Debug][obj.go:128]2019/07/09 15:27:17 update
+[Debug][obj.go:29]2019/07/09 15:27:21 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:27:21 pop
+[Debug][obj.go:103]2019/07/09 15:27:21 idx 1
+[Debug][obj.go:104]2019/07/09 15:27:21 index 7
+[Debug][obj.go:103]2019/07/09 15:27:21 idx 4
+[Debug][obj.go:104]2019/07/09 15:27:21 index 7
+[Debug][obj.go:103]2019/07/09 15:27:21 idx 5
+[Debug][obj.go:104]2019/07/09 15:27:21 index 7
+[Debug][obj.go:128]2019/07/09 15:27:21 update
+[Debug][obj.go:121]2019/07/09 15:29:47 push
+[Debug][obj.go:128]2019/07/09 15:29:47 update
+[Debug][obj.go:121]2019/07/09 15:29:48 push
+[Debug][obj.go:128]2019/07/09 15:29:48 update
+[Debug][obj.go:121]2019/07/09 15:29:48 push
+[Debug][obj.go:128]2019/07/09 15:29:48 update
+[Debug][obj.go:29]2019/07/09 15:29:49 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:29:49 pop
+[Debug][obj.go:103]2019/07/09 15:29:49 idx 1
+[Debug][obj.go:104]2019/07/09 15:29:49 index 8
+[Debug][obj.go:103]2019/07/09 15:29:49 idx 4
+[Debug][obj.go:104]2019/07/09 15:29:49 index 8
+[Debug][obj.go:103]2019/07/09 15:29:49 idx 5
+[Debug][obj.go:104]2019/07/09 15:29:49 index 8
+[Debug][obj.go:128]2019/07/09 15:29:49 update
+[Debug][obj.go:29]2019/07/09 15:29:50 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:29:50 pop
+[Debug][obj.go:103]2019/07/09 15:29:50 idx 1
+[Debug][obj.go:104]2019/07/09 15:29:50 index 7
+[Debug][obj.go:103]2019/07/09 15:29:50 idx 4
+[Debug][obj.go:104]2019/07/09 15:29:50 index 7
+[Debug][obj.go:103]2019/07/09 15:29:50 idx 5
+[Debug][obj.go:104]2019/07/09 15:29:50 index 7
+[Debug][obj.go:128]2019/07/09 15:29:50 update
+[Debug][obj.go:29]2019/07/09 15:29:51 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:29:51 pop
+[Debug][obj.go:103]2019/07/09 15:29:51 idx 1
+[Debug][obj.go:104]2019/07/09 15:29:51 index 6
+[Debug][obj.go:103]2019/07/09 15:29:51 idx 4
+[Debug][obj.go:104]2019/07/09 15:29:51 index 6
+[Debug][obj.go:103]2019/07/09 15:29:51 idx 5
+[Debug][obj.go:104]2019/07/09 15:29:51 index 6
+[Debug][obj.go:128]2019/07/09 15:29:51 update
+[Debug][obj.go:29]2019/07/09 15:29:52 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:29:52 pop
+[Debug][obj.go:103]2019/07/09 15:29:52 idx 1
+[Debug][obj.go:104]2019/07/09 15:29:52 index 10
+[Debug][obj.go:103]2019/07/09 15:29:52 idx 4
+[Debug][obj.go:104]2019/07/09 15:29:52 index 10
+[Debug][obj.go:103]2019/07/09 15:29:52 idx 5
+[Debug][obj.go:104]2019/07/09 15:29:52 index 10
+[Debug][obj.go:128]2019/07/09 15:29:52 update
+[Debug][obj.go:29]2019/07/09 15:30:10 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:10 pop
+[Debug][obj.go:103]2019/07/09 15:30:10 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:10 index 0
+[Debug][obj.go:103]2019/07/09 15:30:10 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:10 index 0
+[Debug][obj.go:103]2019/07/09 15:30:10 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:10 index 0
+[Debug][obj.go:128]2019/07/09 15:30:10 update
+[Debug][obj.go:29]2019/07/09 15:30:15 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:15 pop
+[Debug][obj.go:103]2019/07/09 15:30:15 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:15 index 2
+[Debug][obj.go:103]2019/07/09 15:30:15 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:15 index 2
+[Debug][obj.go:103]2019/07/09 15:30:15 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:15 index 2
+[Debug][obj.go:128]2019/07/09 15:30:15 update
+[Debug][obj.go:29]2019/07/09 15:30:20 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:20 pop
+[Debug][obj.go:103]2019/07/09 15:30:20 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:20 index 7
+[Debug][obj.go:103]2019/07/09 15:30:20 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:20 index 7
+[Debug][obj.go:103]2019/07/09 15:30:20 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:20 index 7
+[Debug][obj.go:128]2019/07/09 15:30:20 update
+[Debug][obj.go:29]2019/07/09 15:30:23 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:23 pop
+[Debug][obj.go:103]2019/07/09 15:30:23 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:23 index 8
+[Debug][obj.go:103]2019/07/09 15:30:23 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:23 index 8
+[Debug][obj.go:103]2019/07/09 15:30:23 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:23 index 8
+[Debug][obj.go:128]2019/07/09 15:30:23 update
+[Debug][obj.go:29]2019/07/09 15:30:26 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:26 pop
+[Debug][obj.go:103]2019/07/09 15:30:26 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:26 index 10
+[Debug][obj.go:103]2019/07/09 15:30:26 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:26 index 10
+[Debug][obj.go:103]2019/07/09 15:30:26 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:26 index 10
+[Debug][obj.go:128]2019/07/09 15:30:26 update
+[Debug][obj.go:29]2019/07/09 15:30:30 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:30 pop
+[Debug][obj.go:103]2019/07/09 15:30:30 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:30 index 9
+[Debug][obj.go:103]2019/07/09 15:30:30 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:30 index 9
+[Debug][obj.go:103]2019/07/09 15:30:30 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:30 index 9
+[Debug][obj.go:128]2019/07/09 15:30:30 update
+[Debug][obj.go:29]2019/07/09 15:30:34 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:30:34 pop
+[Debug][obj.go:103]2019/07/09 15:30:34 idx 1
+[Debug][obj.go:104]2019/07/09 15:30:34 index 0
+[Debug][obj.go:103]2019/07/09 15:30:34 idx 4
+[Debug][obj.go:104]2019/07/09 15:30:34 index 0
+[Debug][obj.go:103]2019/07/09 15:30:34 idx 5
+[Debug][obj.go:104]2019/07/09 15:30:34 index 0
+[Debug][obj.go:128]2019/07/09 15:30:34 update
+[Debug][obj.go:121]2019/07/09 15:31:16 push
+[Debug][obj.go:128]2019/07/09 15:31:16 update
+[Debug][obj.go:121]2019/07/09 15:31:17 push
+[Debug][obj.go:128]2019/07/09 15:31:17 update
+[Debug][obj.go:121]2019/07/09 15:31:18 push
+[Debug][obj.go:128]2019/07/09 15:31:18 update
+[Debug][obj.go:29]2019/07/09 15:31:19 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:31:19 pop
+[Debug][obj.go:103]2019/07/09 15:31:19 idx 4
+[Debug][obj.go:104]2019/07/09 15:31:19 index 10
+[Debug][obj.go:103]2019/07/09 15:31:19 idx 1
+[Debug][obj.go:104]2019/07/09 15:31:19 index 10
+[Debug][obj.go:103]2019/07/09 15:31:19 idx 7
+[Debug][obj.go:104]2019/07/09 15:31:19 index 10
+[Debug][obj.go:128]2019/07/09 15:31:19 update
+[Debug][obj.go:100]2019/07/09 15:31:20 pop
+[Debug][obj.go:103]2019/07/09 15:31:20 idx 4
+[Debug][obj.go:104]2019/07/09 15:31:20 index 7
+[Debug][obj.go:103]2019/07/09 15:31:20 idx 1
+[Debug][obj.go:104]2019/07/09 15:31:20 index 7
+[Debug][obj.go:103]2019/07/09 15:31:20 idx 7
+[Debug][obj.go:104]2019/07/09 15:31:20 index 7
+[Debug][obj.go:128]2019/07/09 15:31:20 update
+[Debug][obj.go:121]2019/07/09 15:31:22 push
+[Debug][obj.go:128]2019/07/09 15:31:22 update
+[Debug][obj.go:29]2019/07/09 15:31:23 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:31:23 pop
+[Debug][obj.go:103]2019/07/09 15:31:23 idx 4
+[Debug][obj.go:104]2019/07/09 15:31:23 index 5
+[Debug][obj.go:103]2019/07/09 15:31:23 idx 1
+[Debug][obj.go:104]2019/07/09 15:31:23 index 5
+[Debug][obj.go:103]2019/07/09 15:31:23 idx 3
+[Debug][obj.go:104]2019/07/09 15:31:23 index 5
+[Debug][obj.go:128]2019/07/09 15:31:23 update
+[Debug][obj.go:100]2019/07/09 15:31:24 pop
+[Debug][obj.go:103]2019/07/09 15:31:24 idx 4
+[Debug][obj.go:104]2019/07/09 15:31:24 index 3
+[Debug][obj.go:103]2019/07/09 15:31:24 idx 1
+[Debug][obj.go:104]2019/07/09 15:31:24 index 3
+[Debug][obj.go:103]2019/07/09 15:31:24 idx 3
+[Debug][obj.go:104]2019/07/09 15:31:24 index 3
+[Debug][obj.go:128]2019/07/09 15:31:24 update
+[Debug][obj.go:121]2019/07/09 15:31:27 push
+[Debug][obj.go:128]2019/07/09 15:31:27 update
+[Debug][obj.go:100]2019/07/09 15:31:28 pop
+[Debug][obj.go:103]2019/07/09 15:31:28 idx 4
+[Debug][obj.go:104]2019/07/09 15:31:28 index 0
+[Debug][obj.go:103]2019/07/09 15:31:28 idx 1
+[Debug][obj.go:104]2019/07/09 15:31:28 index 0
+[Debug][obj.go:103]2019/07/09 15:31:28 idx 0
+[Debug][obj.go:104]2019/07/09 15:31:28 index 0
+[Debug][obj.go:128]2019/07/09 15:31:28 update
+[Debug][obj.go:100]2019/07/09 15:31:29 pop
+[Debug][obj.go:103]2019/07/09 15:31:29 idx 4
+[Debug][obj.go:104]2019/07/09 15:31:29 index 4
+[Debug][obj.go:128]2019/07/09 15:31:29 update
+[Debug][obj.go:121]2019/07/09 15:31:29 push
+[Debug][obj.go:128]2019/07/09 15:31:29 update
+[Debug][obj.go:121]2019/07/09 15:31:30 push
+[Debug][obj.go:128]2019/07/09 15:31:30 update
+[Debug][obj.go:100]2019/07/09 15:31:30 pop
+[Debug][obj.go:103]2019/07/09 15:31:30 idx 1
+[Debug][obj.go:104]2019/07/09 15:31:30 index 1
+[Debug][obj.go:128]2019/07/09 15:31:30 update
+[Debug][obj.go:100]2019/07/09 15:31:31 pop
+[Debug][obj.go:103]2019/07/09 15:31:31 idx 5
+[Debug][obj.go:104]2019/07/09 15:31:31 index 2
+[Debug][obj.go:103]2019/07/09 15:31:31 idx 2
+[Debug][obj.go:104]2019/07/09 15:31:31 index 2
+[Debug][obj.go:128]2019/07/09 15:31:31 update
+[Debug][obj.go:100]2019/07/09 15:31:31 pop
+[Debug][obj.go:103]2019/07/09 15:31:31 idx 5
+[Debug][obj.go:104]2019/07/09 15:31:31 index 5
+[Debug][obj.go:128]2019/07/09 15:31:31 update
+[Debug][obj.go:121]2019/07/09 15:31:33 push
+[Debug][obj.go:128]2019/07/09 15:31:33 update
+[Debug][obj.go:121]2019/07/09 15:35:20 push
+[Debug][obj.go:128]2019/07/09 15:35:20 update
+[Debug][obj.go:121]2019/07/09 15:35:21 push
+[Debug][obj.go:128]2019/07/09 15:35:21 update
+[Debug][obj.go:121]2019/07/09 15:35:21 push
+[Debug][obj.go:128]2019/07/09 15:35:21 update
+[Debug][obj.go:29]2019/07/09 15:35:22 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:35:22 pop
+[Debug][obj.go:103]2019/07/09 15:35:22 idx 1
+[Debug][obj.go:104]2019/07/09 15:35:22 index 8
+[Debug][obj.go:103]2019/07/09 15:35:22 idx 4
+[Debug][obj.go:104]2019/07/09 15:35:22 index 8
+[Debug][obj.go:103]2019/07/09 15:35:22 idx 5
+[Debug][obj.go:104]2019/07/09 15:35:22 index 8
+[Debug][obj.go:128]2019/07/09 15:35:22 update
+[Debug][obj.go:100]2019/07/09 15:35:23 pop
+[Debug][obj.go:103]2019/07/09 15:35:23 idx 1
+[Debug][obj.go:104]2019/07/09 15:35:23 index 5
+[Debug][obj.go:103]2019/07/09 15:35:23 idx 4
+[Debug][obj.go:104]2019/07/09 15:35:23 index 5
+[Debug][obj.go:103]2019/07/09 15:35:23 idx 5
+[Debug][obj.go:104]2019/07/09 15:35:23 index 5
+[Debug][obj.go:128]2019/07/09 15:35:23 update
+[Debug][obj.go:121]2019/07/09 15:35:24 push
+[Debug][obj.go:128]2019/07/09 15:35:24 update
+[Debug][obj.go:100]2019/07/09 15:35:24 pop
+[Debug][obj.go:103]2019/07/09 15:35:24 idx 1
+[Debug][obj.go:104]2019/07/09 15:35:24 index 7
+[Debug][obj.go:103]2019/07/09 15:35:24 idx 4
+[Debug][obj.go:104]2019/07/09 15:35:24 index 7
+[Debug][obj.go:103]2019/07/09 15:35:24 idx 7
+[Debug][obj.go:104]2019/07/09 15:35:24 index 7
+[Debug][obj.go:128]2019/07/09 15:35:24 update
+[Debug][obj.go:121]2019/07/09 15:35:25 push
+[Debug][obj.go:128]2019/07/09 15:35:25 update
+[Debug][obj.go:29]2019/07/09 15:35:26 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:35:26 pop
+[Debug][obj.go:103]2019/07/09 15:35:26 idx 1
+[Debug][obj.go:104]2019/07/09 15:35:26 index 5
+[Debug][obj.go:103]2019/07/09 15:35:26 idx 4
+[Debug][obj.go:104]2019/07/09 15:35:26 index 5
+[Debug][obj.go:103]2019/07/09 15:35:26 idx 2
+[Debug][obj.go:104]2019/07/09 15:35:26 index 5
+[Debug][obj.go:128]2019/07/09 15:35:26 update
+[Debug][obj.go:100]2019/07/09 15:35:27 pop
+[Debug][obj.go:103]2019/07/09 15:35:27 idx 1
+[Debug][obj.go:104]2019/07/09 15:35:27 index 2
+[Debug][obj.go:103]2019/07/09 15:35:27 idx 4
+[Debug][obj.go:104]2019/07/09 15:35:27 index 2
+[Debug][obj.go:103]2019/07/09 15:35:27 idx 2
+[Debug][obj.go:104]2019/07/09 15:35:27 index 2
+[Debug][obj.go:128]2019/07/09 15:35:27 update
+[Debug][obj.go:121]2019/07/09 15:35:28 push
+[Debug][obj.go:128]2019/07/09 15:35:28 update
+[Debug][obj.go:100]2019/07/09 15:35:29 pop
+[Debug][obj.go:103]2019/07/09 15:35:29 idx 1
+[Debug][obj.go:104]2019/07/09 15:35:29 index 5
+[Debug][obj.go:103]2019/07/09 15:35:29 idx 4
+[Debug][obj.go:104]2019/07/09 15:35:29 index 5
+[Debug][obj.go:103]2019/07/09 15:35:29 idx 5
+[Debug][obj.go:104]2019/07/09 15:35:29 index 5
+[Debug][obj.go:128]2019/07/09 15:35:29 update
+[Debug][obj.go:121]2019/07/09 15:37:07 push
+[Debug][obj.go:128]2019/07/09 15:37:07 update
+[Debug][obj.go:121]2019/07/09 15:38:17 push
+[Debug][obj.go:128]2019/07/09 15:38:17 update
+[Debug][obj.go:121]2019/07/09 15:38:18 push
+[Debug][obj.go:128]2019/07/09 15:38:18 update
+[Debug][obj.go:121]2019/07/09 15:38:18 push
+[Debug][obj.go:128]2019/07/09 15:38:18 update
+[Debug][obj.go:29]2019/07/09 15:38:20 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:38:20 pop
+[Debug][obj.go:103]2019/07/09 15:38:20 idx 4
+[Debug][obj.go:104]2019/07/09 15:38:20 index 10
+[Debug][obj.go:103]2019/07/09 15:38:20 idx 5
+[Debug][obj.go:104]2019/07/09 15:38:20 index 10
+[Debug][obj.go:103]2019/07/09 15:38:20 idx 8
+[Debug][obj.go:104]2019/07/09 15:38:20 index 10
+[Debug][obj.go:128]2019/07/09 15:38:20 update
+[Debug][obj.go:121]2019/07/09 15:39:46 push
+[Debug][obj.go:128]2019/07/09 15:39:46 update
+[Debug][obj.go:121]2019/07/09 15:39:47 push
+[Debug][obj.go:128]2019/07/09 15:39:47 update
+[Debug][obj.go:121]2019/07/09 15:39:47 push
+[Debug][obj.go:128]2019/07/09 15:39:47 update
+[Debug][obj.go:29]2019/07/09 15:39:48 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:39:48 pop
+[Debug][obj.go:103]2019/07/09 15:39:48 idx 10
+[Debug][obj.go:104]2019/07/09 15:39:48 index 2
+[Debug][obj.go:103]2019/07/09 15:39:48 idx 7
+[Debug][obj.go:104]2019/07/09 15:39:48 index 2
+[Debug][obj.go:103]2019/07/09 15:39:48 idx 8
+[Debug][obj.go:104]2019/07/09 15:39:48 index 2
+[Debug][obj.go:128]2019/07/09 15:39:48 update
+[Debug][obj.go:29]2019/07/09 15:39:48 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:39:48 pop
+[Debug][obj.go:103]2019/07/09 15:39:48 idx 10
+[Debug][obj.go:104]2019/07/09 15:39:48 index 2
+[Debug][obj.go:103]2019/07/09 15:39:48 idx 7
+[Debug][obj.go:104]2019/07/09 15:39:48 index 2
+[Debug][obj.go:103]2019/07/09 15:39:48 idx 8
+[Debug][obj.go:104]2019/07/09 15:39:48 index 2
+[Debug][obj.go:128]2019/07/09 15:39:48 update
+[Debug][obj.go:121]2019/07/09 15:42:57 push
+[Debug][obj.go:128]2019/07/09 15:42:57 update
+[Debug][obj.go:121]2019/07/09 15:42:58 push
+[Debug][obj.go:128]2019/07/09 15:42:58 update
+[Debug][obj.go:121]2019/07/09 15:43:09 push
+[Debug][obj.go:128]2019/07/09 15:43:09 update
+[Debug][obj.go:29]2019/07/09 15:43:18 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:43:18 pop
+[Debug][obj.go:103]2019/07/09 15:43:18 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:18 index 5
+[Debug][obj.go:103]2019/07/09 15:43:18 idx 4
+[Debug][obj.go:104]2019/07/09 15:43:18 index 5
+[Debug][obj.go:103]2019/07/09 15:43:18 idx 10
+[Debug][obj.go:104]2019/07/09 15:43:18 index 5
+[Debug][obj.go:128]2019/07/09 15:43:18 update
+[Debug][obj.go:100]2019/07/09 15:43:20 pop
+[Debug][obj.go:103]2019/07/09 15:43:20 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:20 index 10
+[Debug][obj.go:103]2019/07/09 15:43:20 idx 4
+[Debug][obj.go:104]2019/07/09 15:43:20 index 10
+[Debug][obj.go:103]2019/07/09 15:43:20 idx 10
+[Debug][obj.go:104]2019/07/09 15:43:20 index 10
+[Debug][obj.go:128]2019/07/09 15:43:20 update
+[Debug][obj.go:121]2019/07/09 15:43:21 push
+[Debug][obj.go:128]2019/07/09 15:43:21 update
+[Debug][obj.go:100]2019/07/09 15:43:22 pop
+[Debug][obj.go:103]2019/07/09 15:43:22 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:22 index 8
+[Debug][obj.go:103]2019/07/09 15:43:22 idx 4
+[Debug][obj.go:104]2019/07/09 15:43:22 index 8
+[Debug][obj.go:103]2019/07/09 15:43:22 idx 8
+[Debug][obj.go:104]2019/07/09 15:43:22 index 8
+[Debug][obj.go:128]2019/07/09 15:43:22 update
+[Debug][obj.go:121]2019/07/09 15:43:22 push
+[Debug][obj.go:128]2019/07/09 15:43:22 update
+[Debug][obj.go:100]2019/07/09 15:43:24 pop
+[Debug][obj.go:103]2019/07/09 15:43:24 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:24 index 4
+[Debug][obj.go:103]2019/07/09 15:43:24 idx 4
+[Debug][obj.go:104]2019/07/09 15:43:24 index 4
+[Debug][obj.go:128]2019/07/09 15:43:24 update
+[Debug][obj.go:121]2019/07/09 15:43:24 push
+[Debug][obj.go:128]2019/07/09 15:43:24 update
+[Debug][obj.go:100]2019/07/09 15:43:24 pop
+[Debug][obj.go:103]2019/07/09 15:43:24 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:24 index 3
+[Debug][obj.go:103]2019/07/09 15:43:24 idx 6
+[Debug][obj.go:104]2019/07/09 15:43:24 index 3
+[Debug][obj.go:103]2019/07/09 15:43:24 idx 3
+[Debug][obj.go:104]2019/07/09 15:43:24 index 3
+[Debug][obj.go:128]2019/07/09 15:43:24 update
+[Debug][obj.go:121]2019/07/09 15:43:25 push
+[Debug][obj.go:128]2019/07/09 15:43:25 update
+[Debug][obj.go:29]2019/07/09 15:43:51 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:43:51 pop
+[Debug][obj.go:103]2019/07/09 15:43:51 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:51 index 4
+[Debug][obj.go:103]2019/07/09 15:43:51 idx 6
+[Debug][obj.go:104]2019/07/09 15:43:51 index 4
+[Debug][obj.go:103]2019/07/09 15:43:51 idx 3
+[Debug][obj.go:104]2019/07/09 15:43:51 index 4
+[Debug][obj.go:128]2019/07/09 15:43:51 update
+[Debug][obj.go:100]2019/07/09 15:43:52 pop
+[Debug][obj.go:103]2019/07/09 15:43:52 idx 1
+[Debug][obj.go:104]2019/07/09 15:43:52 index 6
+[Debug][obj.go:103]2019/07/09 15:43:52 idx 6
+[Debug][obj.go:104]2019/07/09 15:43:52 index 6
+[Debug][obj.go:128]2019/07/09 15:43:52 update
+[Debug][obj.go:121]2019/07/09 15:43:59 push
+[Debug][obj.go:128]2019/07/09 15:43:59 update
+[Debug][obj.go:29]2019/07/09 15:44:00 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 15:44:00 pop
+[Debug][obj.go:103]2019/07/09 15:44:00 idx 1
+[Debug][obj.go:104]2019/07/09 15:44:00 index 10
+[Debug][obj.go:103]2019/07/09 15:44:00 idx 3
+[Debug][obj.go:104]2019/07/09 15:44:00 index 10
+[Debug][obj.go:103]2019/07/09 15:44:00 idx 0
+[Debug][obj.go:104]2019/07/09 15:44:00 index 10
+[Debug][obj.go:128]2019/07/09 15:44:00 update
+[Debug][obj.go:100]2019/07/09 15:44:02 pop
+[Debug][obj.go:103]2019/07/09 15:44:02 idx 1
+[Debug][obj.go:104]2019/07/09 15:44:02 index 3
+[Debug][obj.go:103]2019/07/09 15:44:02 idx 3
+[Debug][obj.go:104]2019/07/09 15:44:02 index 3
+[Debug][obj.go:128]2019/07/09 15:44:02 update
+[Debug][obj.go:100]2019/07/09 15:44:02 pop
+[Debug][obj.go:103]2019/07/09 15:44:02 idx 1
+[Debug][obj.go:104]2019/07/09 15:44:02 index 0
+[Debug][obj.go:103]2019/07/09 15:44:02 idx 0
+[Debug][obj.go:104]2019/07/09 15:44:02 index 0
+[Debug][obj.go:128]2019/07/09 15:44:02 update
+[Debug][obj.go:121]2019/07/09 15:44:03 push
+[Debug][obj.go:128]2019/07/09 15:44:03 update
+[Debug][obj.go:100]2019/07/09 15:44:04 pop
+[Debug][obj.go:103]2019/07/09 15:44:04 idx 1
+[Debug][obj.go:104]2019/07/09 15:44:04 index 4
+[Debug][obj.go:103]2019/07/09 15:44:04 idx 4
+[Debug][obj.go:104]2019/07/09 15:44:04 index 4
+[Debug][obj.go:128]2019/07/09 15:44:04 update
+[Debug][obj.go:100]2019/07/09 15:44:04 pop
+[Debug][obj.go:103]2019/07/09 15:44:04 idx 1
+[Debug][obj.go:104]2019/07/09 15:44:04 index 1
+[Debug][obj.go:128]2019/07/09 15:44:04 update
+[Debug][obj.go:121]2019/07/09 15:44:04 push
+[Debug][obj.go:128]2019/07/09 15:44:04 update
+[Debug][obj.go:121]2019/07/09 15:44:05 push
+[Debug][obj.go:128]2019/07/09 15:44:05 update
+[Debug][obj.go:121]2019/07/09 15:44:05 push
+[Debug][obj.go:128]2019/07/09 15:44:05 update
+[Debug][obj.go:29]2019/07/09 19:41:48 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 19:41:48 pop
+[Debug][obj.go:103]2019/07/09 19:41:48 idx 4
+[Debug][obj.go:104]2019/07/09 19:41:48 index 7
+[Debug][obj.go:103]2019/07/09 19:41:48 idx 5
+[Debug][obj.go:104]2019/07/09 19:41:48 index 7
+[Debug][obj.go:103]2019/07/09 19:41:48 idx 8
+[Debug][obj.go:104]2019/07/09 19:41:48 index 7
+[Debug][obj.go:128]2019/07/09 19:41:48 update
+[Debug][obj.go:29]2019/07/09 19:41:57 发送 toast ： 最多可以选三个
+[Debug][obj.go:100]2019/07/09 19:41:57 pop
+[Debug][obj.go:103]2019/07/09 19:41:57 idx 4
+[Debug][obj.go:104]2019/07/09 19:41:57 index 1
+[Debug][obj.go:103]2019/07/09 19:41:57 idx 5
+[Debug][obj.go:104]2019/07/09 19:41:57 index 1
+[Debug][obj.go:103]2019/07/09 19:41:57 idx 8
+[Debug][obj.go:104]2019/07/09 19:41:57 index 1
+[Debug][obj.go:128]2019/07/09 19:41:57 update

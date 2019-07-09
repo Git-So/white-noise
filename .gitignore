@@ -8,3 +8,4 @@ deploy
 rcc_*
 moc_*
 .log
+test.qml

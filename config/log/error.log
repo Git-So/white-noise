@@ -1,0 +1,8 @@
+[Error][icon.go:27]2019/07/09 15:21:48 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:28:39 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:31:09 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:35:16 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:36:21 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:38:09 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:39:43 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32
+[Error][icon.go:27]2019/07/09 15:42:54 解析自定义音频配置文件文件出错: json: cannot unmarshal string into Go struct field Info.volume of type float32

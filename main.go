@@ -10,6 +10,7 @@ import (
 
 	"github.com/Git-So/white-noise/icon"
 	"github.com/Git-So/white-noise/scene"
+	"github.com/Git-So/white-noise/toast"
 )
 
 func main() {
@@ -25,6 +26,7 @@ func main() {
 	engine := qml.NewQQmlApplicationEngine(nil)
 	engine.RootContext().SetContextProperty("sceneObj", scene.NewObj(nil))
 	engine.RootContext().SetContextProperty("iconStack", icon.NewIconStack(nil))
+	engine.RootContext().SetContextProperty("toastObj", toast.NewObj(nil))
 	engine.Load(core.NewQUrl3("qrc:/qml/view/App.qml", 0))
 
 	gui.QGuiApplication_Exec()
