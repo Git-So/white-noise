@@ -6,9 +6,9 @@ Rectangle {
     color: "transparent"
     // color: "red"
 
-    property var display
-    property var name
-    property var volume
+    property int index: 0
+    property string name: "自定义"
+    property var volume: 1.0
 
     Column {
         width: parent.width - 50
@@ -44,11 +44,9 @@ Rectangle {
                 anchors.horizontalCenter: parent.horizontalCenter
 
                 onValueChanged: {
-
-                    console.log(muiscSetRoot.display)
-                    console.log(display)
-                    console.log(muiscSetRoot.name,":",value)
-
+                    console.log(muiscSetRoot.volume)
+                    console.log(muiscSetRoot.name,":", value)
+                    muisInfoList.model.write(muiscSetRoot.index,value)
                 }
             }
         }

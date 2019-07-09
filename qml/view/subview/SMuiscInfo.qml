@@ -240,6 +240,7 @@ Rectangle {
                             anchors.bottom: parent.bottom
 
                             ListView {
+                                id: muisInfoList
                                 verticalLayoutDirection: ListView.BottomToTop
 
                                 model: SelectedStackModel{}
@@ -259,10 +260,11 @@ Rectangle {
                                 // ]
 
                                 delegate: CMuiscSet {
-                                    width: parent.width
+                                    width: parent.parent.parent.width
                                     height: parent.parent.parent.parent.itemBlockheight
 
-                                    display: display
+                                    // data: display
+                                    index: display.index
                                     name: display.name
                                     volume: display.volume
                                     // display: modelData

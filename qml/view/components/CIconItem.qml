@@ -5,10 +5,10 @@ Rectangle {
     color: "transparent"
     // color: "red"
 
-    property var name: "自定义"
-    property var icon: "庭院鸟鸣.png"
-    property var startColor: "#ffE27DBF"
-    property var endColor: "#ffFCF075"
+    property string name: "自定义"
+    property string icon: "庭院鸟鸣.png"
+    property string startColor: "#ffE27DBF"
+    property string endColor: "#ffFCF075"
     property bool isActive: false
 
     Column {
