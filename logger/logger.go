@@ -3,6 +3,7 @@ package logger
 import (
 	"fmt"
 	"log"
+	"os"
 	"path/filepath"
 	"runtime"
 )
@@ -22,12 +23,14 @@ var (
 	callerSkip = 2
 
 	logObj *log.Logger
+
+	file *os.File
 )
 
 func init() {
-	f := openLogFile(LevelInfo)
+	file = openLogFile(LevelInfo)
 
-	logObj = log.New(f, logPrefix, logFlag)
+	logObj = log.New(file, logPrefix, logFlag)
 }
 
 // setLevel

@@ -13,22 +13,30 @@ var (
 	// LogFileExt log 后缀
 	LogFileExt = "log"
 
-	// LevelFile 错误目录名
-	LevelFile = map[int]string{
+	// LevelFileName 日志目录名
+	LevelFileName = map[int]string{
 		LevelDebug: "debug",
 		LevelInfo:  "info",
 		LevelWarn:  "warn",
 		LevelError: "error",
 	}
+
+	// LevelFile 日志文件实例
+	LevelFile = make(map[int]*os.File, 4)
 )
 
 // GetLogFilePath 获取某等级日志文件路径
 func GetLogFilePath(level int) (path string) {
-	return fmt.Sprintf("%s%s.%s", LogSavePath, LevelFile[level], LogFileExt)
+	return fmt.Sprintf("%s%s.%s", LogSavePath, LevelFileName[level], LogFileExt)
 }
 
 // initLogSavePath
 func openLogFile(level int) *os.File {
+	// 已打开文件
+	if f, ok := LevelFile[level]; ok {
+		return f
+	}
+
 	// 文件状态
 	file := GetLogFilePath(level)
 	_, err := os.Stat(file)
@@ -47,6 +55,9 @@ func openLogFile(level int) *os.File {
 	if err != nil {
 		log.Panicf("权限出错: %v", err)
 	}
+
+	// 保存文件实例
+	LevelFile[level] = f
 
 	return f
 }
