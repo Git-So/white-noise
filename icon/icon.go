@@ -7,10 +7,7 @@ import (
 	"github.com/Git-So/white-noise/logger"
 )
 
-var (
-	iconPath    = "config/icons/"
-	sceneConfig = "prebuilt_icon_config"
-)
+
 
 // Load 加载文件信息
 func Load(file string) (infoList []Info) {

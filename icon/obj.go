@@ -12,7 +12,8 @@ var (
 	// 图标数据
 	iconList []Info
 	// 选中栈
-	selectedStack []map[string]*core.QVariant
+	selectedStack    []map[string]*core.QVariant
+	SelectedStackObj *SelectedStackModel
 )
 
 // IconListModel 场景对象
@@ -37,6 +38,17 @@ type IconStack struct {
 
 	_ func(index *core.QVariant)           `signal:"pop,auto"`
 	_ func(data map[string]*core.QVariant) `signal:"push,auto"`
+}
+
+// SelectedStackModel 选中音频栈
+type SelectedStackModel struct {
+	core.QAbstractListModel
+
+	_ func() `constructor:"init"`
+
+	_ func(idx *core.QVariant, volume *core.QVariant) `signal:"write,auto"`
+
+	modelData []map[string]*core.QVariant
 }
 
 // init IconListModel
@@ -64,6 +76,7 @@ func (o *IconListModel) data(index *core.QModelIndex, role int) *core.QVariant {
 		"colorParam": core.NewQVariant12(item.ColorParam),
 		"icon":       core.NewQVariant12(item.Icon),
 		"isActive":   core.NewQVariant9(item.IsActive),
+		"volume":     core.NewQVariant11(item.Volume),
 	})
 }
 
@@ -144,4 +157,36 @@ func (cs *IconStack) update() {
 		cs.SetIsActive(true)
 	}
 
+}
+
+// init SelectedStackModel
+func (ss *SelectedStackModel) init() {
+	SelectedStackObj = ss
+	ss.modelData = selectedStack
+
+	ss.ConnectRowCount(ss.rowCount)
+	ss.ConnectData(ss.data)
+}
+
+// rowCount SelectedStackModel
+func (ss *SelectedStackModel) rowCount(*core.QModelIndex) int {
+	return len(ss.modelData)
+}
+
+// data SelectedStackModel
+func (ss *SelectedStackModel) data(index *core.QModelIndex, role int) *core.QVariant {
+	if role != int(core.Qt__DisplayRole) {
+		return core.NewQVariant()
+	}
+
+	item := ss.modelData[index.Row()]
+	// return core.NewQVariant()
+	return core.NewQVariant23(item)
+}
+
+// Write 写入音量
+func (ss *SelectedStackModel) write(index *core.QVariant, volume *core.QVariant) {
+	stat := true
+	logger.Debug("index", index.ToInt(&stat))
+	logger.Debug("index", volume.ToFloat(&stat))
 }

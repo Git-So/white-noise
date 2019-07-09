@@ -18,7 +18,7 @@ build:
 	make rebuild
 
 clear:
-	-rm -rf vendor deploy linux
+	-rm -rf vendor deploy linux config/log
 	go mod vendor
 	go mod download
 	cp -r cache/env_linux_amd64_512 vendor/github.com/therecipe/

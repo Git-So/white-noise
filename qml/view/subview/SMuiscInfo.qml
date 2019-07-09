@@ -1,6 +1,6 @@
 import QtQuick 2.7
 import QtGraphicalEffects 1.13
-
+import CustomQmlTypes 1.0
 import "../components"
 
 Rectangle {
@@ -197,50 +197,9 @@ Rectangle {
 
                     property var closeBtnHeight: parent.height / 8
 
-                    // 调节列表
-                    Rectangle {
-                        property var itemBlockheight: parent.height / 6
-
-                        width: parent.width
-                        height: itemBlockheight * muiscInfoRoot.musicNum
-                        color: "transparent"
-                        // color: "#f00"
-
-                        anchors.bottomMargin: parent.closeBtnHeight
-                        anchors.bottom: parent.bottom
-
-                        Column {
-
-                            anchors.fill: parent
-                            anchors.bottom: parent.bottom
-
-                            ListView {
-
-
-                                model: [
-                                    {
-                                        name: "夏雨",
-                                        size: 3
-                                    },
-                                    {
-                                        name: "鱼打树叶",
-                                        size: 3
-                                    }
-                                ]
-
-                                delegate: CMuiscSet {
-                                    width: parent.width
-                                    height: parent.parent.parent.parent.itemBlockheight
-                                }
-
-                                anchors.fill: parent
-                                anchors.bottom: parent.bottom
-                            }
-                        }
-                    }
-
                     // 关闭按钮
                     Rectangle {
+                        id: muiscInfoCloseBtn
                         width: parent.width
                         height: parent.closeBtnHeight
                         color: "transparent"
@@ -264,6 +223,58 @@ Rectangle {
                             }
                         }
                     }
+
+                    // 调节列表
+                    Rectangle {
+                        property var itemBlockheight: parent.height / 6
+
+                        width: parent.width
+                        height: itemBlockheight * 3
+                        color: "transparent"
+                        // color: "#f00"
+
+                        anchors.bottom: muiscInfoCloseBtn.top
+
+                        Column {
+                            anchors.fill: parent
+                            anchors.bottom: parent.bottom
+
+                            ListView {
+                                verticalLayoutDirection: ListView.BottomToTop
+
+                                model: SelectedStackModel{}
+                                // model: [
+                                //     {
+                                //         name: "夏雨",
+                                //         size: 3
+                                //     },
+                                //     {
+                                //         name: "鱼打树叶",
+                                //         size: 3
+                                //     },
+                                //     {
+                                //         name: "鱼打1树叶",
+                                //         size: 3
+                                //     }
+                                // ]
+
+                                delegate: CMuiscSet {
+                                    width: parent.width
+                                    height: parent.parent.parent.parent.itemBlockheight
+
+                                    display: display
+                                    name: display.name
+                                    volume: display.volume
+                                    // display: modelData
+                                }
+
+                                anchors.fill: parent
+                                anchors.bottom: parent.bottom
+                            }
+                        }
+                    }
+
+
                 }
             }
         }

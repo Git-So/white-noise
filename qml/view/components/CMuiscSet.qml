@@ -2,8 +2,13 @@ import QtQuick 2.7
 import QtQuick.Controls 1.4
 
 Rectangle {
+    id: muiscSetRoot
     color: "transparent"
     // color: "red"
+
+    property var display
+    property var name
+    property var volume
 
     Column {
         width: parent.width - 50
@@ -17,7 +22,7 @@ Rectangle {
             color: "transparent"
 
             Text {
-                text: modelData.name
+                text: muiscSetRoot.name
                 color: "#fff"
 
                anchors.verticalCenter: parent.verticalCenter
@@ -31,7 +36,7 @@ Rectangle {
 
             Slider {
                 width: parent.width * 0.9
-                value: modelData.size
+                value: muiscSetRoot.volume
                 maximumValue: 5
                 minimumValue: 0.05
                 stepSize: 0.01
@@ -40,7 +45,9 @@ Rectangle {
 
                 onValueChanged: {
 
-                    console.log(modelData.name,":",value)
+                    console.log(muiscSetRoot.display)
+                    console.log(display)
+                    console.log(muiscSetRoot.name,":",value)
 
                 }
             }

@@ -7,5 +7,5 @@ deploy
 *.cpp
 rcc_*
 moc_*
-.log
+*.log
 test.qml
