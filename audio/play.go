@@ -5,6 +5,7 @@ import (
 
 	"github.com/Git-So/white-noise/logger"
 	"github.com/bobertlo/go-mpg123/mpg123"
+	"github.com/hajimehoshi/oto"
 )
 
 var (
@@ -72,13 +73,15 @@ func (i *Info) AddPlayer() {
 		// 播放
 		if i.State {
 			// 播放
-			i.player()
+			p := otoObj.NewPlayer()
+			defer p.Close()
+			i.player(p)
 		}
 	}()
 }
 
 // player 播放音频
-func (i *Info) player() {
+func (i *Info) player(p *oto.Player) {
 	// 音频编码
 	decoder, err := mpg123.NewDecoder("")
 	if err != nil {
@@ -103,8 +106,6 @@ func (i *Info) player() {
 	decoder.Format(rate, chans, mpg123.ENC_SIGNED_16)
 
 	buf := make([]byte, 2048*16)
-	p := otoObj.NewPlayer()
-	defer p.Close()
 
 	for {
 		// 停止播放

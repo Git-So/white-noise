@@ -8,6 +8,11 @@ import (
 	"github.com/Git-So/white-noise/logger"
 )
 
+var (
+	// 播放队列
+	playerList = make(map[string]*audio.Info, 100)
+)
+
 // Load 加载文件信息
 func Load(file string) (infoList []Info) {
 	// 读取文件
@@ -31,14 +36,29 @@ func Load(file string) (infoList []Info) {
 func player() {
 	// 获取播放队列
 	stat := true
+
+	// 关闭所有音频
+	for _, val := range playerList {
+		val.State = false
+	}
+
+	// 启用音频
 	for _, val := range selectedStack {
 		index := val["index"].ToInt(&stat)
 		iconInfo := iconList[index]
 		for _, item := range iconInfo.AudioUrls {
-			audioInfo := audio.Info{
-				Name:   item.URL,
-				Volume: val["volume"].ToFloat(&stat),
-				State:  true,
+			var audioInfo *audio.Info
+			var ok bool
+			if audioInfo, ok = playerList[item.URL]; ok {
+				audioInfo.State = true
+				audioInfo.Volume = val["volume"].ToFloat(&stat)
+			} else {
+				audioInfo = &audio.Info{
+					Name:   item.URL,
+					Volume: val["volume"].ToFloat(&stat),
+					State:  true,
+				}
+				playerList[item.URL] = audioInfo
 			}
 			audioInfo.AddPlayer()
 		}

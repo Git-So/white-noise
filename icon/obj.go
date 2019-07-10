@@ -136,7 +136,6 @@ func (cs *IconStack) push(data map[string]*core.QVariant) {
 	stat := true
 	logger.Debug("volume", data["volume"].ToFloat(&stat))
 	cs.update()
-	player()
 }
 
 // update 栈数据更新后同步更新相关数据
@@ -160,6 +159,8 @@ func (cs *IconStack) update() {
 		cs.SetIsActive(true)
 	}
 
+	// 更新播放
+	player()
 }
 
 // init SelectedStackModel
@@ -201,5 +202,6 @@ func (ss *SelectedStackModel) write(index *core.QVariant, volume *core.QVariant)
 		}
 	}
 
+	player()
 	// ss.DataChanged(ss.Index(key, 0, core.NewQModelIndex()), ss.Index(key, 0, core.NewQModelIndex()), []int{int(core.Qt__DisplayRole)})
 }
