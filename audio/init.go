@@ -19,4 +19,5 @@ func init() {
 	if err != nil {
 		logger.Error("初始化播放出错: ", err)
 	}
+	logger.Debug("初始化播放成功")
 }

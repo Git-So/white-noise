@@ -136,6 +136,7 @@ func (cs *IconStack) push(data map[string]*core.QVariant) {
 	stat := true
 	logger.Debug("volume", data["volume"].ToFloat(&stat))
 	cs.update()
+	player()
 }
 
 // update 栈数据更新后同步更新相关数据

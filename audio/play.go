@@ -65,7 +65,8 @@ func Close() {
 func (i *Info) AddPlayer() {
 	// 播放状态
 	i.State = true
-	logger.Debug("添加到", i.Name, "播放器")
+	// logger.Debug("添加到", i.Name, "播放器")
+	logger.Debug("添加播放")
 	// 循环播放
 	go func() {
 		// 播放
