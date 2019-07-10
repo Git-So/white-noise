@@ -8,10 +8,6 @@ init:
 
 rebuild:
 	qtdeploy build desktop
-	-rm -rf rcc*
-	-rm -rf ./scene/moc*
-	-rm -rf ./icon/moc*
-	-rm -rf ./toast/moc*
 
 build:
 	make clear
@@ -29,6 +25,11 @@ run:
 
 rerun:
 	./deploy/linux/${AppName}
+	-rm -rf rcc*
+	-rm -rf ./scene/moc*
+	-rm -rf ./icon/moc*
+	-rm -rf ./toast/moc*
+	-rm -rf ./audio/moc*
 
 test:
 ifeq ($(findstring _test.go,$(testFile)),_test.go)

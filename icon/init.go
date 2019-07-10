@@ -1,15 +1,20 @@
 package icon
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Git-So/white-noise/logger"
+)
 
 var (
 	iconPath    = "config/icons/"
-	sceneConfig = "prebuilt_icon_config"
+	sceneConfig = "icons"
 )
 
 func init() {
 	file := fmt.Sprintf("%s%s.json", iconPath, sceneConfig)
 	iconList = Load(file)
+	logger.Debug(fmt.Sprintf("%v", iconList))
 }
 
 func init() {

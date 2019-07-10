@@ -133,6 +133,8 @@ func (cs *IconStack) push(data map[string]*core.QVariant) {
 
 	logger.Debug("push")
 	selectedStack = append(selectedStack, data)
+	stat := true
+	logger.Debug("volume", data["volume"].ToFloat(&stat))
 	cs.update()
 }
 
@@ -189,4 +191,14 @@ func (ss *SelectedStackModel) write(index *core.QVariant, volume *core.QVariant)
 	stat := true
 	logger.Debug("index", index.ToInt(&stat))
 	logger.Debug("index", volume.ToFloat(&stat))
+
+	key := index.ToInt(&stat)
+	for idx, val := range selectedStack {
+		ValIndex := val["index"].ToInt(&stat)
+		if ValIndex == key {
+			selectedStack[idx]["volume"] = volume
+		}
+	}
+
+	// ss.DataChanged(ss.Index(key, 0, core.NewQModelIndex()), ss.Index(key, 0, core.NewQModelIndex()), []int{int(core.Qt__DisplayRole)})
 }

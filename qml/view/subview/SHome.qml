@@ -22,11 +22,24 @@ Rectangle {
         fillMode: Image.PreserveAspectCrop
 
         anchors.fill: parent
+
+        // 切换播放状态
+        MouseArea {
+            anchors.fill: parent
+
+            onClicked: {
+                if (playObj.state) {
+                    playObj.stop()
+                } else {
+                    playObj.start()
+                }
+            }
+        }
     }
 
     // 禁音
     CQuite {
-        quite: homeRoot.quite
+        quite: playObj.state
     }
 
     // 声音详情

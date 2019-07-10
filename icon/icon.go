@@ -4,10 +4,9 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
+	"github.com/Git-So/white-noise/audio"
 	"github.com/Git-So/white-noise/logger"
 )
-
-
 
 // Load 加载文件信息
 func Load(file string) (infoList []Info) {
@@ -26,4 +25,22 @@ func Load(file string) (infoList []Info) {
 	}
 
 	return
+}
+
+// player 播放解析
+func player() {
+	// 获取播放队列
+	stat := true
+	for _, val := range selectedStack {
+		index := val["index"].ToInt(&stat)
+		iconInfo := iconList[index]
+		for _, item := range iconInfo.AudioUrls {
+			audioInfo := audio.Info{
+				Name:   item.URL,
+				Volume: val["volume"].ToFloat(&stat),
+				State:  true,
+			}
+			audioInfo.AddPlayer()
+		}
+	}
 }

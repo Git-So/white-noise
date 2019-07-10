@@ -2,7 +2,7 @@ import QtQuick 2.7
 
 // 禁音
 Rectangle {
-    property var quite: true
+    property var quite: false
 
     width: parent.width
     height: parent.height / 1.2

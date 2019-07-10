@@ -8,6 +8,7 @@ import (
 	"github.com/therecipe/qt/qml"
 	"github.com/therecipe/qt/quickcontrols2"
 
+	"github.com/Git-So/white-noise/audio"
 	"github.com/Git-So/white-noise/icon"
 	"github.com/Git-So/white-noise/scene"
 	"github.com/Git-So/white-noise/toast"
@@ -27,6 +28,7 @@ func main() {
 	engine.RootContext().SetContextProperty("sceneObj", scene.NewObj(nil))
 	engine.RootContext().SetContextProperty("iconStack", icon.NewIconStack(nil))
 	engine.RootContext().SetContextProperty("toastObj", toast.NewObj(nil))
+	engine.RootContext().SetContextProperty("playObj", audio.NewPlay(nil))
 	engine.Load(core.NewQUrl3("qrc:/qml/view/App.qml", 0))
 
 	gui.QGuiApplication_Exec()

@@ -281,4 +281,9 @@ Rectangle {
             }
         }
     }
+
+    // 禁音
+    CQuite {
+        quite: playObj.state
+    }
 }

@@ -37,7 +37,7 @@ Rectangle {
             Slider {
                 width: parent.width * 0.9
                 value: muiscSetRoot.volume
-                maximumValue: 5
+                maximumValue: 2.5
                 minimumValue: 0.05
                 stepSize: 0.01
 

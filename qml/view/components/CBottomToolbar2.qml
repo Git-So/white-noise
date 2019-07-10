@@ -179,7 +179,7 @@ Rectangle {
                 Image {
                     width: parent.iconSize
                     height: parent.iconSize
-                    visible: bottomToolbar2Root.iconMusicPlay
+                    visible: playObj.state
 
                     // source: "qrc:/qml/drawable/icon_music_play.png"
                     source: "../../drawable/icon_music_play.png"
@@ -191,7 +191,7 @@ Rectangle {
                 Image {
                     width: parent.iconSize
                     height: parent.iconSize
-                    visible: !bottomToolbar2Root.iconMusicPlay
+                    visible: !playObj.state
 
                     // source: "qrc:/qml/drawable/icon_music_pause.png"
                     source: "../../drawable/icon_music_pause.png"
@@ -204,7 +204,11 @@ Rectangle {
                     anchors.fill: parent
 
                     onClicked: {
-                        bottomToolbar2Root.iconMusicPlay = !bottomToolbar2Root.iconMusicPlay
+                        if (playObj.state) {
+                            playObj.stop()
+                        } else {
+                            playObj.start()
+                        }
                     }
                 }
             }
