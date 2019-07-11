@@ -82,7 +82,7 @@ func updateVolume(idx int, volume float32) {
 	for _, val := range iconInfo.AudioUrls {
 		// 获取播放实例
 		p := audio.GetPlayer(val.URL)
-		// 停止播放
+		// 设置音量
 		p.SetVolume(volume)
 	}
 }
@@ -102,4 +102,20 @@ func getStackInfo(idx int) (info map[string]*core.QVariant) {
 	}
 
 	return
+}
+
+// AddPlayer 添加音频播放，提供对外使用
+func AddPlayer(name string) {
+	for _, iconInfo := range iconList {
+		if iconInfo.Title == name {
+			for _, val := range iconInfo.AudioUrls {
+				audio.AddPlayer(
+					val.URL,
+					iconInfo.Volume,
+					val.Duration,
+					audio.PLAYER_ENABLE,
+				)
+			}
+		}
+	}
 }

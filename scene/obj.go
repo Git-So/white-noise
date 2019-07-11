@@ -1,6 +1,7 @@
 package scene
 
 import (
+	"github.com/Git-So/white-noise/logger"
 	"github.com/therecipe/qt/core"
 )
 
@@ -19,11 +20,15 @@ type Obj struct {
 	_ string `property:"imagePath"`
 
 	_ func() `signal:"next,auto"`
+	_ func() `signal:"play,auto"`
 }
 
 // init 初始化对象
 func (o *Obj) init() {
 	o.update(sceneID)
+
+	// 播放场景音频
+	o.play()
 }
 
 // update 更新对象
@@ -43,4 +48,13 @@ func (o *Obj) next() {
 		sceneID++
 	}
 	o.update(sceneID)
+
+	// 播放场景音频
+	o.play()
+}
+
+// play 播放场景音乐
+func (o *Obj) play() {
+	logger.Debug("播放场景音乐")
+	player()
 }

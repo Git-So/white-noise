@@ -9,7 +9,7 @@ var (
 	// PlayState 播放状态
 	PlayState = true
 
-	playObj *Play
+	playAudioObj *Play
 )
 
 // Play 播放信息
@@ -22,10 +22,14 @@ type Play struct {
 
 	_ func() `signal:"stop,auto"`
 	_ func() `signal:"start,auto"`
+	_ func() `signal:"stopAll,auto"`
 }
 
 // init Play
 func (py *Play) init() {
+	if playAudioObj == nil {
+		playAudioObj = py
+	}
 	py.SetState(PlayState)
 }
 
@@ -34,6 +38,12 @@ func (py *Play) stop() {
 	logger.Debug("播放停止")
 	py.update(false)
 	Disable()
+}
+
+// stopAll
+func (py *Play) stopAll() {
+	logger.Debug("停止播放全部音频")
+	CloseAllPlayer()
 }
 
 // start

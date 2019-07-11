@@ -39,6 +39,9 @@ func AddPlayer(name string, volume float32, duration int, state bool) {
 	}
 
 	// 启用播放
+	// if playAudioObj != nil {
+	// 	playAudioObj.start()
+	// }
 	Enable()
 
 	// 开始播放
@@ -137,5 +140,12 @@ func (p *player) player(op *oto.Player) {
 
 		// 写入流
 		op.Write(raiseVolume(buf[0:len], p.volume))
+	}
+}
+
+// CloseAllPlayer 关闭所有播放器，主要用于场景切换或自定义和场景状态切换
+func CloseAllPlayer() {
+	for key, _ := range playerList {
+		playerList[key].state = false
 	}
 }

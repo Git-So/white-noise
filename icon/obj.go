@@ -3,6 +3,7 @@ package icon
 import (
 	"strings"
 
+	"github.com/Git-So/white-noise/audio"
 	"github.com/Git-So/white-noise/logger"
 	"github.com/Git-So/white-noise/toast"
 	"github.com/therecipe/qt/core"
@@ -38,6 +39,7 @@ type IconStack struct {
 
 	_ func(index *core.QVariant)           `signal:"pop,auto"`
 	_ func(data map[string]*core.QVariant) `signal:"push,auto"`
+	_ func()                               `signal:"play,auto"`
 }
 
 // SelectedStackModel 选中音频栈
@@ -163,6 +165,30 @@ func (cs *IconStack) update() {
 		selectedInfo := selectedStack[stackLen-1]
 		cs.SetColorParam(selectedInfo["colorParam"].ToString())
 		cs.SetIsActive(true)
+	}
+}
+
+// play 播放音频
+func (cs *IconStack) play() {
+	logger.Debug("icons: play 播放音频")
+
+	for _, info := range selectedStack {
+		// 添加到播放
+		if _, ok := info["index"]; ok {
+			// 添加播放
+			addPlayer(info["index"].ToInt(&ok))
+
+			// 获取音频信息
+			idx := info["index"].ToInt(&ok)
+			iconInfo := iconList[idx]
+			// stat := true
+			for _, val := range iconInfo.AudioUrls {
+				// 获取播放实例
+				p := audio.GetPlayer(val.URL)
+				// 开始播放
+				p.SetState(audio.PLAYER_ENABLE)
+			}
+		}
 	}
 }
 

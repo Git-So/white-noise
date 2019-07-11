@@ -45,7 +45,16 @@ Item {
                         anchors.fill: parent
                         onClicked: {
                             if (toolbarRoot.stackObj && toolbarRoot.activeID != 0 ) {
+                                // 显示推荐
                                 stackObj.pop()
+
+                                // 停止播放所有音频
+                                playObj.stopAll()
+
+                                // 播放场景音频
+                                playObj.stop()
+                                sceneObj.play()
+                                playObj.start()
                             }
                         }
                     }
@@ -64,7 +73,16 @@ Item {
                         onClicked: {
 
                             if (toolbarRoot.stackObj && toolbarRoot.customizeID && toolbarRoot.activeID != 1 ) {
+                                // 显示自选
                                 toolbarRoot.stackObj.push(customizeID)
+
+                                // 停止播放所有音频
+                                playObj.stopAll()
+
+                                // 启用选中音频
+                                playObj.stop()
+                                iconStack.play()
+                                playObj.start()
                             }
                         }
                     }

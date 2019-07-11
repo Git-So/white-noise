@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
+	"github.com/Git-So/white-noise/audio"
+	"github.com/Git-So/white-noise/icon"
 	"github.com/Git-So/white-noise/logger"
 )
 
@@ -38,7 +40,7 @@ func Load(file string) (infoList []*Info) {
 }
 
 // LoadAudio 加载音频配置
-func LoadAudio(sceneName string) (audioList []*Audio, err error) {
+func LoadAudio(sceneName string) (audioList []*Audio) {
 	// 读取文件
 	file := getAudioFilePath(sceneName)
 	data, err := ioutil.ReadFile(file)
@@ -60,4 +62,38 @@ func LoadAudio(sceneName string) (audioList []*Audio, err error) {
 // getAudioFilePath 获取音频文件
 func getAudioFilePath(sceneName string) (filePath string) {
 	return fmt.Sprintf("%s%s.json", scenePath, sceneName)
+}
+
+// player 播放场景
+func player() {
+	// 停止当前播放
+	audio.CloseAllPlayer()
+
+	// 播放当前场景
+	sceneInfo := sceneList[sceneID]
+
+	// 加载场景音频文件
+	audioList := LoadAudio(sceneInfo.Title)
+	if audioList == nil {
+		logger.Error("加载场景音频文件信息出错")
+		return
+	}
+
+	for _, audioInfo := range audioList {
+		// 加载自定义音乐
+		if len(audioInfo.Name) > 0 {
+			icon.AddPlayer(audioInfo.Name)
+		}
+
+		// 加载系列音频
+		for _, name := range audioInfo.Names {
+			audio.AddPlayer(
+				name,
+				audioInfo.Volume,
+				audioInfo.Duration,
+				audio.PLAYER_ENABLE,
+			)
+		}
+	}
+
 }

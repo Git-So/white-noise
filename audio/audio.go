@@ -13,6 +13,11 @@ var (
 	iconPath = "config/audio/"
 )
 
+func init() {
+	// 默认启用播放
+	Enable()
+}
+
 // getFileName 获取播放文件路径
 func getFileName(name string) string {
 	return fmt.Sprintf("%v%v.mp3", iconPath, name)
@@ -79,8 +84,8 @@ func Enable() {
 
 	logger.Info("初始化播放成功")
 
-	if playObj != nil {
-		playObj.update(true)
+	if playAudioObj != nil {
+		playAudioObj.update(true)
 	}
 
 	// 播放队伍音频

@@ -33,11 +33,7 @@ func TestLoad(t *testing.T) {
 
 func TestLoadAudio(t *testing.T) {
 	Convey("测试加载场景音频数据:", t, func() {
-		list, err := scene.LoadAudio("夏雨")
-
-		Convey("无错执行", func() {
-			So(err, ShouldBeNil)
-		})
+		list := scene.LoadAudio("夏雨")
 
 		Convey("标题数据效验", func() {
 			So(list[0].Name, ShouldEqual, "河流")
