@@ -90,76 +90,83 @@ Rectangle {
 
             anchors.bottom: parent.bottom
 
-                Row {
-                    width: parent.width - 40
-                    height: parent.height
+            Row {
+                width: parent.width - 40
+                height: parent.height
 
-                    anchors.horizontalCenter: parent.horizontalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+
+                Rectangle {
+                    width: parent.width / 7 * 5
+                    height: parent.height
+                    color: "transparent"
+                    // color: "#00f"
+
+                    anchors.left: parent.left
+                    anchors.margins: 20
 
                     Rectangle {
-                        width: parent.width / 7 * 5
-                        height: parent.height
+                        width: parent.width
+                        height: parent.height / 2.1
                         color: "transparent"
-                        // color: "#00f"
 
-                        anchors.left: parent.left
-                        anchors.margins: 20
+                        anchors.verticalCenter: parent.verticalCenter
 
-                        Rectangle {
-                            width: parent.width
-                            height: parent.height / 2.1
-                            color: "transparent"
-
-                            anchors.verticalCenter: parent.verticalCenter
-
-                            Column {
-                                // 标题
-                                Text {
-                                    text: "自选"
-                                    color: "#fff"
-                                    font {
-                                        pixelSize: 35
-                                        bold: true
-                                    }
-                                }
-
-                                // 介绍
-                                Text {
-                                    text: iconStack.title
-                                    color: "#eee"
-                                    font.pixelSize: 17
+                        Column {
+                            // 标题
+                            Text {
+                                text: "自选"
+                                color: "#fff"
+                                font {
+                                    pixelSize: 35
+                                    bold: true
                                 }
                             }
-                        }
-                    }
 
-                    // 音乐配置
-                    Rectangle {
-                        width: parent.width / 7 * 2
-                        height: parent.height
-                        color: "transparent"
-                        // color: "#0f0"
-
-                        anchors.right: parent.right
-
-                        Image {
-                            width: 70
-                            height: 70
-                            // source: "qrc:/qml/drawable/ic_audio_adjust_n.png"
-                            source: "../../drawable/ic_audio_adjust_n.png"
-
-                            anchors.verticalCenter: parent.verticalCenter
-
-                            MouseArea {
-                                anchors.fill: parent
-
-                                onClicked: {
-                                    muiscInfoRoot.isSet = true
-                                }
+                            // 介绍
+                            Text {
+                                text: iconStack.title
+                                color: "#eee"
+                                font.pixelSize: 17
                             }
                         }
                     }
                 }
+
+                // 音乐配置
+                Rectangle {
+                    width: parent.width / 7 * 2
+                    height: parent.height
+                    color: "transparent"
+                    // color: "#0f0"
+
+                    anchors.right: parent.right
+
+                    Image {
+                        width: 70
+                        height: 70
+                        // source: "qrc:/qml/drawable/ic_audio_adjust_n.png"
+                        source: "../../drawable/ic_audio_adjust_n.png"
+
+                        anchors.verticalCenter: parent.verticalCenter
+
+                        MouseArea {
+                            anchors.fill: parent
+
+                            onClicked: {
+                                muiscInfoRoot.isSet = true
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        // 禁音
+        CQuite {
+            quite: playObj.state
         }
 
         // 配置调节
@@ -282,8 +289,5 @@ Rectangle {
         }
     }
 
-    // 禁音
-    CQuite {
-        quite: playObj.state
-    }
+
 }
