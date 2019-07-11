@@ -34,999 +34,6 @@ func unpackStringList(s string) []string {
 	return strings.Split(s, "¡¦!")
 }
 
-type IconStack_ITF interface {
-	std_core.QObject_ITF
-	IconStack_PTR() *IconStack
-}
-
-func (ptr *IconStack) IconStack_PTR() *IconStack {
-	return ptr
-}
-
-func (ptr *IconStack) Pointer() unsafe.Pointer {
-	if ptr != nil {
-		return ptr.QObject_PTR().Pointer()
-	}
-	return nil
-}
-
-func (ptr *IconStack) SetPointer(p unsafe.Pointer) {
-	if ptr != nil {
-		ptr.QObject_PTR().SetPointer(p)
-	}
-}
-
-func PointerFromIconStack(ptr IconStack_ITF) unsafe.Pointer {
-	if ptr != nil {
-		return ptr.IconStack_PTR().Pointer()
-	}
-	return nil
-}
-
-func NewIconStackFromPointer(ptr unsafe.Pointer) (n *IconStack) {
-	if gPtr, ok := qt.Receive(ptr); !ok {
-		n = new(IconStack)
-		n.SetPointer(ptr)
-	} else {
-		switch deduced := gPtr.(type) {
-		case *IconStack:
-			n = deduced
-
-		case *std_core.QObject:
-			n = &IconStack{QObject: *deduced}
-
-		default:
-			n = new(IconStack)
-			n.SetPointer(ptr)
-		}
-	}
-	return
-}
-func (this *IconStack) Init() { this.init() }
-
-//export callbackIconStackd54ccb_Constructor
-func callbackIconStackd54ccb_Constructor(ptr unsafe.Pointer) {
-	this := NewIconStackFromPointer(ptr)
-	qt.Register(ptr, this)
-	this.ConnectPop(this.pop)
-	this.ConnectPush(this.push)
-	this.init()
-}
-
-//export callbackIconStackd54ccb_Pop
-func callbackIconStackd54ccb_Pop(ptr unsafe.Pointer, index unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "pop"); signal != nil {
-		(*(*func(*std_core.QVariant))(signal))(std_core.NewQVariantFromPointer(index))
-	}
-
-}
-
-func (ptr *IconStack) ConnectPop(f func(index *std_core.QVariant)) {
-	if ptr.Pointer() != nil {
-
-		if !qt.ExistsSignal(ptr.Pointer(), "pop") {
-			C.IconStackd54ccb_ConnectPop(ptr.Pointer())
-		}
-
-		if signal := qt.LendSignal(ptr.Pointer(), "pop"); signal != nil {
-			f := func(index *std_core.QVariant) {
-				(*(*func(*std_core.QVariant))(signal))(index)
-				f(index)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "pop", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "pop", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectPop() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DisconnectPop(ptr.Pointer())
-		qt.DisconnectSignal(ptr.Pointer(), "pop")
-	}
-}
-
-func (ptr *IconStack) Pop(index std_core.QVariant_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_Pop(ptr.Pointer(), std_core.PointerFromQVariant(index))
-	}
-}
-
-//export callbackIconStackd54ccb_Push
-func callbackIconStackd54ccb_Push(ptr unsafe.Pointer, data C.struct_Moc_PackedList) {
-	if signal := qt.GetSignal(ptr, "push"); signal != nil {
-		(*(*func(map[string]*std_core.QVariant))(signal))(func(l C.struct_Moc_PackedList) map[string]*std_core.QVariant {
-			out := make(map[string]*std_core.QVariant, int(l.len))
-			tmpList := NewIconStackFromPointer(l.data)
-			for i, v := range tmpList.__push_data_keyList() {
-				out[v] = tmpList.__push_data_atList(v, i)
-			}
-			return out
-		}(data))
-	}
-
-}
-
-func (ptr *IconStack) ConnectPush(f func(data map[string]*std_core.QVariant)) {
-	if ptr.Pointer() != nil {
-
-		if !qt.ExistsSignal(ptr.Pointer(), "push") {
-			C.IconStackd54ccb_ConnectPush(ptr.Pointer())
-		}
-
-		if signal := qt.LendSignal(ptr.Pointer(), "push"); signal != nil {
-			f := func(data map[string]*std_core.QVariant) {
-				(*(*func(map[string]*std_core.QVariant))(signal))(data)
-				f(data)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "push", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "push", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectPush() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DisconnectPush(ptr.Pointer())
-		qt.DisconnectSignal(ptr.Pointer(), "push")
-	}
-}
-
-func (ptr *IconStack) Push(data map[string]*std_core.QVariant) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_Push(ptr.Pointer(), func() unsafe.Pointer {
-			tmpList := NewIconStackFromPointer(NewIconStackFromPointer(nil).__push_data_newList())
-			for k, v := range data {
-				tmpList.__push_data_setList(k, std_core.NewQVariant1(v))
-			}
-			return tmpList.Pointer()
-		}())
-	}
-}
-
-//export callbackIconStackd54ccb_ColorParam
-func callbackIconStackd54ccb_ColorParam(ptr unsafe.Pointer) C.struct_Moc_PackedString {
-	if signal := qt.GetSignal(ptr, "colorParam"); signal != nil {
-		tempVal := (*(*func() string)(signal))()
-		return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
-	}
-	tempVal := NewIconStackFromPointer(ptr).ColorParamDefault()
-	return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
-}
-
-func (ptr *IconStack) ConnectColorParam(f func() string) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "colorParam"); signal != nil {
-			f := func() string {
-				(*(*func() string)(signal))()
-				return f()
-			}
-			qt.ConnectSignal(ptr.Pointer(), "colorParam", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "colorParam", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectColorParam() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "colorParam")
-	}
-}
-
-func (ptr *IconStack) ColorParam() string {
-	if ptr.Pointer() != nil {
-		return cGoUnpackString(C.IconStackd54ccb_ColorParam(ptr.Pointer()))
-	}
-	return ""
-}
-
-func (ptr *IconStack) ColorParamDefault() string {
-	if ptr.Pointer() != nil {
-		return cGoUnpackString(C.IconStackd54ccb_ColorParamDefault(ptr.Pointer()))
-	}
-	return ""
-}
-
-//export callbackIconStackd54ccb_SetColorParam
-func callbackIconStackd54ccb_SetColorParam(ptr unsafe.Pointer, colorParam C.struct_Moc_PackedString) {
-	if signal := qt.GetSignal(ptr, "setColorParam"); signal != nil {
-		(*(*func(string))(signal))(cGoUnpackString(colorParam))
-	} else {
-		NewIconStackFromPointer(ptr).SetColorParamDefault(cGoUnpackString(colorParam))
-	}
-}
-
-func (ptr *IconStack) ConnectSetColorParam(f func(colorParam string)) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "setColorParam"); signal != nil {
-			f := func(colorParam string) {
-				(*(*func(string))(signal))(colorParam)
-				f(colorParam)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "setColorParam", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "setColorParam", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectSetColorParam() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "setColorParam")
-	}
-}
-
-func (ptr *IconStack) SetColorParam(colorParam string) {
-	if ptr.Pointer() != nil {
-		var colorParamC *C.char
-		if colorParam != "" {
-			colorParamC = C.CString(colorParam)
-			defer C.free(unsafe.Pointer(colorParamC))
-		}
-		C.IconStackd54ccb_SetColorParam(ptr.Pointer(), C.struct_Moc_PackedString{data: colorParamC, len: C.longlong(len(colorParam))})
-	}
-}
-
-func (ptr *IconStack) SetColorParamDefault(colorParam string) {
-	if ptr.Pointer() != nil {
-		var colorParamC *C.char
-		if colorParam != "" {
-			colorParamC = C.CString(colorParam)
-			defer C.free(unsafe.Pointer(colorParamC))
-		}
-		C.IconStackd54ccb_SetColorParamDefault(ptr.Pointer(), C.struct_Moc_PackedString{data: colorParamC, len: C.longlong(len(colorParam))})
-	}
-}
-
-//export callbackIconStackd54ccb_ColorParamChanged
-func callbackIconStackd54ccb_ColorParamChanged(ptr unsafe.Pointer, colorParam C.struct_Moc_PackedString) {
-	if signal := qt.GetSignal(ptr, "colorParamChanged"); signal != nil {
-		(*(*func(string))(signal))(cGoUnpackString(colorParam))
-	}
-
-}
-
-func (ptr *IconStack) ConnectColorParamChanged(f func(colorParam string)) {
-	if ptr.Pointer() != nil {
-
-		if !qt.ExistsSignal(ptr.Pointer(), "colorParamChanged") {
-			C.IconStackd54ccb_ConnectColorParamChanged(ptr.Pointer())
-		}
-
-		if signal := qt.LendSignal(ptr.Pointer(), "colorParamChanged"); signal != nil {
-			f := func(colorParam string) {
-				(*(*func(string))(signal))(colorParam)
-				f(colorParam)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "colorParamChanged", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "colorParamChanged", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectColorParamChanged() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DisconnectColorParamChanged(ptr.Pointer())
-		qt.DisconnectSignal(ptr.Pointer(), "colorParamChanged")
-	}
-}
-
-func (ptr *IconStack) ColorParamChanged(colorParam string) {
-	if ptr.Pointer() != nil {
-		var colorParamC *C.char
-		if colorParam != "" {
-			colorParamC = C.CString(colorParam)
-			defer C.free(unsafe.Pointer(colorParamC))
-		}
-		C.IconStackd54ccb_ColorParamChanged(ptr.Pointer(), C.struct_Moc_PackedString{data: colorParamC, len: C.longlong(len(colorParam))})
-	}
-}
-
-//export callbackIconStackd54ccb_IsActive
-func callbackIconStackd54ccb_IsActive(ptr unsafe.Pointer) C.char {
-	if signal := qt.GetSignal(ptr, "isActive"); signal != nil {
-		return C.char(int8(qt.GoBoolToInt((*(*func() bool)(signal))())))
-	}
-
-	return C.char(int8(qt.GoBoolToInt(NewIconStackFromPointer(ptr).IsActiveDefault())))
-}
-
-func (ptr *IconStack) ConnectIsActive(f func() bool) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "isActive"); signal != nil {
-			f := func() bool {
-				(*(*func() bool)(signal))()
-				return f()
-			}
-			qt.ConnectSignal(ptr.Pointer(), "isActive", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "isActive", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectIsActive() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "isActive")
-	}
-}
-
-func (ptr *IconStack) IsActive() bool {
-	if ptr.Pointer() != nil {
-		return int8(C.IconStackd54ccb_IsActive(ptr.Pointer())) != 0
-	}
-	return false
-}
-
-func (ptr *IconStack) IsActiveDefault() bool {
-	if ptr.Pointer() != nil {
-		return int8(C.IconStackd54ccb_IsActiveDefault(ptr.Pointer())) != 0
-	}
-	return false
-}
-
-//export callbackIconStackd54ccb_SetIsActive
-func callbackIconStackd54ccb_SetIsActive(ptr unsafe.Pointer, isActive C.char) {
-	if signal := qt.GetSignal(ptr, "setIsActive"); signal != nil {
-		(*(*func(bool))(signal))(int8(isActive) != 0)
-	} else {
-		NewIconStackFromPointer(ptr).SetIsActiveDefault(int8(isActive) != 0)
-	}
-}
-
-func (ptr *IconStack) ConnectSetIsActive(f func(isActive bool)) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "setIsActive"); signal != nil {
-			f := func(isActive bool) {
-				(*(*func(bool))(signal))(isActive)
-				f(isActive)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "setIsActive", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "setIsActive", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectSetIsActive() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "setIsActive")
-	}
-}
-
-func (ptr *IconStack) SetIsActive(isActive bool) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_SetIsActive(ptr.Pointer(), C.char(int8(qt.GoBoolToInt(isActive))))
-	}
-}
-
-func (ptr *IconStack) SetIsActiveDefault(isActive bool) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_SetIsActiveDefault(ptr.Pointer(), C.char(int8(qt.GoBoolToInt(isActive))))
-	}
-}
-
-//export callbackIconStackd54ccb_IsActiveChanged
-func callbackIconStackd54ccb_IsActiveChanged(ptr unsafe.Pointer, isActive C.char) {
-	if signal := qt.GetSignal(ptr, "isActiveChanged"); signal != nil {
-		(*(*func(bool))(signal))(int8(isActive) != 0)
-	}
-
-}
-
-func (ptr *IconStack) ConnectIsActiveChanged(f func(isActive bool)) {
-	if ptr.Pointer() != nil {
-
-		if !qt.ExistsSignal(ptr.Pointer(), "isActiveChanged") {
-			C.IconStackd54ccb_ConnectIsActiveChanged(ptr.Pointer())
-		}
-
-		if signal := qt.LendSignal(ptr.Pointer(), "isActiveChanged"); signal != nil {
-			f := func(isActive bool) {
-				(*(*func(bool))(signal))(isActive)
-				f(isActive)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "isActiveChanged", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "isActiveChanged", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectIsActiveChanged() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DisconnectIsActiveChanged(ptr.Pointer())
-		qt.DisconnectSignal(ptr.Pointer(), "isActiveChanged")
-	}
-}
-
-func (ptr *IconStack) IsActiveChanged(isActive bool) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_IsActiveChanged(ptr.Pointer(), C.char(int8(qt.GoBoolToInt(isActive))))
-	}
-}
-
-//export callbackIconStackd54ccb_Title
-func callbackIconStackd54ccb_Title(ptr unsafe.Pointer) C.struct_Moc_PackedString {
-	if signal := qt.GetSignal(ptr, "title"); signal != nil {
-		tempVal := (*(*func() string)(signal))()
-		return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
-	}
-	tempVal := NewIconStackFromPointer(ptr).TitleDefault()
-	return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
-}
-
-func (ptr *IconStack) ConnectTitle(f func() string) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "title"); signal != nil {
-			f := func() string {
-				(*(*func() string)(signal))()
-				return f()
-			}
-			qt.ConnectSignal(ptr.Pointer(), "title", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "title", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectTitle() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "title")
-	}
-}
-
-func (ptr *IconStack) Title() string {
-	if ptr.Pointer() != nil {
-		return cGoUnpackString(C.IconStackd54ccb_Title(ptr.Pointer()))
-	}
-	return ""
-}
-
-func (ptr *IconStack) TitleDefault() string {
-	if ptr.Pointer() != nil {
-		return cGoUnpackString(C.IconStackd54ccb_TitleDefault(ptr.Pointer()))
-	}
-	return ""
-}
-
-//export callbackIconStackd54ccb_SetTitle
-func callbackIconStackd54ccb_SetTitle(ptr unsafe.Pointer, title C.struct_Moc_PackedString) {
-	if signal := qt.GetSignal(ptr, "setTitle"); signal != nil {
-		(*(*func(string))(signal))(cGoUnpackString(title))
-	} else {
-		NewIconStackFromPointer(ptr).SetTitleDefault(cGoUnpackString(title))
-	}
-}
-
-func (ptr *IconStack) ConnectSetTitle(f func(title string)) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "setTitle"); signal != nil {
-			f := func(title string) {
-				(*(*func(string))(signal))(title)
-				f(title)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "setTitle", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "setTitle", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectSetTitle() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "setTitle")
-	}
-}
-
-func (ptr *IconStack) SetTitle(title string) {
-	if ptr.Pointer() != nil {
-		var titleC *C.char
-		if title != "" {
-			titleC = C.CString(title)
-			defer C.free(unsafe.Pointer(titleC))
-		}
-		C.IconStackd54ccb_SetTitle(ptr.Pointer(), C.struct_Moc_PackedString{data: titleC, len: C.longlong(len(title))})
-	}
-}
-
-func (ptr *IconStack) SetTitleDefault(title string) {
-	if ptr.Pointer() != nil {
-		var titleC *C.char
-		if title != "" {
-			titleC = C.CString(title)
-			defer C.free(unsafe.Pointer(titleC))
-		}
-		C.IconStackd54ccb_SetTitleDefault(ptr.Pointer(), C.struct_Moc_PackedString{data: titleC, len: C.longlong(len(title))})
-	}
-}
-
-//export callbackIconStackd54ccb_TitleChanged
-func callbackIconStackd54ccb_TitleChanged(ptr unsafe.Pointer, title C.struct_Moc_PackedString) {
-	if signal := qt.GetSignal(ptr, "titleChanged"); signal != nil {
-		(*(*func(string))(signal))(cGoUnpackString(title))
-	}
-
-}
-
-func (ptr *IconStack) ConnectTitleChanged(f func(title string)) {
-	if ptr.Pointer() != nil {
-
-		if !qt.ExistsSignal(ptr.Pointer(), "titleChanged") {
-			C.IconStackd54ccb_ConnectTitleChanged(ptr.Pointer())
-		}
-
-		if signal := qt.LendSignal(ptr.Pointer(), "titleChanged"); signal != nil {
-			f := func(title string) {
-				(*(*func(string))(signal))(title)
-				f(title)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "titleChanged", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "titleChanged", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectTitleChanged() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DisconnectTitleChanged(ptr.Pointer())
-		qt.DisconnectSignal(ptr.Pointer(), "titleChanged")
-	}
-}
-
-func (ptr *IconStack) TitleChanged(title string) {
-	if ptr.Pointer() != nil {
-		var titleC *C.char
-		if title != "" {
-			titleC = C.CString(title)
-			defer C.free(unsafe.Pointer(titleC))
-		}
-		C.IconStackd54ccb_TitleChanged(ptr.Pointer(), C.struct_Moc_PackedString{data: titleC, len: C.longlong(len(title))})
-	}
-}
-
-func IconStack_QRegisterMetaType() int {
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType()))
-}
-
-func (ptr *IconStack) QRegisterMetaType() int {
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType()))
-}
-
-func IconStack_QRegisterMetaType2(typeName string) int {
-	var typeNameC *C.char
-	if typeName != "" {
-		typeNameC = C.CString(typeName)
-		defer C.free(unsafe.Pointer(typeNameC))
-	}
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType2(typeNameC)))
-}
-
-func (ptr *IconStack) QRegisterMetaType2(typeName string) int {
-	var typeNameC *C.char
-	if typeName != "" {
-		typeNameC = C.CString(typeName)
-		defer C.free(unsafe.Pointer(typeNameC))
-	}
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType2(typeNameC)))
-}
-
-func IconStack_QmlRegisterType() int {
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType()))
-}
-
-func (ptr *IconStack) QmlRegisterType() int {
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType()))
-}
-
-func IconStack_QmlRegisterType2(uri string, versionMajor int, versionMinor int, qmlName string) int {
-	var uriC *C.char
-	if uri != "" {
-		uriC = C.CString(uri)
-		defer C.free(unsafe.Pointer(uriC))
-	}
-	var qmlNameC *C.char
-	if qmlName != "" {
-		qmlNameC = C.CString(qmlName)
-		defer C.free(unsafe.Pointer(qmlNameC))
-	}
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType2(uriC, C.int(int32(versionMajor)), C.int(int32(versionMinor)), qmlNameC)))
-}
-
-func (ptr *IconStack) QmlRegisterType2(uri string, versionMajor int, versionMinor int, qmlName string) int {
-	var uriC *C.char
-	if uri != "" {
-		uriC = C.CString(uri)
-		defer C.free(unsafe.Pointer(uriC))
-	}
-	var qmlNameC *C.char
-	if qmlName != "" {
-		qmlNameC = C.CString(qmlName)
-		defer C.free(unsafe.Pointer(qmlNameC))
-	}
-	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType2(uriC, C.int(int32(versionMajor)), C.int(int32(versionMinor)), qmlNameC)))
-}
-
-func (ptr *IconStack) __children_atList(i int) *std_core.QObject {
-	if ptr.Pointer() != nil {
-		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___children_atList(ptr.Pointer(), C.int(int32(i))))
-		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
-			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
-		}
-		return tmpValue
-	}
-	return nil
-}
-
-func (ptr *IconStack) __children_setList(i std_core.QObject_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb___children_setList(ptr.Pointer(), std_core.PointerFromQObject(i))
-	}
-}
-
-func (ptr *IconStack) __children_newList() unsafe.Pointer {
-	return C.IconStackd54ccb___children_newList(ptr.Pointer())
-}
-
-func (ptr *IconStack) __dynamicPropertyNames_atList(i int) *std_core.QByteArray {
-	if ptr.Pointer() != nil {
-		tmpValue := std_core.NewQByteArrayFromPointer(C.IconStackd54ccb___dynamicPropertyNames_atList(ptr.Pointer(), C.int(int32(i))))
-		runtime.SetFinalizer(tmpValue, (*std_core.QByteArray).DestroyQByteArray)
-		return tmpValue
-	}
-	return nil
-}
-
-func (ptr *IconStack) __dynamicPropertyNames_setList(i std_core.QByteArray_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb___dynamicPropertyNames_setList(ptr.Pointer(), std_core.PointerFromQByteArray(i))
-	}
-}
-
-func (ptr *IconStack) __dynamicPropertyNames_newList() unsafe.Pointer {
-	return C.IconStackd54ccb___dynamicPropertyNames_newList(ptr.Pointer())
-}
-
-func (ptr *IconStack) __findChildren_atList(i int) *std_core.QObject {
-	if ptr.Pointer() != nil {
-		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___findChildren_atList(ptr.Pointer(), C.int(int32(i))))
-		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
-			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
-		}
-		return tmpValue
-	}
-	return nil
-}
-
-func (ptr *IconStack) __findChildren_setList(i std_core.QObject_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb___findChildren_setList(ptr.Pointer(), std_core.PointerFromQObject(i))
-	}
-}
-
-func (ptr *IconStack) __findChildren_newList() unsafe.Pointer {
-	return C.IconStackd54ccb___findChildren_newList(ptr.Pointer())
-}
-
-func (ptr *IconStack) __findChildren_atList3(i int) *std_core.QObject {
-	if ptr.Pointer() != nil {
-		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___findChildren_atList3(ptr.Pointer(), C.int(int32(i))))
-		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
-			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
-		}
-		return tmpValue
-	}
-	return nil
-}
-
-func (ptr *IconStack) __findChildren_setList3(i std_core.QObject_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb___findChildren_setList3(ptr.Pointer(), std_core.PointerFromQObject(i))
-	}
-}
-
-func (ptr *IconStack) __findChildren_newList3() unsafe.Pointer {
-	return C.IconStackd54ccb___findChildren_newList3(ptr.Pointer())
-}
-
-func (ptr *IconStack) __qFindChildren_atList2(i int) *std_core.QObject {
-	if ptr.Pointer() != nil {
-		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___qFindChildren_atList2(ptr.Pointer(), C.int(int32(i))))
-		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
-			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
-		}
-		return tmpValue
-	}
-	return nil
-}
-
-func (ptr *IconStack) __qFindChildren_setList2(i std_core.QObject_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb___qFindChildren_setList2(ptr.Pointer(), std_core.PointerFromQObject(i))
-	}
-}
-
-func (ptr *IconStack) __qFindChildren_newList2() unsafe.Pointer {
-	return C.IconStackd54ccb___qFindChildren_newList2(ptr.Pointer())
-}
-
-func (ptr *IconStack) __push_data_atList(v string, i int) *std_core.QVariant {
-	if ptr.Pointer() != nil {
-		var vC *C.char
-		if v != "" {
-			vC = C.CString(v)
-			defer C.free(unsafe.Pointer(vC))
-		}
-		tmpValue := std_core.NewQVariantFromPointer(C.IconStackd54ccb___push_data_atList(ptr.Pointer(), C.struct_Moc_PackedString{data: vC, len: C.longlong(len(v))}, C.int(int32(i))))
-		runtime.SetFinalizer(tmpValue, (*std_core.QVariant).DestroyQVariant)
-		return tmpValue
-	}
-	return nil
-}
-
-func (ptr *IconStack) __push_data_setList(key string, i std_core.QVariant_ITF) {
-	if ptr.Pointer() != nil {
-		var keyC *C.char
-		if key != "" {
-			keyC = C.CString(key)
-			defer C.free(unsafe.Pointer(keyC))
-		}
-		C.IconStackd54ccb___push_data_setList(ptr.Pointer(), C.struct_Moc_PackedString{data: keyC, len: C.longlong(len(key))}, std_core.PointerFromQVariant(i))
-	}
-}
-
-func (ptr *IconStack) __push_data_newList() unsafe.Pointer {
-	return C.IconStackd54ccb___push_data_newList(ptr.Pointer())
-}
-
-func (ptr *IconStack) __push_data_keyList() []string {
-	if ptr.Pointer() != nil {
-		return func(l C.struct_Moc_PackedList) []string {
-			out := make([]string, int(l.len))
-			tmpList := NewIconStackFromPointer(l.data)
-			for i := 0; i < len(out); i++ {
-				out[i] = tmpList.____push_data_keyList_atList(i)
-			}
-			return out
-		}(C.IconStackd54ccb___push_data_keyList(ptr.Pointer()))
-	}
-	return make([]string, 0)
-}
-
-func (ptr *IconStack) ____push_data_keyList_atList(i int) string {
-	if ptr.Pointer() != nil {
-		return cGoUnpackString(C.IconStackd54ccb_____push_data_keyList_atList(ptr.Pointer(), C.int(int32(i))))
-	}
-	return ""
-}
-
-func (ptr *IconStack) ____push_data_keyList_setList(i string) {
-	if ptr.Pointer() != nil {
-		var iC *C.char
-		if i != "" {
-			iC = C.CString(i)
-			defer C.free(unsafe.Pointer(iC))
-		}
-		C.IconStackd54ccb_____push_data_keyList_setList(ptr.Pointer(), C.struct_Moc_PackedString{data: iC, len: C.longlong(len(i))})
-	}
-}
-
-func (ptr *IconStack) ____push_data_keyList_newList() unsafe.Pointer {
-	return C.IconStackd54ccb_____push_data_keyList_newList(ptr.Pointer())
-}
-
-func NewIconStack(parent std_core.QObject_ITF) *IconStack {
-	tmpValue := NewIconStackFromPointer(C.IconStackd54ccb_NewIconStack(std_core.PointerFromQObject(parent)))
-	if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
-		tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
-	}
-	return tmpValue
-}
-
-//export callbackIconStackd54ccb_DestroyIconStack
-func callbackIconStackd54ccb_DestroyIconStack(ptr unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "~IconStack"); signal != nil {
-		(*(*func())(signal))()
-	} else {
-		NewIconStackFromPointer(ptr).DestroyIconStackDefault()
-	}
-}
-
-func (ptr *IconStack) ConnectDestroyIconStack(f func()) {
-	if ptr.Pointer() != nil {
-
-		if signal := qt.LendSignal(ptr.Pointer(), "~IconStack"); signal != nil {
-			f := func() {
-				(*(*func())(signal))()
-				f()
-			}
-			qt.ConnectSignal(ptr.Pointer(), "~IconStack", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "~IconStack", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *IconStack) DisconnectDestroyIconStack() {
-	if ptr.Pointer() != nil {
-
-		qt.DisconnectSignal(ptr.Pointer(), "~IconStack")
-	}
-}
-
-func (ptr *IconStack) DestroyIconStack() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DestroyIconStack(ptr.Pointer())
-		ptr.SetPointer(nil)
-		runtime.SetFinalizer(ptr, nil)
-	}
-}
-
-func (ptr *IconStack) DestroyIconStackDefault() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DestroyIconStackDefault(ptr.Pointer())
-		ptr.SetPointer(nil)
-		runtime.SetFinalizer(ptr, nil)
-	}
-}
-
-//export callbackIconStackd54ccb_ChildEvent
-func callbackIconStackd54ccb_ChildEvent(ptr unsafe.Pointer, event unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "childEvent"); signal != nil {
-		(*(*func(*std_core.QChildEvent))(signal))(std_core.NewQChildEventFromPointer(event))
-	} else {
-		NewIconStackFromPointer(ptr).ChildEventDefault(std_core.NewQChildEventFromPointer(event))
-	}
-}
-
-func (ptr *IconStack) ChildEventDefault(event std_core.QChildEvent_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_ChildEventDefault(ptr.Pointer(), std_core.PointerFromQChildEvent(event))
-	}
-}
-
-//export callbackIconStackd54ccb_ConnectNotify
-func callbackIconStackd54ccb_ConnectNotify(ptr unsafe.Pointer, sign unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "connectNotify"); signal != nil {
-		(*(*func(*std_core.QMetaMethod))(signal))(std_core.NewQMetaMethodFromPointer(sign))
-	} else {
-		NewIconStackFromPointer(ptr).ConnectNotifyDefault(std_core.NewQMetaMethodFromPointer(sign))
-	}
-}
-
-func (ptr *IconStack) ConnectNotifyDefault(sign std_core.QMetaMethod_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_ConnectNotifyDefault(ptr.Pointer(), std_core.PointerFromQMetaMethod(sign))
-	}
-}
-
-//export callbackIconStackd54ccb_CustomEvent
-func callbackIconStackd54ccb_CustomEvent(ptr unsafe.Pointer, event unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "customEvent"); signal != nil {
-		(*(*func(*std_core.QEvent))(signal))(std_core.NewQEventFromPointer(event))
-	} else {
-		NewIconStackFromPointer(ptr).CustomEventDefault(std_core.NewQEventFromPointer(event))
-	}
-}
-
-func (ptr *IconStack) CustomEventDefault(event std_core.QEvent_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_CustomEventDefault(ptr.Pointer(), std_core.PointerFromQEvent(event))
-	}
-}
-
-//export callbackIconStackd54ccb_DeleteLater
-func callbackIconStackd54ccb_DeleteLater(ptr unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "deleteLater"); signal != nil {
-		(*(*func())(signal))()
-	} else {
-		NewIconStackFromPointer(ptr).DeleteLaterDefault()
-	}
-}
-
-func (ptr *IconStack) DeleteLaterDefault() {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DeleteLaterDefault(ptr.Pointer())
-		runtime.SetFinalizer(ptr, nil)
-	}
-}
-
-//export callbackIconStackd54ccb_Destroyed
-func callbackIconStackd54ccb_Destroyed(ptr unsafe.Pointer, obj unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "destroyed"); signal != nil {
-		(*(*func(*std_core.QObject))(signal))(std_core.NewQObjectFromPointer(obj))
-	}
-	qt.Unregister(ptr)
-
-}
-
-//export callbackIconStackd54ccb_DisconnectNotify
-func callbackIconStackd54ccb_DisconnectNotify(ptr unsafe.Pointer, sign unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "disconnectNotify"); signal != nil {
-		(*(*func(*std_core.QMetaMethod))(signal))(std_core.NewQMetaMethodFromPointer(sign))
-	} else {
-		NewIconStackFromPointer(ptr).DisconnectNotifyDefault(std_core.NewQMetaMethodFromPointer(sign))
-	}
-}
-
-func (ptr *IconStack) DisconnectNotifyDefault(sign std_core.QMetaMethod_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_DisconnectNotifyDefault(ptr.Pointer(), std_core.PointerFromQMetaMethod(sign))
-	}
-}
-
-//export callbackIconStackd54ccb_Event
-func callbackIconStackd54ccb_Event(ptr unsafe.Pointer, e unsafe.Pointer) C.char {
-	if signal := qt.GetSignal(ptr, "event"); signal != nil {
-		return C.char(int8(qt.GoBoolToInt((*(*func(*std_core.QEvent) bool)(signal))(std_core.NewQEventFromPointer(e)))))
-	}
-
-	return C.char(int8(qt.GoBoolToInt(NewIconStackFromPointer(ptr).EventDefault(std_core.NewQEventFromPointer(e)))))
-}
-
-func (ptr *IconStack) EventDefault(e std_core.QEvent_ITF) bool {
-	if ptr.Pointer() != nil {
-		return int8(C.IconStackd54ccb_EventDefault(ptr.Pointer(), std_core.PointerFromQEvent(e))) != 0
-	}
-	return false
-}
-
-//export callbackIconStackd54ccb_EventFilter
-func callbackIconStackd54ccb_EventFilter(ptr unsafe.Pointer, watched unsafe.Pointer, event unsafe.Pointer) C.char {
-	if signal := qt.GetSignal(ptr, "eventFilter"); signal != nil {
-		return C.char(int8(qt.GoBoolToInt((*(*func(*std_core.QObject, *std_core.QEvent) bool)(signal))(std_core.NewQObjectFromPointer(watched), std_core.NewQEventFromPointer(event)))))
-	}
-
-	return C.char(int8(qt.GoBoolToInt(NewIconStackFromPointer(ptr).EventFilterDefault(std_core.NewQObjectFromPointer(watched), std_core.NewQEventFromPointer(event)))))
-}
-
-func (ptr *IconStack) EventFilterDefault(watched std_core.QObject_ITF, event std_core.QEvent_ITF) bool {
-	if ptr.Pointer() != nil {
-		return int8(C.IconStackd54ccb_EventFilterDefault(ptr.Pointer(), std_core.PointerFromQObject(watched), std_core.PointerFromQEvent(event))) != 0
-	}
-	return false
-}
-
-//export callbackIconStackd54ccb_ObjectNameChanged
-func callbackIconStackd54ccb_ObjectNameChanged(ptr unsafe.Pointer, objectName C.struct_Moc_PackedString) {
-	if signal := qt.GetSignal(ptr, "objectNameChanged"); signal != nil {
-		(*(*func(string))(signal))(cGoUnpackString(objectName))
-	}
-
-}
-
-//export callbackIconStackd54ccb_TimerEvent
-func callbackIconStackd54ccb_TimerEvent(ptr unsafe.Pointer, event unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "timerEvent"); signal != nil {
-		(*(*func(*std_core.QTimerEvent))(signal))(std_core.NewQTimerEventFromPointer(event))
-	} else {
-		NewIconStackFromPointer(ptr).TimerEventDefault(std_core.NewQTimerEventFromPointer(event))
-	}
-}
-
-func (ptr *IconStack) TimerEventDefault(event std_core.QTimerEvent_ITF) {
-	if ptr.Pointer() != nil {
-		C.IconStackd54ccb_TimerEventDefault(ptr.Pointer(), std_core.PointerFromQTimerEvent(event))
-	}
-}
-
 type SelectedStackModel_ITF interface {
 	std_core.QAbstractListModel_ITF
 	SelectedStackModel_PTR() *SelectedStackModel
@@ -4282,5 +3289,998 @@ func callbackIconListModeld54ccb_TimerEvent(ptr unsafe.Pointer, event unsafe.Poi
 func (ptr *IconListModel) TimerEventDefault(event std_core.QTimerEvent_ITF) {
 	if ptr.Pointer() != nil {
 		C.IconListModeld54ccb_TimerEventDefault(ptr.Pointer(), std_core.PointerFromQTimerEvent(event))
+	}
+}
+
+type IconStack_ITF interface {
+	std_core.QObject_ITF
+	IconStack_PTR() *IconStack
+}
+
+func (ptr *IconStack) IconStack_PTR() *IconStack {
+	return ptr
+}
+
+func (ptr *IconStack) Pointer() unsafe.Pointer {
+	if ptr != nil {
+		return ptr.QObject_PTR().Pointer()
+	}
+	return nil
+}
+
+func (ptr *IconStack) SetPointer(p unsafe.Pointer) {
+	if ptr != nil {
+		ptr.QObject_PTR().SetPointer(p)
+	}
+}
+
+func PointerFromIconStack(ptr IconStack_ITF) unsafe.Pointer {
+	if ptr != nil {
+		return ptr.IconStack_PTR().Pointer()
+	}
+	return nil
+}
+
+func NewIconStackFromPointer(ptr unsafe.Pointer) (n *IconStack) {
+	if gPtr, ok := qt.Receive(ptr); !ok {
+		n = new(IconStack)
+		n.SetPointer(ptr)
+	} else {
+		switch deduced := gPtr.(type) {
+		case *IconStack:
+			n = deduced
+
+		case *std_core.QObject:
+			n = &IconStack{QObject: *deduced}
+
+		default:
+			n = new(IconStack)
+			n.SetPointer(ptr)
+		}
+	}
+	return
+}
+func (this *IconStack) Init() { this.init() }
+
+//export callbackIconStackd54ccb_Constructor
+func callbackIconStackd54ccb_Constructor(ptr unsafe.Pointer) {
+	this := NewIconStackFromPointer(ptr)
+	qt.Register(ptr, this)
+	this.ConnectPop(this.pop)
+	this.ConnectPush(this.push)
+	this.init()
+}
+
+//export callbackIconStackd54ccb_Pop
+func callbackIconStackd54ccb_Pop(ptr unsafe.Pointer, index unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "pop"); signal != nil {
+		(*(*func(*std_core.QVariant))(signal))(std_core.NewQVariantFromPointer(index))
+	}
+
+}
+
+func (ptr *IconStack) ConnectPop(f func(index *std_core.QVariant)) {
+	if ptr.Pointer() != nil {
+
+		if !qt.ExistsSignal(ptr.Pointer(), "pop") {
+			C.IconStackd54ccb_ConnectPop(ptr.Pointer())
+		}
+
+		if signal := qt.LendSignal(ptr.Pointer(), "pop"); signal != nil {
+			f := func(index *std_core.QVariant) {
+				(*(*func(*std_core.QVariant))(signal))(index)
+				f(index)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "pop", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "pop", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectPop() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DisconnectPop(ptr.Pointer())
+		qt.DisconnectSignal(ptr.Pointer(), "pop")
+	}
+}
+
+func (ptr *IconStack) Pop(index std_core.QVariant_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_Pop(ptr.Pointer(), std_core.PointerFromQVariant(index))
+	}
+}
+
+//export callbackIconStackd54ccb_Push
+func callbackIconStackd54ccb_Push(ptr unsafe.Pointer, data C.struct_Moc_PackedList) {
+	if signal := qt.GetSignal(ptr, "push"); signal != nil {
+		(*(*func(map[string]*std_core.QVariant))(signal))(func(l C.struct_Moc_PackedList) map[string]*std_core.QVariant {
+			out := make(map[string]*std_core.QVariant, int(l.len))
+			tmpList := NewIconStackFromPointer(l.data)
+			for i, v := range tmpList.__push_data_keyList() {
+				out[v] = tmpList.__push_data_atList(v, i)
+			}
+			return out
+		}(data))
+	}
+
+}
+
+func (ptr *IconStack) ConnectPush(f func(data map[string]*std_core.QVariant)) {
+	if ptr.Pointer() != nil {
+
+		if !qt.ExistsSignal(ptr.Pointer(), "push") {
+			C.IconStackd54ccb_ConnectPush(ptr.Pointer())
+		}
+
+		if signal := qt.LendSignal(ptr.Pointer(), "push"); signal != nil {
+			f := func(data map[string]*std_core.QVariant) {
+				(*(*func(map[string]*std_core.QVariant))(signal))(data)
+				f(data)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "push", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "push", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectPush() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DisconnectPush(ptr.Pointer())
+		qt.DisconnectSignal(ptr.Pointer(), "push")
+	}
+}
+
+func (ptr *IconStack) Push(data map[string]*std_core.QVariant) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_Push(ptr.Pointer(), func() unsafe.Pointer {
+			tmpList := NewIconStackFromPointer(NewIconStackFromPointer(nil).__push_data_newList())
+			for k, v := range data {
+				tmpList.__push_data_setList(k, std_core.NewQVariant1(v))
+			}
+			return tmpList.Pointer()
+		}())
+	}
+}
+
+//export callbackIconStackd54ccb_ColorParam
+func callbackIconStackd54ccb_ColorParam(ptr unsafe.Pointer) C.struct_Moc_PackedString {
+	if signal := qt.GetSignal(ptr, "colorParam"); signal != nil {
+		tempVal := (*(*func() string)(signal))()
+		return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
+	}
+	tempVal := NewIconStackFromPointer(ptr).ColorParamDefault()
+	return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
+}
+
+func (ptr *IconStack) ConnectColorParam(f func() string) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "colorParam"); signal != nil {
+			f := func() string {
+				(*(*func() string)(signal))()
+				return f()
+			}
+			qt.ConnectSignal(ptr.Pointer(), "colorParam", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "colorParam", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectColorParam() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "colorParam")
+	}
+}
+
+func (ptr *IconStack) ColorParam() string {
+	if ptr.Pointer() != nil {
+		return cGoUnpackString(C.IconStackd54ccb_ColorParam(ptr.Pointer()))
+	}
+	return ""
+}
+
+func (ptr *IconStack) ColorParamDefault() string {
+	if ptr.Pointer() != nil {
+		return cGoUnpackString(C.IconStackd54ccb_ColorParamDefault(ptr.Pointer()))
+	}
+	return ""
+}
+
+//export callbackIconStackd54ccb_SetColorParam
+func callbackIconStackd54ccb_SetColorParam(ptr unsafe.Pointer, colorParam C.struct_Moc_PackedString) {
+	if signal := qt.GetSignal(ptr, "setColorParam"); signal != nil {
+		(*(*func(string))(signal))(cGoUnpackString(colorParam))
+	} else {
+		NewIconStackFromPointer(ptr).SetColorParamDefault(cGoUnpackString(colorParam))
+	}
+}
+
+func (ptr *IconStack) ConnectSetColorParam(f func(colorParam string)) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "setColorParam"); signal != nil {
+			f := func(colorParam string) {
+				(*(*func(string))(signal))(colorParam)
+				f(colorParam)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "setColorParam", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "setColorParam", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectSetColorParam() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "setColorParam")
+	}
+}
+
+func (ptr *IconStack) SetColorParam(colorParam string) {
+	if ptr.Pointer() != nil {
+		var colorParamC *C.char
+		if colorParam != "" {
+			colorParamC = C.CString(colorParam)
+			defer C.free(unsafe.Pointer(colorParamC))
+		}
+		C.IconStackd54ccb_SetColorParam(ptr.Pointer(), C.struct_Moc_PackedString{data: colorParamC, len: C.longlong(len(colorParam))})
+	}
+}
+
+func (ptr *IconStack) SetColorParamDefault(colorParam string) {
+	if ptr.Pointer() != nil {
+		var colorParamC *C.char
+		if colorParam != "" {
+			colorParamC = C.CString(colorParam)
+			defer C.free(unsafe.Pointer(colorParamC))
+		}
+		C.IconStackd54ccb_SetColorParamDefault(ptr.Pointer(), C.struct_Moc_PackedString{data: colorParamC, len: C.longlong(len(colorParam))})
+	}
+}
+
+//export callbackIconStackd54ccb_ColorParamChanged
+func callbackIconStackd54ccb_ColorParamChanged(ptr unsafe.Pointer, colorParam C.struct_Moc_PackedString) {
+	if signal := qt.GetSignal(ptr, "colorParamChanged"); signal != nil {
+		(*(*func(string))(signal))(cGoUnpackString(colorParam))
+	}
+
+}
+
+func (ptr *IconStack) ConnectColorParamChanged(f func(colorParam string)) {
+	if ptr.Pointer() != nil {
+
+		if !qt.ExistsSignal(ptr.Pointer(), "colorParamChanged") {
+			C.IconStackd54ccb_ConnectColorParamChanged(ptr.Pointer())
+		}
+
+		if signal := qt.LendSignal(ptr.Pointer(), "colorParamChanged"); signal != nil {
+			f := func(colorParam string) {
+				(*(*func(string))(signal))(colorParam)
+				f(colorParam)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "colorParamChanged", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "colorParamChanged", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectColorParamChanged() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DisconnectColorParamChanged(ptr.Pointer())
+		qt.DisconnectSignal(ptr.Pointer(), "colorParamChanged")
+	}
+}
+
+func (ptr *IconStack) ColorParamChanged(colorParam string) {
+	if ptr.Pointer() != nil {
+		var colorParamC *C.char
+		if colorParam != "" {
+			colorParamC = C.CString(colorParam)
+			defer C.free(unsafe.Pointer(colorParamC))
+		}
+		C.IconStackd54ccb_ColorParamChanged(ptr.Pointer(), C.struct_Moc_PackedString{data: colorParamC, len: C.longlong(len(colorParam))})
+	}
+}
+
+//export callbackIconStackd54ccb_IsActive
+func callbackIconStackd54ccb_IsActive(ptr unsafe.Pointer) C.char {
+	if signal := qt.GetSignal(ptr, "isActive"); signal != nil {
+		return C.char(int8(qt.GoBoolToInt((*(*func() bool)(signal))())))
+	}
+
+	return C.char(int8(qt.GoBoolToInt(NewIconStackFromPointer(ptr).IsActiveDefault())))
+}
+
+func (ptr *IconStack) ConnectIsActive(f func() bool) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "isActive"); signal != nil {
+			f := func() bool {
+				(*(*func() bool)(signal))()
+				return f()
+			}
+			qt.ConnectSignal(ptr.Pointer(), "isActive", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "isActive", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectIsActive() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "isActive")
+	}
+}
+
+func (ptr *IconStack) IsActive() bool {
+	if ptr.Pointer() != nil {
+		return int8(C.IconStackd54ccb_IsActive(ptr.Pointer())) != 0
+	}
+	return false
+}
+
+func (ptr *IconStack) IsActiveDefault() bool {
+	if ptr.Pointer() != nil {
+		return int8(C.IconStackd54ccb_IsActiveDefault(ptr.Pointer())) != 0
+	}
+	return false
+}
+
+//export callbackIconStackd54ccb_SetIsActive
+func callbackIconStackd54ccb_SetIsActive(ptr unsafe.Pointer, isActive C.char) {
+	if signal := qt.GetSignal(ptr, "setIsActive"); signal != nil {
+		(*(*func(bool))(signal))(int8(isActive) != 0)
+	} else {
+		NewIconStackFromPointer(ptr).SetIsActiveDefault(int8(isActive) != 0)
+	}
+}
+
+func (ptr *IconStack) ConnectSetIsActive(f func(isActive bool)) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "setIsActive"); signal != nil {
+			f := func(isActive bool) {
+				(*(*func(bool))(signal))(isActive)
+				f(isActive)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "setIsActive", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "setIsActive", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectSetIsActive() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "setIsActive")
+	}
+}
+
+func (ptr *IconStack) SetIsActive(isActive bool) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_SetIsActive(ptr.Pointer(), C.char(int8(qt.GoBoolToInt(isActive))))
+	}
+}
+
+func (ptr *IconStack) SetIsActiveDefault(isActive bool) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_SetIsActiveDefault(ptr.Pointer(), C.char(int8(qt.GoBoolToInt(isActive))))
+	}
+}
+
+//export callbackIconStackd54ccb_IsActiveChanged
+func callbackIconStackd54ccb_IsActiveChanged(ptr unsafe.Pointer, isActive C.char) {
+	if signal := qt.GetSignal(ptr, "isActiveChanged"); signal != nil {
+		(*(*func(bool))(signal))(int8(isActive) != 0)
+	}
+
+}
+
+func (ptr *IconStack) ConnectIsActiveChanged(f func(isActive bool)) {
+	if ptr.Pointer() != nil {
+
+		if !qt.ExistsSignal(ptr.Pointer(), "isActiveChanged") {
+			C.IconStackd54ccb_ConnectIsActiveChanged(ptr.Pointer())
+		}
+
+		if signal := qt.LendSignal(ptr.Pointer(), "isActiveChanged"); signal != nil {
+			f := func(isActive bool) {
+				(*(*func(bool))(signal))(isActive)
+				f(isActive)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "isActiveChanged", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "isActiveChanged", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectIsActiveChanged() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DisconnectIsActiveChanged(ptr.Pointer())
+		qt.DisconnectSignal(ptr.Pointer(), "isActiveChanged")
+	}
+}
+
+func (ptr *IconStack) IsActiveChanged(isActive bool) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_IsActiveChanged(ptr.Pointer(), C.char(int8(qt.GoBoolToInt(isActive))))
+	}
+}
+
+//export callbackIconStackd54ccb_Title
+func callbackIconStackd54ccb_Title(ptr unsafe.Pointer) C.struct_Moc_PackedString {
+	if signal := qt.GetSignal(ptr, "title"); signal != nil {
+		tempVal := (*(*func() string)(signal))()
+		return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
+	}
+	tempVal := NewIconStackFromPointer(ptr).TitleDefault()
+	return C.struct_Moc_PackedString{data: C.CString(tempVal), len: C.longlong(len(tempVal))}
+}
+
+func (ptr *IconStack) ConnectTitle(f func() string) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "title"); signal != nil {
+			f := func() string {
+				(*(*func() string)(signal))()
+				return f()
+			}
+			qt.ConnectSignal(ptr.Pointer(), "title", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "title", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectTitle() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "title")
+	}
+}
+
+func (ptr *IconStack) Title() string {
+	if ptr.Pointer() != nil {
+		return cGoUnpackString(C.IconStackd54ccb_Title(ptr.Pointer()))
+	}
+	return ""
+}
+
+func (ptr *IconStack) TitleDefault() string {
+	if ptr.Pointer() != nil {
+		return cGoUnpackString(C.IconStackd54ccb_TitleDefault(ptr.Pointer()))
+	}
+	return ""
+}
+
+//export callbackIconStackd54ccb_SetTitle
+func callbackIconStackd54ccb_SetTitle(ptr unsafe.Pointer, title C.struct_Moc_PackedString) {
+	if signal := qt.GetSignal(ptr, "setTitle"); signal != nil {
+		(*(*func(string))(signal))(cGoUnpackString(title))
+	} else {
+		NewIconStackFromPointer(ptr).SetTitleDefault(cGoUnpackString(title))
+	}
+}
+
+func (ptr *IconStack) ConnectSetTitle(f func(title string)) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "setTitle"); signal != nil {
+			f := func(title string) {
+				(*(*func(string))(signal))(title)
+				f(title)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "setTitle", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "setTitle", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectSetTitle() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "setTitle")
+	}
+}
+
+func (ptr *IconStack) SetTitle(title string) {
+	if ptr.Pointer() != nil {
+		var titleC *C.char
+		if title != "" {
+			titleC = C.CString(title)
+			defer C.free(unsafe.Pointer(titleC))
+		}
+		C.IconStackd54ccb_SetTitle(ptr.Pointer(), C.struct_Moc_PackedString{data: titleC, len: C.longlong(len(title))})
+	}
+}
+
+func (ptr *IconStack) SetTitleDefault(title string) {
+	if ptr.Pointer() != nil {
+		var titleC *C.char
+		if title != "" {
+			titleC = C.CString(title)
+			defer C.free(unsafe.Pointer(titleC))
+		}
+		C.IconStackd54ccb_SetTitleDefault(ptr.Pointer(), C.struct_Moc_PackedString{data: titleC, len: C.longlong(len(title))})
+	}
+}
+
+//export callbackIconStackd54ccb_TitleChanged
+func callbackIconStackd54ccb_TitleChanged(ptr unsafe.Pointer, title C.struct_Moc_PackedString) {
+	if signal := qt.GetSignal(ptr, "titleChanged"); signal != nil {
+		(*(*func(string))(signal))(cGoUnpackString(title))
+	}
+
+}
+
+func (ptr *IconStack) ConnectTitleChanged(f func(title string)) {
+	if ptr.Pointer() != nil {
+
+		if !qt.ExistsSignal(ptr.Pointer(), "titleChanged") {
+			C.IconStackd54ccb_ConnectTitleChanged(ptr.Pointer())
+		}
+
+		if signal := qt.LendSignal(ptr.Pointer(), "titleChanged"); signal != nil {
+			f := func(title string) {
+				(*(*func(string))(signal))(title)
+				f(title)
+			}
+			qt.ConnectSignal(ptr.Pointer(), "titleChanged", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "titleChanged", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectTitleChanged() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DisconnectTitleChanged(ptr.Pointer())
+		qt.DisconnectSignal(ptr.Pointer(), "titleChanged")
+	}
+}
+
+func (ptr *IconStack) TitleChanged(title string) {
+	if ptr.Pointer() != nil {
+		var titleC *C.char
+		if title != "" {
+			titleC = C.CString(title)
+			defer C.free(unsafe.Pointer(titleC))
+		}
+		C.IconStackd54ccb_TitleChanged(ptr.Pointer(), C.struct_Moc_PackedString{data: titleC, len: C.longlong(len(title))})
+	}
+}
+
+func IconStack_QRegisterMetaType() int {
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType()))
+}
+
+func (ptr *IconStack) QRegisterMetaType() int {
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType()))
+}
+
+func IconStack_QRegisterMetaType2(typeName string) int {
+	var typeNameC *C.char
+	if typeName != "" {
+		typeNameC = C.CString(typeName)
+		defer C.free(unsafe.Pointer(typeNameC))
+	}
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType2(typeNameC)))
+}
+
+func (ptr *IconStack) QRegisterMetaType2(typeName string) int {
+	var typeNameC *C.char
+	if typeName != "" {
+		typeNameC = C.CString(typeName)
+		defer C.free(unsafe.Pointer(typeNameC))
+	}
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QRegisterMetaType2(typeNameC)))
+}
+
+func IconStack_QmlRegisterType() int {
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType()))
+}
+
+func (ptr *IconStack) QmlRegisterType() int {
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType()))
+}
+
+func IconStack_QmlRegisterType2(uri string, versionMajor int, versionMinor int, qmlName string) int {
+	var uriC *C.char
+	if uri != "" {
+		uriC = C.CString(uri)
+		defer C.free(unsafe.Pointer(uriC))
+	}
+	var qmlNameC *C.char
+	if qmlName != "" {
+		qmlNameC = C.CString(qmlName)
+		defer C.free(unsafe.Pointer(qmlNameC))
+	}
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType2(uriC, C.int(int32(versionMajor)), C.int(int32(versionMinor)), qmlNameC)))
+}
+
+func (ptr *IconStack) QmlRegisterType2(uri string, versionMajor int, versionMinor int, qmlName string) int {
+	var uriC *C.char
+	if uri != "" {
+		uriC = C.CString(uri)
+		defer C.free(unsafe.Pointer(uriC))
+	}
+	var qmlNameC *C.char
+	if qmlName != "" {
+		qmlNameC = C.CString(qmlName)
+		defer C.free(unsafe.Pointer(qmlNameC))
+	}
+	return int(int32(C.IconStackd54ccb_IconStackd54ccb_QmlRegisterType2(uriC, C.int(int32(versionMajor)), C.int(int32(versionMinor)), qmlNameC)))
+}
+
+func (ptr *IconStack) __children_atList(i int) *std_core.QObject {
+	if ptr.Pointer() != nil {
+		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___children_atList(ptr.Pointer(), C.int(int32(i))))
+		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
+			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
+		}
+		return tmpValue
+	}
+	return nil
+}
+
+func (ptr *IconStack) __children_setList(i std_core.QObject_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb___children_setList(ptr.Pointer(), std_core.PointerFromQObject(i))
+	}
+}
+
+func (ptr *IconStack) __children_newList() unsafe.Pointer {
+	return C.IconStackd54ccb___children_newList(ptr.Pointer())
+}
+
+func (ptr *IconStack) __dynamicPropertyNames_atList(i int) *std_core.QByteArray {
+	if ptr.Pointer() != nil {
+		tmpValue := std_core.NewQByteArrayFromPointer(C.IconStackd54ccb___dynamicPropertyNames_atList(ptr.Pointer(), C.int(int32(i))))
+		runtime.SetFinalizer(tmpValue, (*std_core.QByteArray).DestroyQByteArray)
+		return tmpValue
+	}
+	return nil
+}
+
+func (ptr *IconStack) __dynamicPropertyNames_setList(i std_core.QByteArray_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb___dynamicPropertyNames_setList(ptr.Pointer(), std_core.PointerFromQByteArray(i))
+	}
+}
+
+func (ptr *IconStack) __dynamicPropertyNames_newList() unsafe.Pointer {
+	return C.IconStackd54ccb___dynamicPropertyNames_newList(ptr.Pointer())
+}
+
+func (ptr *IconStack) __findChildren_atList(i int) *std_core.QObject {
+	if ptr.Pointer() != nil {
+		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___findChildren_atList(ptr.Pointer(), C.int(int32(i))))
+		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
+			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
+		}
+		return tmpValue
+	}
+	return nil
+}
+
+func (ptr *IconStack) __findChildren_setList(i std_core.QObject_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb___findChildren_setList(ptr.Pointer(), std_core.PointerFromQObject(i))
+	}
+}
+
+func (ptr *IconStack) __findChildren_newList() unsafe.Pointer {
+	return C.IconStackd54ccb___findChildren_newList(ptr.Pointer())
+}
+
+func (ptr *IconStack) __findChildren_atList3(i int) *std_core.QObject {
+	if ptr.Pointer() != nil {
+		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___findChildren_atList3(ptr.Pointer(), C.int(int32(i))))
+		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
+			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
+		}
+		return tmpValue
+	}
+	return nil
+}
+
+func (ptr *IconStack) __findChildren_setList3(i std_core.QObject_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb___findChildren_setList3(ptr.Pointer(), std_core.PointerFromQObject(i))
+	}
+}
+
+func (ptr *IconStack) __findChildren_newList3() unsafe.Pointer {
+	return C.IconStackd54ccb___findChildren_newList3(ptr.Pointer())
+}
+
+func (ptr *IconStack) __qFindChildren_atList2(i int) *std_core.QObject {
+	if ptr.Pointer() != nil {
+		tmpValue := std_core.NewQObjectFromPointer(C.IconStackd54ccb___qFindChildren_atList2(ptr.Pointer(), C.int(int32(i))))
+		if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
+			tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
+		}
+		return tmpValue
+	}
+	return nil
+}
+
+func (ptr *IconStack) __qFindChildren_setList2(i std_core.QObject_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb___qFindChildren_setList2(ptr.Pointer(), std_core.PointerFromQObject(i))
+	}
+}
+
+func (ptr *IconStack) __qFindChildren_newList2() unsafe.Pointer {
+	return C.IconStackd54ccb___qFindChildren_newList2(ptr.Pointer())
+}
+
+func (ptr *IconStack) __push_data_atList(v string, i int) *std_core.QVariant {
+	if ptr.Pointer() != nil {
+		var vC *C.char
+		if v != "" {
+			vC = C.CString(v)
+			defer C.free(unsafe.Pointer(vC))
+		}
+		tmpValue := std_core.NewQVariantFromPointer(C.IconStackd54ccb___push_data_atList(ptr.Pointer(), C.struct_Moc_PackedString{data: vC, len: C.longlong(len(v))}, C.int(int32(i))))
+		runtime.SetFinalizer(tmpValue, (*std_core.QVariant).DestroyQVariant)
+		return tmpValue
+	}
+	return nil
+}
+
+func (ptr *IconStack) __push_data_setList(key string, i std_core.QVariant_ITF) {
+	if ptr.Pointer() != nil {
+		var keyC *C.char
+		if key != "" {
+			keyC = C.CString(key)
+			defer C.free(unsafe.Pointer(keyC))
+		}
+		C.IconStackd54ccb___push_data_setList(ptr.Pointer(), C.struct_Moc_PackedString{data: keyC, len: C.longlong(len(key))}, std_core.PointerFromQVariant(i))
+	}
+}
+
+func (ptr *IconStack) __push_data_newList() unsafe.Pointer {
+	return C.IconStackd54ccb___push_data_newList(ptr.Pointer())
+}
+
+func (ptr *IconStack) __push_data_keyList() []string {
+	if ptr.Pointer() != nil {
+		return func(l C.struct_Moc_PackedList) []string {
+			out := make([]string, int(l.len))
+			tmpList := NewIconStackFromPointer(l.data)
+			for i := 0; i < len(out); i++ {
+				out[i] = tmpList.____push_data_keyList_atList(i)
+			}
+			return out
+		}(C.IconStackd54ccb___push_data_keyList(ptr.Pointer()))
+	}
+	return make([]string, 0)
+}
+
+func (ptr *IconStack) ____push_data_keyList_atList(i int) string {
+	if ptr.Pointer() != nil {
+		return cGoUnpackString(C.IconStackd54ccb_____push_data_keyList_atList(ptr.Pointer(), C.int(int32(i))))
+	}
+	return ""
+}
+
+func (ptr *IconStack) ____push_data_keyList_setList(i string) {
+	if ptr.Pointer() != nil {
+		var iC *C.char
+		if i != "" {
+			iC = C.CString(i)
+			defer C.free(unsafe.Pointer(iC))
+		}
+		C.IconStackd54ccb_____push_data_keyList_setList(ptr.Pointer(), C.struct_Moc_PackedString{data: iC, len: C.longlong(len(i))})
+	}
+}
+
+func (ptr *IconStack) ____push_data_keyList_newList() unsafe.Pointer {
+	return C.IconStackd54ccb_____push_data_keyList_newList(ptr.Pointer())
+}
+
+func NewIconStack(parent std_core.QObject_ITF) *IconStack {
+	tmpValue := NewIconStackFromPointer(C.IconStackd54ccb_NewIconStack(std_core.PointerFromQObject(parent)))
+	if !qt.ExistsSignal(tmpValue.Pointer(), "destroyed") {
+		tmpValue.ConnectDestroyed(func(*std_core.QObject) { tmpValue.SetPointer(nil) })
+	}
+	return tmpValue
+}
+
+//export callbackIconStackd54ccb_DestroyIconStack
+func callbackIconStackd54ccb_DestroyIconStack(ptr unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "~IconStack"); signal != nil {
+		(*(*func())(signal))()
+	} else {
+		NewIconStackFromPointer(ptr).DestroyIconStackDefault()
+	}
+}
+
+func (ptr *IconStack) ConnectDestroyIconStack(f func()) {
+	if ptr.Pointer() != nil {
+
+		if signal := qt.LendSignal(ptr.Pointer(), "~IconStack"); signal != nil {
+			f := func() {
+				(*(*func())(signal))()
+				f()
+			}
+			qt.ConnectSignal(ptr.Pointer(), "~IconStack", unsafe.Pointer(&f))
+		} else {
+			qt.ConnectSignal(ptr.Pointer(), "~IconStack", unsafe.Pointer(&f))
+		}
+	}
+}
+
+func (ptr *IconStack) DisconnectDestroyIconStack() {
+	if ptr.Pointer() != nil {
+
+		qt.DisconnectSignal(ptr.Pointer(), "~IconStack")
+	}
+}
+
+func (ptr *IconStack) DestroyIconStack() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DestroyIconStack(ptr.Pointer())
+		ptr.SetPointer(nil)
+		runtime.SetFinalizer(ptr, nil)
+	}
+}
+
+func (ptr *IconStack) DestroyIconStackDefault() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DestroyIconStackDefault(ptr.Pointer())
+		ptr.SetPointer(nil)
+		runtime.SetFinalizer(ptr, nil)
+	}
+}
+
+//export callbackIconStackd54ccb_ChildEvent
+func callbackIconStackd54ccb_ChildEvent(ptr unsafe.Pointer, event unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "childEvent"); signal != nil {
+		(*(*func(*std_core.QChildEvent))(signal))(std_core.NewQChildEventFromPointer(event))
+	} else {
+		NewIconStackFromPointer(ptr).ChildEventDefault(std_core.NewQChildEventFromPointer(event))
+	}
+}
+
+func (ptr *IconStack) ChildEventDefault(event std_core.QChildEvent_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_ChildEventDefault(ptr.Pointer(), std_core.PointerFromQChildEvent(event))
+	}
+}
+
+//export callbackIconStackd54ccb_ConnectNotify
+func callbackIconStackd54ccb_ConnectNotify(ptr unsafe.Pointer, sign unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "connectNotify"); signal != nil {
+		(*(*func(*std_core.QMetaMethod))(signal))(std_core.NewQMetaMethodFromPointer(sign))
+	} else {
+		NewIconStackFromPointer(ptr).ConnectNotifyDefault(std_core.NewQMetaMethodFromPointer(sign))
+	}
+}
+
+func (ptr *IconStack) ConnectNotifyDefault(sign std_core.QMetaMethod_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_ConnectNotifyDefault(ptr.Pointer(), std_core.PointerFromQMetaMethod(sign))
+	}
+}
+
+//export callbackIconStackd54ccb_CustomEvent
+func callbackIconStackd54ccb_CustomEvent(ptr unsafe.Pointer, event unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "customEvent"); signal != nil {
+		(*(*func(*std_core.QEvent))(signal))(std_core.NewQEventFromPointer(event))
+	} else {
+		NewIconStackFromPointer(ptr).CustomEventDefault(std_core.NewQEventFromPointer(event))
+	}
+}
+
+func (ptr *IconStack) CustomEventDefault(event std_core.QEvent_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_CustomEventDefault(ptr.Pointer(), std_core.PointerFromQEvent(event))
+	}
+}
+
+//export callbackIconStackd54ccb_DeleteLater
+func callbackIconStackd54ccb_DeleteLater(ptr unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "deleteLater"); signal != nil {
+		(*(*func())(signal))()
+	} else {
+		NewIconStackFromPointer(ptr).DeleteLaterDefault()
+	}
+}
+
+func (ptr *IconStack) DeleteLaterDefault() {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DeleteLaterDefault(ptr.Pointer())
+		runtime.SetFinalizer(ptr, nil)
+	}
+}
+
+//export callbackIconStackd54ccb_Destroyed
+func callbackIconStackd54ccb_Destroyed(ptr unsafe.Pointer, obj unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "destroyed"); signal != nil {
+		(*(*func(*std_core.QObject))(signal))(std_core.NewQObjectFromPointer(obj))
+	}
+	qt.Unregister(ptr)
+
+}
+
+//export callbackIconStackd54ccb_DisconnectNotify
+func callbackIconStackd54ccb_DisconnectNotify(ptr unsafe.Pointer, sign unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "disconnectNotify"); signal != nil {
+		(*(*func(*std_core.QMetaMethod))(signal))(std_core.NewQMetaMethodFromPointer(sign))
+	} else {
+		NewIconStackFromPointer(ptr).DisconnectNotifyDefault(std_core.NewQMetaMethodFromPointer(sign))
+	}
+}
+
+func (ptr *IconStack) DisconnectNotifyDefault(sign std_core.QMetaMethod_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_DisconnectNotifyDefault(ptr.Pointer(), std_core.PointerFromQMetaMethod(sign))
+	}
+}
+
+//export callbackIconStackd54ccb_Event
+func callbackIconStackd54ccb_Event(ptr unsafe.Pointer, e unsafe.Pointer) C.char {
+	if signal := qt.GetSignal(ptr, "event"); signal != nil {
+		return C.char(int8(qt.GoBoolToInt((*(*func(*std_core.QEvent) bool)(signal))(std_core.NewQEventFromPointer(e)))))
+	}
+
+	return C.char(int8(qt.GoBoolToInt(NewIconStackFromPointer(ptr).EventDefault(std_core.NewQEventFromPointer(e)))))
+}
+
+func (ptr *IconStack) EventDefault(e std_core.QEvent_ITF) bool {
+	if ptr.Pointer() != nil {
+		return int8(C.IconStackd54ccb_EventDefault(ptr.Pointer(), std_core.PointerFromQEvent(e))) != 0
+	}
+	return false
+}
+
+//export callbackIconStackd54ccb_EventFilter
+func callbackIconStackd54ccb_EventFilter(ptr unsafe.Pointer, watched unsafe.Pointer, event unsafe.Pointer) C.char {
+	if signal := qt.GetSignal(ptr, "eventFilter"); signal != nil {
+		return C.char(int8(qt.GoBoolToInt((*(*func(*std_core.QObject, *std_core.QEvent) bool)(signal))(std_core.NewQObjectFromPointer(watched), std_core.NewQEventFromPointer(event)))))
+	}
+
+	return C.char(int8(qt.GoBoolToInt(NewIconStackFromPointer(ptr).EventFilterDefault(std_core.NewQObjectFromPointer(watched), std_core.NewQEventFromPointer(event)))))
+}
+
+func (ptr *IconStack) EventFilterDefault(watched std_core.QObject_ITF, event std_core.QEvent_ITF) bool {
+	if ptr.Pointer() != nil {
+		return int8(C.IconStackd54ccb_EventFilterDefault(ptr.Pointer(), std_core.PointerFromQObject(watched), std_core.PointerFromQEvent(event))) != 0
+	}
+	return false
+}
+
+//export callbackIconStackd54ccb_ObjectNameChanged
+func callbackIconStackd54ccb_ObjectNameChanged(ptr unsafe.Pointer, objectName C.struct_Moc_PackedString) {
+	if signal := qt.GetSignal(ptr, "objectNameChanged"); signal != nil {
+		(*(*func(string))(signal))(cGoUnpackString(objectName))
+	}
+
+}
+
+//export callbackIconStackd54ccb_TimerEvent
+func callbackIconStackd54ccb_TimerEvent(ptr unsafe.Pointer, event unsafe.Pointer) {
+	if signal := qt.GetSignal(ptr, "timerEvent"); signal != nil {
+		(*(*func(*std_core.QTimerEvent))(signal))(std_core.NewQTimerEventFromPointer(event))
+	} else {
+		NewIconStackFromPointer(ptr).TimerEventDefault(std_core.NewQTimerEventFromPointer(event))
+	}
+}
+
+func (ptr *IconStack) TimerEventDefault(event std_core.QTimerEvent_ITF) {
+	if ptr.Pointer() != nil {
+		C.IconStackd54ccb_TimerEventDefault(ptr.Pointer(), std_core.PointerFromQTimerEvent(event))
 	}
 }

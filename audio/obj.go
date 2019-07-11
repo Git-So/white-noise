@@ -8,6 +8,8 @@ import (
 var (
 	// PlayState 播放状态
 	PlayState = true
+
+	playObj *Play
 )
 
 // Play 播放信息

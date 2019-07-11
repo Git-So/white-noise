@@ -79,6 +79,10 @@ func Enable() {
 
 	logger.Info("初始化播放成功")
 
+	if playObj != nil {
+		playObj.update(true)
+	}
+
 	// 播放队伍音频
 	for key, val := range playerList {
 		if val.state == PLAYER_ENABLE {

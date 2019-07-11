@@ -179,7 +179,7 @@ Rectangle {
                 Image {
                     width: parent.iconSize
                     height: parent.iconSize
-                    visible: playObj.state
+                    visible: !playObj.state
 
                     // source: "qrc:/qml/drawable/icon_music_play.png"
                     source: "../../drawable/icon_music_play.png"
@@ -191,7 +191,7 @@ Rectangle {
                 Image {
                     width: parent.iconSize
                     height: parent.iconSize
-                    visible: !playObj.state
+                    visible: playObj.state
 
                     // source: "qrc:/qml/drawable/icon_music_pause.png"
                     source: "../../drawable/icon_music_pause.png"
