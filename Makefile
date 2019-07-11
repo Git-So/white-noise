@@ -15,6 +15,7 @@ build:
 
 clear:
 	-rm -rf vendor deploy linux config/log
+	-rm -rf rcc* ./*/moc*
 	go mod vendor
 	go mod download
 	cp -r cache/env_linux_amd64_512 vendor/github.com/therecipe/
@@ -25,11 +26,7 @@ run:
 
 rerun:
 	./deploy/linux/${AppName}
-	-rm -rf rcc*
-	-rm -rf ./scene/moc*
-	-rm -rf ./icon/moc*
-	-rm -rf ./toast/moc*
-	-rm -rf ./audio/moc*
+	-rm -rf rcc* ./*/moc*
 
 test:
 ifeq ($(findstring _test.go,$(testFile)),_test.go)

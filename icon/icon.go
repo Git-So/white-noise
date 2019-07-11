@@ -6,11 +6,7 @@ import (
 
 	"github.com/Git-So/white-noise/audio"
 	"github.com/Git-So/white-noise/logger"
-)
-
-var (
-	// 播放队列
-	playerList = make(map[string]*audio.Info, 100)
+	"github.com/therecipe/qt/core"
 )
 
 // Load 加载文件信息
@@ -32,35 +28,78 @@ func Load(file string) (infoList []Info) {
 	return
 }
 
-// player 播放解析
-func player() {
-	// 获取播放队列
-	stat := true
-
-	// 关闭所有音频
-	for _, val := range playerList {
-		val.State = false
+// addPlayer 添加音频播放
+func addPlayer(idx int) {
+	stackInfo := getStackInfo(idx)
+	if stackInfo == nil {
+		logger.Error("获取不到栈数据信息")
 	}
 
-	// 启用音频
+	// p := audio.GetPlayer(info["name"].ToString())
+
+	// 获取音频信息
+	iconInfo := iconList[idx]
+	stat := true
+	for _, val := range iconInfo.AudioUrls {
+		audio.AddPlayer(
+			val.URL,
+			stackInfo["volume"].ToFloat(&stat),
+			val.Duration,
+			audio.PLAYER_ENABLE,
+		)
+	}
+
+}
+
+// removePlayer 移除音频播放
+func removePlayer(idx int) {
+	stackInfo := getStackInfo(idx)
+	if stackInfo == nil {
+		logger.Error("获取不到栈数据信息")
+	}
+
+	// 获取音频信息
+	iconInfo := iconList[idx]
+	// stat := true
+	for _, val := range iconInfo.AudioUrls {
+		// 获取播放实例
+		p := audio.GetPlayer(val.URL)
+		// 停止播放
+		p.SetState(audio.PLAYER_DISABLE)
+	}
+}
+
+// updateVolume 更新播放音量
+func updateVolume(idx int, volume float32) {
+	stackInfo := getStackInfo(idx)
+	if stackInfo == nil {
+		logger.Error("获取不到栈数据信息")
+	}
+
+	// 获取音频信息
+	iconInfo := iconList[idx]
+	// stat := true
+	for _, val := range iconInfo.AudioUrls {
+		// 获取播放实例
+		p := audio.GetPlayer(val.URL)
+		// 停止播放
+		p.SetVolume(volume)
+	}
+}
+
+// getStackInfo
+func getStackInfo(idx int) (info map[string]*core.QVariant) {
+
+	// 获取栈中对应数据
+	// 移除前获取
+	// 添加后获取
 	for _, val := range selectedStack {
-		index := val["index"].ToInt(&stat)
-		iconInfo := iconList[index]
-		for _, item := range iconInfo.AudioUrls {
-			var audioInfo *audio.Info
-			var ok bool
-			if audioInfo, ok = playerList[item.URL]; ok {
-				audioInfo.State = true
-				audioInfo.Volume = val["volume"].ToFloat(&stat)
-			} else {
-				audioInfo = &audio.Info{
-					Name:   item.URL,
-					Volume: val["volume"].ToFloat(&stat),
-					State:  true,
-				}
-				playerList[item.URL] = audioInfo
+		if _, ok := val["index"]; ok {
+			if idx == val["index"].ToInt(&ok) {
+				info = val
 			}
-			audioInfo.AddPlayer()
 		}
 	}
+
+	return
 }

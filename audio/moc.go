@@ -90,7 +90,6 @@ func callbackPlayf024d8_Constructor(ptr unsafe.Pointer) {
 	qt.Register(ptr, this)
 	this.ConnectStop(this.stop)
 	this.ConnectStart(this.start)
-	this.ConnectSetType(this.setType)
 	this.init()
 }
 
@@ -171,46 +170,6 @@ func (ptr *Play) DisconnectStart() {
 func (ptr *Play) Start() {
 	if ptr.Pointer() != nil {
 		C.Playf024d8_Start(ptr.Pointer())
-	}
-}
-
-//export callbackPlayf024d8_SetType
-func callbackPlayf024d8_SetType(ptr unsafe.Pointer, tp unsafe.Pointer) {
-	if signal := qt.GetSignal(ptr, "setType"); signal != nil {
-		(*(*func(*std_core.QVariant))(signal))(std_core.NewQVariantFromPointer(tp))
-	}
-
-}
-
-func (ptr *Play) ConnectSetType(f func(tp *std_core.QVariant)) {
-	if ptr.Pointer() != nil {
-
-		if !qt.ExistsSignal(ptr.Pointer(), "setType") {
-			C.Playf024d8_ConnectSetType(ptr.Pointer())
-		}
-
-		if signal := qt.LendSignal(ptr.Pointer(), "setType"); signal != nil {
-			f := func(tp *std_core.QVariant) {
-				(*(*func(*std_core.QVariant))(signal))(tp)
-				f(tp)
-			}
-			qt.ConnectSignal(ptr.Pointer(), "setType", unsafe.Pointer(&f))
-		} else {
-			qt.ConnectSignal(ptr.Pointer(), "setType", unsafe.Pointer(&f))
-		}
-	}
-}
-
-func (ptr *Play) DisconnectSetType() {
-	if ptr.Pointer() != nil {
-		C.Playf024d8_DisconnectSetType(ptr.Pointer())
-		qt.DisconnectSignal(ptr.Pointer(), "setType")
-	}
-}
-
-func (ptr *Play) SetType(tp std_core.QVariant_ITF) {
-	if ptr.Pointer() != nil {
-		C.Playf024d8_SetType(ptr.Pointer(), std_core.PointerFromQVariant(tp))
 	}
 }
 

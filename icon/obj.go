@@ -11,7 +11,7 @@ import (
 var (
 	// 图标数据
 	iconList []Info
-	// 选中栈
+	// 选中栈： 一开始是用栈的，后来发现思维错误
 	selectedStack    []map[string]*core.QVariant
 	SelectedStackObj *SelectedStackModel
 )
@@ -85,6 +85,7 @@ func (o *IconListModel) change(idx *core.QVariant) {
 	stat := true
 	index := idx.ToInt(&stat)
 	if o.modelData[index].IsActive {
+		// 取消选中
 		o.modelData[index].IsActive = false
 	} else {
 		// 最多同时播放三个音频
@@ -94,8 +95,6 @@ func (o *IconListModel) change(idx *core.QVariant) {
 		}
 		o.modelData[index].IsActive = true
 	}
-	// o.ConnectRowCount(o.rowCount)
-	// o.ConnectData(o.data)
 	o.DataChanged(o.Index(index, 0, core.NewQModelIndex()), o.Index(index, 0, core.NewQModelIndex()), []int{int(core.Qt__DisplayRole)})
 }
 
@@ -112,10 +111,14 @@ func (cs *IconStack) pop(index *core.QVariant) {
 
 	logger.Debug("pop")
 	stat := true
+
 	for idx, val := range selectedStack {
 		logger.Debug("idx", val["index"].ToInt(&stat))
 		logger.Debug("index", index.ToInt(&stat))
 		if val["index"].ToInt(&stat) == index.ToInt(&stat) {
+			// 移除播放
+			removePlayer(val["index"].ToInt(&stat))
+			// 出栈
 			selectedStack = append(selectedStack[:idx], selectedStack[idx+1:]...)
 			break
 		}
@@ -136,6 +139,9 @@ func (cs *IconStack) push(data map[string]*core.QVariant) {
 	stat := true
 	logger.Debug("volume", data["volume"].ToFloat(&stat))
 	cs.update()
+
+	// 添加到播放
+	addPlayer(data["index"].ToInt(&stat))
 }
 
 // update 栈数据更新后同步更新相关数据
@@ -158,9 +164,6 @@ func (cs *IconStack) update() {
 		cs.SetColorParam(selectedInfo["colorParam"].ToString())
 		cs.SetIsActive(true)
 	}
-
-	// 更新播放
-	player()
 }
 
 // init SelectedStackModel
@@ -199,9 +202,9 @@ func (ss *SelectedStackModel) write(index *core.QVariant, volume *core.QVariant)
 		ValIndex := val["index"].ToInt(&stat)
 		if ValIndex == key {
 			selectedStack[idx]["volume"] = volume
+			updateVolume(ValIndex, volume.ToFloat(&stat))
 		}
 	}
 
-	player()
 	// ss.DataChanged(ss.Index(key, 0, core.NewQModelIndex()), ss.Index(key, 0, core.NewQModelIndex()), []int{int(core.Qt__DisplayRole)})
 }

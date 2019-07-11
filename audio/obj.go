@@ -5,16 +5,9 @@ import (
 	"github.com/therecipe/qt/core"
 )
 
-const (
-	SCENE = iota
-	ICON
-)
-
 var (
 	// PlayState 播放状态
 	PlayState = true
-	// PlayType 播放类型
-	PlayType = SCENE
 )
 
 // Play 播放信息
@@ -25,38 +18,32 @@ type Play struct {
 
 	_ func() `constructor:"init"`
 
-	_ func()                  `signal:"stop,auto"`
-	_ func()                  `signal:"start,auto"`
-	_ func(tp *core.QVariant) `signal:"setType,auto"`
+	_ func() `signal:"stop,auto"`
+	_ func() `signal:"start,auto"`
 }
 
 // init Play
-func (p *Play) init() {
-	p.SetState(PlayState)
+func (py *Play) init() {
+	py.SetState(PlayState)
 }
 
 // stop
-func (p *Play) stop() {
+func (py *Play) stop() {
 	logger.Debug("播放停止")
-	p.update(false)
-	Close()
+	py.update(false)
+	Disable()
 }
 
 // start
-func (p *Play) start() {
+func (py *Play) start() {
 	logger.Debug("播放开始")
-	p.update(true)
+	py.update(true)
+	Enable()
 }
 
 // update
-func (p *Play) update(stat bool) {
+func (py *Play) update(stat bool) {
 	logger.Debug("更新播放状态")
 	PlayState = stat
-	p.SetState(PlayState)
-}
-
-// type
-func (p *Play) setType(tp *core.QVariant) {
-	stat := true
-	PlayType = tp.ToInt(&stat)
+	py.SetState(PlayState)
 }

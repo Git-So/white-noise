@@ -46,7 +46,6 @@ Item {
                         onClicked: {
                             if (toolbarRoot.stackObj && toolbarRoot.activeID != 0 ) {
                                 stackObj.pop()
-                                playObj.setType(0)
                             }
                         }
                     }
@@ -66,7 +65,6 @@ Item {
 
                             if (toolbarRoot.stackObj && toolbarRoot.customizeID && toolbarRoot.activeID != 1 ) {
                                 toolbarRoot.stackObj.push(customizeID)
-                                playObj.setType(1)
                             }
                         }
                     }
