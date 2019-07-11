@@ -74,15 +74,20 @@ func (p *player) enablePlayer() {
 
 	// 按一定时间循环播放
 	go func() {
-		// 播放器有效状态播放
-		if p.state == PLAYER_ENABLE && PlayState {
-			// 等待播放
-			time.Sleep(time.Duration(p.duration) * time.Millisecond)
+		for {
+			// 播放器有效状态播放
+			if p.state == PLAYER_ENABLE && PlayState {
+				// 等待播放
+				time.Sleep(time.Duration(p.duration) * time.Millisecond)
 
-			// 添加播放实例
-			play := otoObj.NewPlayer()
-			defer play.Close()
-			p.player(play)
+				// 添加播放实例
+				play := otoObj.NewPlayer()
+				p.player(play)
+				play.Close()
+			} else {
+				// 退出播放
+				break
+			}
 		}
 	}()
 }

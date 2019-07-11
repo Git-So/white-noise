@@ -7,5 +7,6 @@ deploy
 *.cpp
 rcc_*
 moc_*
+moc.go
 *.log
 test.qml
