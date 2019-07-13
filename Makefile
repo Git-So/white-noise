@@ -15,7 +15,7 @@ build:
 
 clear:
 	-rm -rf vendor deploy linux config/log
-	-rm -rf rcc* ./*/moc*
+	-rm -rf rcc* moc* ./*/moc*
 	go mod vendor
 	go mod download
 	cp -r cache/env_linux_amd64_512 vendor/github.com/therecipe/

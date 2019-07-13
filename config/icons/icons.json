@@ -3,7 +3,7 @@
     "title": "夏雨",
     "engTitle": "Shower",
     "colorParam": "#FF8FC86F;#FF46A773",
-    "icon": "夏雨.png",
+    "icon": "Shower.png",
     "volume": 1.4,
     "audioUrls": [
       {
@@ -16,7 +16,7 @@
     "title": "雨打树叶",
     "engTitle": "Rainforest",
     "colorParam": "#FFFF8DA5;#FF9B85EC",
-    "icon": "雨打树叶.png",
+    "icon": "Rainforest.png",
     "volume": 1.5,
     "audioUrls": [
       {
@@ -29,7 +29,7 @@
     "title": "河流",
     "engTitle": "River",
     "colorParam": "#FF84C1F3;#FF79A7EF",
-    "icon": "河流.png",
+    "icon": "River.png",
     "volume": 1.35,
     "audioUrls": [
       {
@@ -42,7 +42,7 @@
     "title": "溪流",
     "engTitle": "Stream",
     "colorParam": "#FFFFB586;#FFFE9090",
-    "icon": "溪流.png",
+    "icon": "Stream.png",
     "volume": 1.65,
     "audioUrls": [
       {
@@ -55,7 +55,7 @@
     "title": "近海",
     "engTitle": "Beach",
     "colorParam": "#FF40A9B7;#FF74D8BD",
-    "icon": "近海.png",
+    "icon": "Beach.png",
     "volume": 1.0,
     "audioUrls": [
       {
@@ -68,7 +68,7 @@
     "title": "远海",
     "engTitle": "Sea",
     "colorParam": "#FFF89BAE;#FFF7A78B",
-    "icon": "远海.png",
+    "icon": "Sea.png",
     "volume": 1.0,
     "audioUrls": [
       {
@@ -81,7 +81,7 @@
     "title": "炉火",
     "engTitle": "Fireplace",
     "colorParam": "#FF7B86FF;#FFFF93E8",
-    "icon": "炉火.png",
+    "icon": "Fireplace.png",
     "volume": 1.8,
     "audioUrls": [
       {
@@ -94,7 +94,7 @@
     "title": "森林",
     "engTitle": "Grove",
     "colorParam": "#FFFFC685;#FFFF8282",
-    "icon": "森林.png",
+    "icon": "Grove.png",
     "volume": 1.8,
     "audioUrls": [
       {
@@ -107,7 +107,7 @@
     "title": "鸟鸣",
     "engTitle": "Birds A",
     "colorParam": "#FFB77FD4;#FFFD96AD",
-    "icon": "鸟鸣.png",
+    "icon": "Birds A.png",
     "volume": 1.6,
     "audioUrls": [
       {
@@ -120,7 +120,7 @@
     "title": "海风",
     "engTitle": "Monsoon",
     "colorParam": "#FF91DB9D;#FF3AB2A3",
-    "icon": "海风.png",
+    "icon": "Monsoon.png",
     "volume": 2.0,
     "audioUrls": [
       {
@@ -133,7 +133,7 @@
     "title": "钢琴声",
     "engTitle": "Piano A",
     "colorParam": "#FF6A79D2;#FFE790B0",
-    "icon": "钢琴声.png",
+    "icon": "Piano A.png",
     "volume": 1.4,
     "audioUrls": [
       {
@@ -146,7 +146,7 @@
     "title": "窗外的风",
     "engTitle": "Wind B",
     "colorParam": "#FFAE6DE7;#FF6CB6E7",
-    "icon": "窗外的风.png",
+    "icon": "Wind B.png",
     "volume": 2.0,
     "audioUrls": [
       {
@@ -159,7 +159,7 @@
     "title": "时钟",
     "engTitle": "Clock",
     "colorParam": "#FF8FC86F;#FF46A773",
-    "icon": "时钟.png",
+    "icon": "Clock.png",
     "volume": 1.6,
     "audioUrls": [
       {

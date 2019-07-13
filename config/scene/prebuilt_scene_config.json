@@ -4,7 +4,7 @@
     "desp": "六月与夏雨的邂逅",
     "engTitle": "Rain",
     "engDesp": "A sunshiny shower",
-    "imagePath": "夏雨.jpg",
+    "imagePath": "Rain.jpg",
     "cropPicSmall": {
       "centerLine": 0.7345,
       "top": 131,
@@ -25,7 +25,7 @@
     "desp": "把你的秘密藏进森林",
     "engTitle": "Forest",
     "engDesp": "Find peace among the trees",
-    "imagePath": "森林.jpg",
+    "imagePath": "Forest.jpg",
     "cropPicSmall": {
       "centerLine": 0.2995,
       "top": 131,
@@ -46,7 +46,7 @@
     "desp": "温暖冬日的闲暇时光",
     "engTitle": "Fireplace",
     "engDesp": "Sit by the fireplace with a cup of tea",
-    "imagePath": "炉火.jpg",
+    "imagePath": "Fireplace.jpg",
     "cropPicSmall": {
       "centerLine": 0.5405,
       "top": 131,
@@ -67,7 +67,7 @@
     "desp": "海边漫步的气息",
     "engTitle": "Ocean",
     "engDesp": "Have a walk on the beach",
-    "imagePath": "海洋.jpg",
+    "imagePath": "Ocean.jpg",
     "cropPicSmall": {
       "centerLine": 0.2345,
       "top": 131,
