@@ -4,7 +4,8 @@ AppName = "white-noise"
 
 init:
 	mkdir -p cache
-	git clone https://github.com/therecipe/env_linux_amd64_512.git cache/env_linux_amd64_512
+#	git clone https://github.com/therecipe/env_linux_amd64_512.git cache/env_linux_amd64_512
+	git clone https://github.com/therecipe/env_linux_amd64_513.git cache/env_linux_amd64_513
 
 rebuild:
 	qtdeploy build desktop
@@ -18,7 +19,7 @@ clear:
 	-rm -rf rcc* moc* ./*/moc*
 	go mod vendor
 	go mod download
-	cp -r cache/env_linux_amd64_512 vendor/github.com/therecipe/
+	cp -r cache/env_linux_amd64_513 vendor/github.com/therecipe/
 
 run:
 	make rebuild
